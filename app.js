@@ -148,6 +148,7 @@ if(cmd === `${prefix}kick`){
 
   if(cmd === `${prefix}report`){
 
+    let message.channel.send("Report został pomyślnie wysłany")
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("Nie ma takiego użytkownika!")
     let reason = args.join(" ").slice(22);
@@ -168,7 +169,6 @@ if(cmd === `${prefix}kick`){
       reportschannel.send(reportEmbed);
 
     return;
-    message.channel.send("Report został pomyślnie wysłany")
   }
 
 
