@@ -41,7 +41,7 @@ if(cmd === `${prefix}zapytaj`){
   .addField("Pytanie", question)
   .addField("Odpowiedź", replies[result]);
 
-  message.channel.send(ballembed);
+  message.channel.send(ballembed)
 
  }
 
