@@ -204,9 +204,6 @@ if(cmd === `${prefix}kick`){
     .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby");
 
     return message.channel.send(helpembed);
-
-
-  }
-)};
+ }
 
 bot.login(process.env.BOT_TOKEN);
