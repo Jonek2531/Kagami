@@ -76,7 +76,7 @@ if(cmd === `${prefix}kick`){
    .addField("Wyrzucony przez", `<@${message.author.id}>, ID użytkownika: ${message.author.id}`)
    .addField("Na kanale", message.channel)
    .addField("O godzinie", message.createdAt)
-   .addField("Powód", kReason);
+   .addField("Powód", kReason)
 
    let kickChannel = message.guild.channels.find(`name`, "logi");
    if(!kickChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
@@ -188,7 +188,7 @@ if(cmd === `${prefix}kick`){
     .setColor("#00f4ff")
     .addField("Kagami", bot.user.username);
 
-    return message.channel.send(botembed);
+    return message.channel.send(botembed)
   }
 
   if(cmd === `${prefix}pomoc`){
