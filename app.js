@@ -191,7 +191,9 @@ if(cmd === `${prefix}kick`){
     return message.channel.send(serverembed);
   }
 
-  if(cmd === `${prefix}logoserwera`)
+  if(cmd === `${prefix}logoserwera`){
+
+    let logoembed = new Discord.RichEmbed()
   message.channel.send("Bardzo proszę", message.guild.displayAvatarURL)
 
 
