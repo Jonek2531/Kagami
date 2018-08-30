@@ -72,6 +72,30 @@ if(cmd === `${prefix}zapytaj`){
             return message.channel.send(botembed);
         }
 
+  if(cmd === `${prefix}kick`){
+    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+   if(!kUser) return message.channel.send("Nie ma takiego użytkownika!");
+   let kReason = args.join(" ").slice(22);
+   if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić tej osoby, ponieważ nie masz uprawnień!");
+   if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić z serwera tej osoby!");
+    let kickEmbed = new Discord.RichEmbed()
+   .setDescription("Kick")
+   .setColor("#00e7ff")
+   .addField("Wyrzucony użytkownik", `${kUser}, ID użytkownika ${kUser.id}`)
+   .addField("Wyrzucony przez", `<@${message.author.id}>, ID użytkownika: ${message.author.id}`)
+   .addField("Na kanale", message.channel)
+   .addField("O godzinie", message.createdAt)
+   .addField("Powód", kReason);
+    
+    let kickChannel = message.guild.channels.find(`name`, "logi");
+    
+   if(!kickChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
+    message.guild.member(kUser).kick(kReason);
+    
+    kickChannel.send(kickEmbed);
+    return;
+ }
+  
  if(cmd === `${prefix}ban`){
 
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
