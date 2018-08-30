@@ -2,19 +2,39 @@ const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true})
-bot.commands = new Discord.Collection()
+bot.commands = new Discord.Collection();
 
+fs.readdir("./commands/", (err, files) => {
+
+ if(err) console.log(err);
+
+ let jsfile = files.filter(f => f.split(".").pop() === "js")
+ if(jsfile.length <= 0){
+   console/log("Nie moge znalesc komendy");
+   return;
+ }
+})
+
+fs.readdir("./commands/", (err, files) =>{
+  if(err) console.log(err);
+  let jsfile = files.filter(f => f.split(".").pop() === "js");
+  if(jsfile.length <= 0){
+    console.log("Nie ma takiej komendy.");
+    return;
+  }
 
   jsfile.forEach((f, i) =>{
     let props = require(`./commands/${f}`);
     console.log(`${f} loaded`);
     bot.commands.set(props.help.name, props);
   })
+})
 
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("https://discord.gg/D8C9GXK <== Link Zaproszeniowy na serwer GamerStay", {type: "WATCHING"});
 })
+
 
 
 bot.on("message", async message =>{
@@ -58,8 +78,34 @@ if(cmd === `${prefix}zapytaj`){
 
     message.channel.send(embed)
   }
-  
-  
+
+
+if(cmd === `${prefix}kick`){
+
+   let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+   if(!kUser) return message.channel.send("Nie ma takiego użytkownika!");
+   let kReason = args.join(" ").slice(22);
+   if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić tej osoby, ponieważ nie masz uprawnień!");
+   if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić z serwera tej osoby!");
+
+   let kickEmbed = new Discord.RichEmbed()
+   .setDescription("Kick")
+   .setColor("#00e7ff")
+   .addField("Wyrzucony użytkownik", `${kUser}, ID użytkownika ${kUser.id}`)
+   .addField("Wyrzucony przez", `<@${message.author.id}>, ID użytkownika: ${message.author.id}`)
+   .addField("Na kanale", message.channel)
+   .addField("O godzinie", message.createdAt)
+   .addField("Powód", kReason);
+
+   let kickChannel = message.guild.channels.find(`name`, "logi");
+   if(!kickChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
+
+   message.guild.member(kUser).kick(kReason);
+
+   kickChannel.send(kickEmbed);
+
+   return;
+ }
 
  if(cmd === `${prefix}profil`) {
        let botembed = new Discord.RichEmbed()
@@ -71,30 +117,6 @@ if(cmd === `${prefix}zapytaj`){
             return message.channel.send(botembed);
         }
 
-  if(cmd === `${prefix}kick`){
-    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-   if(!kUser) return message.channel.send("Nie ma takiego użytkownika!");
-   let kReason = args.join(" ").slice(22);
-   if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić tej osoby, ponieważ nie masz uprawnień!");
-   if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić z serwera tej osoby!");
-    let kickEmbed = new Discord.RichEmbed()
-   .setDescription("Kick")
-   .setColor("#00e7ff")
-   .addField("Wyrzucony użytkownik", `${kUser}, ID użytkownika ${kUser.id}`)
-   .addField("Wyrzucony przez", `<@${message.author.id}>, ID użytkownika: ${message.author.id}`)
-   .addField("Na kanale", message.channel)
-   .addField("O godzinie", message.createdAt)
-   .addField("Powód", kReason);
-    
-    let kickChannel = message.guild.channels.find(`name`, "logi");
-    
-   if(!kickChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
-    message.guild.member(kUser).kick(kReason);
-    
-    kickChannel.send(kickEmbed);
-    return;
- }
-  
  if(cmd === `${prefix}ban`){
 
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -140,7 +162,7 @@ if(cmd === `${prefix}zapytaj`){
     .addField("Zgłoszony przez", `${message.author}. ID zgłaszającego: ${message.author.id}`)
     .addField("Godzina wysłania", message.createdAt)
     .addField("Na kanale", message.channel)
-    .addField("Powód", reason);
+    .addField("Powód", reason)
 
     let reportschannel = message.guild.channels.find(`name`, "reporty");
     if(!reportschannel) return message.channel.send("Nie ma kanału od reportów");
@@ -151,6 +173,30 @@ if(cmd === `${prefix}zapytaj`){
     return;
   }
 
+
+  if(cmd === `${prefix}report`){
+
+    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(!rUser) return message.channel.send("Nie ma takiego użytkownika!")
+    let reason = args.join(" ").slice(22);
+
+    let reportEmbed = new Discord.RichEmbed()
+    .setDescription("Reporty")
+    .setColor("#00e7ff")
+    .addField("Zgłoszony użytkownik", `${rUser}, ID użytkownika: ${rUser.id}`)
+    .addField("Zgłoszony przez", `${message.author}. ID zgłaszającego: ${message.author.id}`)
+    .addField("Godzina wysłania", message.createdAt)
+    .addField("Na kanale", message.channel)
+    .addField("Powód", reason)
+
+    let reportschannel = message.guild.channels.find(`name`, "reporty");
+    if(!reportschannel) return message.channel.send("Nie ma kanału od reportów");
+
+      message.delete().catch(O_o=>{});
+      reportschannel.send(reportEmbed);
+
+    return;
+  }
 
 
 
@@ -185,7 +231,7 @@ if(cmd === `${prefix}zapytaj`){
     .setColor("#00f4ff")
     .addField("Kagami", bot.user.username);
 
-    return message.channel.send(botembed)
+    return message.channel.send(botembed);
   }
 
   if(cmd === `${prefix}pomoc`){
@@ -201,6 +247,12 @@ if(cmd === `${prefix}zapytaj`){
     .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby");
 
     return message.channel.send(helpembed);
- };;
+
+
+  }
+
+
+})
+
 
 bot.login(process.env.BOT_TOKEN)
