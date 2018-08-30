@@ -21,7 +21,18 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 
-if(cmd === `${prefix}zapytaj`){
+  if(cmd === `${prefix}avatar`) {
+    let user = message.mentions.users.first() || message.author;
+
+    let embed = new Discord.RichEmbed()
+    .setAuthor(`${user.username}`)
+    .setImage(user.displayAvatarURL)
+
+    message.channel.send(embed)
+  }
+
+  
+  if(cmd === `${prefix}zapytaj`){
   if(!args[1]) return message.reply("Zadaj pytanie!!!");
   let replies = ["Tak", "Nie", "Myślę, że tak", "Myślę, że nie", "idk", "domyśl się", "rusz głową", "kappa","nwm","Igor","( ͡° ͜ʖ ͡°)","xDDD","XD","XDDDD","WINIARY","( ͡ ͡° ͡°  ʖ ͡° ͡°)","ryż","płatki","maxus","maxus6","maxus69",
  "maxus69","maxus22","maxus24","maxus to dzban","myj ręce","Wypad","Nie odpowiem Ci na to pytanie, ponieważ nie ukończyłeś 18 roku życia","zboczeniec","pal gume","Jonek to właściciel","LOL","Fortnite to gówno za 0 zł","Tia","Oficjalny serwer discord GamerStay: https://discord.gg/D8C9GXK", "xd", "chyba u Ciebie w domu","pal wrotki","Tak, zaGadka to gówno","zaGadka to gówno","GamerStay to najlepszy serwer discord!!!",
