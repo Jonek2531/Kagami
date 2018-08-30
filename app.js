@@ -194,7 +194,7 @@ if(cmd === `${prefix}kick`){
   if(cmd === `${prefix}logoserwera`){
 
     let embed = new Discord.RichEmbed()
-.setImage("message.guild.avatarURL");
+.setImage(message.guild.displayAvatarURL);
   }
 
 
