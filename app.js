@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
     let props = require(`./commands/${f}`);
     console.log(`${f} loaded`);
     bot.commands.set(props.help.name, props);
-  }
+  })
 
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
