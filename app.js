@@ -168,6 +168,7 @@ if(cmd === `${prefix}kick`){
       reportschannel.send(reportEmbed);
 
     return;
+    message.channel.send("Report został pomyślnie wysłany")
   }
 
 
