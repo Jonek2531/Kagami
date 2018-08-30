@@ -207,6 +207,6 @@ if(cmd === `${prefix}kick`){
 
 
   }
-
+)};
 
 bot.login(process.env.BOT_TOKEN);
