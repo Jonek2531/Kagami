@@ -4,6 +4,11 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+bot.on("ready", async () =>{
+  console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("https://discord.gg/D8C9GXK <== Link Zaproszeniowy na serwer GamerStay", {type: "WATCHING"});
+})
+
 bot.on("message", async message =>{
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
