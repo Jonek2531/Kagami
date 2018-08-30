@@ -174,29 +174,6 @@ if(cmd === `${prefix}kick`){
     return;
   }
 
-  if(cmd === `${prefix}zgłoś`){
-
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("Nie ma takiego użytkownika!")
-    let reason = args.join(" ").slice(22);
-
-    let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Reporty")
-    .setColor("#00e7ff")
-    .addField("Zgłoszony użytkownik", `${rUser}, ID użytkownika: ${rUser.id}`)
-    .addField("Zgłoszony przez", `${message.author}. ID zgłaszającego: ${message.author.id}`)
-    .addField("Godzina wysłania", message.createdAt)
-    .addField("Na kanale", message.channel)
-    .addField("Powód", reason)
-
-    let reportschannel = message.guild.channels.find(`name`, "reporty");
-    if(!reportschannel) return message.channel.send("Nie ma kanału od reportów");
-
-      message.delete().catch(O_o=>{});
-      reportschannel.send(reportEmbed);
-
-    return;
-  }
 
   if(cmd === `${prefix}report`){
 
