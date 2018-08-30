@@ -45,17 +45,6 @@ if(cmd === `${prefix}zapytaj`){
 
  }
 
-  if(cmd === `${prefix}avatar`) {
-    let user = message.mentions.users.first() || message.author;
-
-    let embed = new Discord.RichEmbed()
-    .setAuthor(`${user.username}`)
-    .setImage(user.displayAvatarURL)
-
-    message.channel.send(embed)
-  }
-
-
 if(cmd === `${prefix}kick`){
 
    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
