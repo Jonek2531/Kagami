@@ -20,7 +20,7 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
-
+       
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
 
@@ -227,5 +227,7 @@ if(cmd === `${prefix}kick`){
 
     return message.channel.send(helpembed);
   }
+  
+}
 
 bot.login(process.env.BOT_TOKEN)
