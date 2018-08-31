@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+const randomPuppy = require('random-puppy');
 bot.commands = new Discord.Collection();
 
 bot.on("ready", async () =>{
@@ -31,6 +32,16 @@ bot.on("message", async message =>{
     message.channel.send(embed)
   }
 
+randomPuppy('memes')
+    .then(url => {
+        const embed = new Discord.MessageEmbed()
+            .setTimestamp()
+            .setImage(url)
+            .setColor('RANDOM')
+        message.channel.send(embed);
+    });
+  
+  
 module.exports.run = (bot, message, args) => {
   
     let rock2 = ["Paper! I win!", "Scissors! You win!"]
