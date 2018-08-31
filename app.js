@@ -283,7 +283,7 @@ if(cmd === `${prefix}kick`){
     message.channel.send(response);
   } else {
     message.channel.send(`You need to use \`${prefix}rps\` <rock|paper|scissors>`);
-  }
+  });
 
 
 
