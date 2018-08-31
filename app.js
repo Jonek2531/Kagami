@@ -137,7 +137,7 @@ if(cmd === `${prefix}kick`){
     .addField("Zgłoszony przez", `${message.author}. ID zgłaszającego: ${message.author.id}`)
     .addField("Godzina wysłania", message.createdAt)
     .addField("Na kanale", message.channel)
-    .addField("Powód", reason)
+    .addField("Powód", reason);
 
     let reportschannel = message.guild.channels.find(`name`, "reporty");
     if(!reportschannel) return message.channel.send("Nie ma kanału od reportów");
