@@ -273,6 +273,7 @@ if(cmd === `${prefix}kick`){
     .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby");
 
     return message.channel.send(helpembed);
+  }
     
     if(cmd === `{prefix}rps`){ 
       var choice = args[0];
