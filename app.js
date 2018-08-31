@@ -403,7 +403,7 @@ if(cmd === `${prefix}trump`){
 };
 	
 	
-if (msg.startsWith(prefix + 'HUG')) {
+if (cmd === `${prefix}przytul) {
     let hug = [
         "https://data.whicdn.com/images/221692186/original.gif",
         "http://mrwgifs.com/wp-content/uploads/2013/04/Ouran-High-School-Host-Club-Love-Hug-Gif.gif",
