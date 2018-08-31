@@ -228,57 +228,57 @@ if(cmd === `${prefix}kick`){
     return message.channel.send(helpembed);
   }
   
-  if(cmd === `${prefix}rps`){
+  if(cmd === `${prefix}wybierz`){
     var choice = args[0];
-  if (choice == "paper" || choice == "p") {
+  if (choice == "papier" || choice == "p") {
     var numb = Math.floor(Math.random() * 100);
     if (numb <= 50) {
-      var choice2 = "paper";
+      var choice2 = "papier";
     } else if (numb > 50) {
-      var choice2 = "rock";
+      var choice2 = "kamień";
     } else {
-      var choice2 = "scissors";
+      var choice2 = "nożyce";
     }
-    if (choice2 == "scissors") {
-      var response = "I'm choosing **Scissors**! :v: I win!"
-    } else if (choice2 == "paper") {
-      var response = "I'm choosing **Paper**! :hand_splayed: It's a tie!"
+    if (choice2 == "nożyce") {
+      var response = "Ja wybrałam **Nożyce**! :v: Przegrałeś!"
+    } else if (choice2 == "papier") {
+      var response = "Ja wybrałam **Papier**! :hand_splayed: Remis!"
     } else {
-      var response = "I'm choosing **Rock**! :punch: You win!"
+      var response = "Ja wybrałam **Kamień**! :punch: Wygrałeś!"
     }
     message.channel.send(response);
-  } else if (choice == "rock" || choice == "r") {
+  } else if (choice == "kamień" || choice == "r") {
     var numb = Math.floor(Math.random() * 100);
     if (numb <= 50) {
-      var choice2 = "paper";
+      var choice2 = "papier";
     } else if (numb > 50) {
-      var choice2 = "rock";
+      var choice2 = "kamień";
     } else {
-      var choice2 = "scissors";
+      var choice2 = "nożyce";
     }
     if (choice2 == "paper") {
-      var response = "I'm choosing **Paper**! :hand_splayed: I win!"
+      var response = "Ja wybrałam **Papier**! :hand_splayed: Przegrałeś"
     } else if (choice2 == "rock") {
-      var response = "I'm choosing **Rock**! :punch: It's a tie!"
+      var response = "Ja wybrałam **Kamień**! :punch: Remis"
     } else {
-      var response = "I'm choosing **Scissors**! :v: You win!"
+      var response = "Ja wybrałam **Nożyce**! :v: Wygrałeś"
     }
     message.channel.send(response);
-  } else if (choice == "scissors" || choice == "s") {
+  } else if (choice == "nożyce" || choice == "s") {
     var numb = Math.floor(Math.random() * 100);
     if (numb <= 50) {
-      var choice2 = "paper";
+      var choice2 = "papier";
     } else if (numb > 50) {
-      var choice2 = "rock";
+      var choice2 = "kamień";
     } else {
-      var choice2 = "scissors";
+      var choice2 = "nożyce";
     }
-    if (choice2 == "rock") {
-      var response = "I'm choosing **Paper**! :hand_splayed: You win!"
-    } else if (choice2 == "scissors") {
-      var response = "I'm choosing **Scissors**! :v: It's a tie!"
+    if (choice2 == "kamień") {
+      var response = "Ja wybrałam **Papier**! :hand_splayed: Wygrałeś!"
+    } else if (choice2 == "nożyce") {
+      var response = "Ja wybrałam **Nożyce**! :v: Remis"
     } else {
-      var response = "I'm choosing **Rock**! :punch: I win!"
+      var response = "Ja wybrałam **Kamień**! :punch: Przegrałeś!"
     }
     message.channel.send(response);
   } else {
