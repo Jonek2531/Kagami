@@ -224,7 +224,7 @@ if(cmd === `${prefix}kick`){
     .addField("!zapytaj <treść>", "pytasz się o coś bota, a on Ci odpowiada")
     .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby")
     .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
-    .addField("!zapal", "zaczynasz palić gumę" :3)
+    .addField("!zapal", "zaczynasz palić gumę :3")
     .addField("!hug", "przytulasz oznaczoną osobę);
 
     return message.channel.send(helpembed);
