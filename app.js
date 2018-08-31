@@ -287,7 +287,7 @@ if(cmd === `${prefix}kick`){
   }
 }
   
-  if (msg === `${prefix}slot`) {
+  if (cmd === `${prefix}slot`) {
 	    var replys1 = [
 	        ":gem: : :gem: : :gem: ",
 	        ":lemon: : :lemon: : :lemon: ",
