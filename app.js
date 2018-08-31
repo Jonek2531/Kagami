@@ -374,7 +374,7 @@ if(cmd === `${prefix}trump`){
 }
 	
 	if(cmd === `${prefix}zapal`){
-	  message.channel.send('**ja PAAAAAAAAALE**').then(async msg => {
+	  message.channel.send('**ja PAAAAAAAAALE GUUUUUUUUME**').then(async msg => {
   setTimeout(() => {
     msg.edit('🚬');
   }, 500);
@@ -397,7 +397,7 @@ if(cmd === `${prefix}trump`){
     msg.edit('🚬 ');
   }, 3500);
   setTimeout(() => {
-    msg.edit(`Finished smoking`);
+    msg.edit(`Palenie gumy skończoned`);
   }, 4000);
 });
 };
