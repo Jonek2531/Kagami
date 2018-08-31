@@ -393,6 +393,6 @@ if(cmd === `${prefix}trump`){
         message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
     }
   
-})
+}
 
 bot.login(process.env.BOT_TOKEN)
