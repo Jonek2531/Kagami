@@ -4,6 +4,21 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+fs.readdir("./commands/", (err, files) =>{
+  if(err) console.log(err);
+  let jsfile = files.filter(f => f.split(".").pop() === "js");
+  if(jsfile.length <= 0){
+    console.log("Nie ma takiej komendy.");
+    return;
+  }
+
+  jsfile.forEach((f, i) =>{
+    let props = require(`./commands/${f}`);
+    console.log(`${f} loaded`);
+    bot.commands.set(props.help.name, props);
+  })
+
+
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("https://discord.gg/D8C9GXK <== Link Zaproszeniowy na serwer GamerStay", {type: "WATCHING"});
