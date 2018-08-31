@@ -331,7 +331,7 @@ if(cmd === `${prefix}kick`){
   } else {
     message.channel.send(`You need to use \`${prefix}rps\` <rock|paper|scissors>`);
   }
-}
+
 
 
 bot.login(process.env.BOT_TOKEN)
