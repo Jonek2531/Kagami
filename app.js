@@ -369,11 +369,10 @@ if(cmd === `${prefix}trump`){
           var embed = new Discord.RichEmbed()
           .setColor("RANDOM")
           .setImage(gif)
-          .setFooter('Trump')
-	  }  
+          .setFooter('Trump')  
   
   message.channel.send(embed)
-})
+}
  
        
        if(cmd === `${prefix}eval`) {
@@ -393,7 +392,6 @@ if(cmd === `${prefix}trump`){
     } catch(e) {
         message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
     }
-}
   
 })
 
