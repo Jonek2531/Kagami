@@ -228,6 +228,6 @@ if(cmd === `${prefix}kick`){
     return message.channel.send(helpembed);
   }
   
-}
+})
 
 bot.login(process.env.BOT_TOKEN)
