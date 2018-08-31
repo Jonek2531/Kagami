@@ -287,7 +287,7 @@ if(cmd === `${prefix}kick`){
   }
 }
   
-  if (message.content === prefix + "slot") {
+  if (msg === `${prefix}slot`) {
 	    var replys1 = [
 	        ":gem: : :gem: : :gem: ",
 	        ":lemon: : :lemon: : :lemon: ",
@@ -348,7 +348,7 @@ if(cmd === `${prefix}kick`){
 
 	    const embed = new Discord.RichEmbed()
 	        .setColor("#FE0101")
-	        .setTitle(`**[ :slot_machine: @${message.author.tag} launched the slot machine! :slot_machine: ]**`)
+	        .setTitle(`**[ :slot_machine: @${message.author.tag} użył maszynę! :slot_machine: ]**`)
 	        .addField("**-------------------**", "** **")
 	        .addField(`${reponse} \n \n${reponse2}**<** \n \n${reponse3}`, `** **`)
 	        .addField("**-------------------**", "** **")
