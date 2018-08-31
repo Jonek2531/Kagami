@@ -373,7 +373,7 @@ if(cmd === `${prefix}trump`){
   message.channel.send(embed)
 }
 	
-	if(cmd === `${prefix}zapal`){
+	if(cmd === `${prefix}zapal gume`){
 	  message.channel.send('**ja PAAAAAAAAALE GUUUUUUUUME**').then(async msg => {
   setTimeout(() => {
     msg.edit('🚬');
