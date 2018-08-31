@@ -223,7 +223,9 @@ if(cmd === `${prefix}kick`){
     .addField("!kick <nick> <powód>", "wyrzucasz osobę z serwera [Tylko dla Administracji]")
     .addField("!zapytaj <treść>", "pytasz się o coś bota, a on Ci odpowiada")
     .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby")
-    .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.");
+    .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
+    .addField("!zapal", "zaczynasz palić gumę" :3)
+    .addField("!hug", "przytulasz oznaczoną osobę);
 
     return message.channel.send(helpembed);
   }
