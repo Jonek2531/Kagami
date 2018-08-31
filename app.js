@@ -8,15 +8,15 @@ fs.readdir("./commands/", (err, files) =>{
   if(err) console.log(err);
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0){
-    console.log("Nie ma takiej komendy.");
-    return;
+  return  console.log("Nie ma takiej komendy.");
+    
   }
 
   jsfile.forEach((f, i) =>{
-    let props = require(`./commands/${f}`);
+    var cmds = require(`./commands/${f}`);
     console.log(`${f} loaded`);
-    bot.commands.set(props.help.name, props);
-  });
+    bot.commands.set(cmds.config.command, cmds);
+  })
 
 
 bot.on("ready", async () =>{
