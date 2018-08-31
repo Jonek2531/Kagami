@@ -403,7 +403,7 @@ if(cmd === `${prefix}trump`){
 };
 	
 	
-if (cmd === `${prefix}przytul) {
+if (cmd.startsWith(prefix + 'HUG')) {
     let hug = [
         "https://data.whicdn.com/images/221692186/original.gif",
         "http://mrwgifs.com/wp-content/uploads/2013/04/Ouran-High-School-Host-Club-Love-Hug-Gif.gif",
@@ -456,7 +456,7 @@ if (cmd === `${prefix}przytul) {
     message.channel.send({
         embed: ghembed
     })
-}  
+}
 })
 
 bot.login(process.env.BOT_TOKEN)
