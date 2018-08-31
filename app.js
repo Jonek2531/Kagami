@@ -403,7 +403,7 @@ if(cmd === `${prefix}trump`){
 };
 	
 	
-	if (cmd === `${prefix}hug') {
+if (msg.startsWith(prefix + 'HUG')) {
     let hug = [
         "https://data.whicdn.com/images/221692186/original.gif",
         "http://mrwgifs.com/wp-content/uploads/2013/04/Ouran-High-School-Host-Club-Love-Hug-Gif.gif",
@@ -432,7 +432,7 @@ if(cmd === `${prefix}trump`){
     if (!args[0]) {
         const ghembed = new Discord.RichEmbed()
             .setColor(0xFF0000)
-            .setTitle(message.author.username sam siebie przytulił! (weirdo)`)
+            .setTitle(`${message.author.username} hugged themself...! (weirdo)`)
             .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
         message.channel.send({
             embed: ghembed
@@ -442,7 +442,7 @@ if(cmd === `${prefix}trump`){
     if (!message.mentions.members.first().user.username === message.isMentioned(message.author)) {
         const hembed = new Discord.RichEmbed()
             .setColor(0xFF0000)
-            .setTitle(message.author.username dał message.mentions.members.first().user.username przytulenie! Jak słodko!`)
+            .setTitle(`${message.author.username} gave ${message.mentions.members.first().user.username} a hug! How sweet!`)
             .setImage(hug[hugresult])
         message.channel.send({
             embed: hembed
@@ -451,13 +451,12 @@ if(cmd === `${prefix}trump`){
     }
     const ghembed = new Discord.RichEmbed()
         .setColor(0xFF0000)
-        .setTitle(message.author.username samego siebie przytulił! (weirdo)`)
+        .setTitle(`${message.author.username} hugged themself...! (weirdo)`)
         .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
     message.channel.send({
         embed: ghembed
     })
-}
-       
+}  
 })
 
 bot.login(process.env.BOT_TOKEN)
