@@ -373,8 +373,10 @@ if(cmd === `${prefix}trump`){
 	  }  
   
   message.channel.send(embed)
-}
-  if(cmd === `${prefix}eval`) {
+})
+ 
+       
+       if(cmd === `${prefix}eval`) {
 	if (message.author.id !== '242969117479403520' && message.author.id !== '242969117479403520') return;
     try {
         let codein = args.join(" ");
