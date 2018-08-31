@@ -16,7 +16,7 @@ fs.readdir("./commands/", (err, files) =>{
     let props = require(`./commands/${f}`);
     console.log(`${f} loaded`);
     bot.commands.set(props.help.name, props);
-  })
+  });
 
 
 bot.on("ready", async () =>{
