@@ -186,7 +186,7 @@ if(cmd === `${prefix}kick`){
     .addField("ID Założyciela serwera", message.guild.owner.id)
     .addField("ID serwera", message.guild.id)
     .addField("Region serwera", message.guild.region)
-    .addField("Wszystkich użytkowników jest", message.guild.memberCount)
+    .addField("Loczba użytkowników", message.guild.memberCount)
     .addField("Poziom potwierdzenia konta", message.guild.verificationLevel)
     .addField("Duży serwer?", message.guild.large);
 
