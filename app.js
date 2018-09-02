@@ -186,9 +186,9 @@ if(cmd === `${prefix}kick`){
     .addField("ID Założyciela serwera", message.guild.owner.id)
     .addField("ID serwera", message.guild.id)
     .addField("Region serwera", message.guild.region)
-    .addField("Loczba użytkowników", message.guild.memberCount)
+    .addField("Liczba użytkowników", message.guild.memberCount)
     .addField("Poziom potwierdzenia konta", message.guild.verificationLevel)
-    .addField("Duży serwer?", message.guild.large);
+    .setThumbnail(`${message.author.avatarURL}`);
 
 
     return message.channel.send(serverembed);
