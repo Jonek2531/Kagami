@@ -44,8 +44,8 @@ bot.on("message", async message =>{
 '✧Na kanale #klucze_steam użytkownicy wstawiają klucze dla innych użytkowników :3' +
 
 'Życzymy miłego pobytu na serwerze!' +
-'https://imgur.com/nNe3iqC');
-								}
+'https://imgur.com/nNe3iqC'
+});
   
 	
 	
