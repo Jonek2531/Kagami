@@ -34,7 +34,7 @@ bot.on("message", async message =>{
   
   bot.on('guildMemberAdd', member => {
 	  
-	  members.guild.channels.get(`434008775750582282`).send('<@' + member.user.id + 'dołączył/a do GamerStay!
+	  members.guild.channels.get(`434008775750582282`).send('**' + member.user.username + '**, dołączył/a do GamerStay!
 
 
 ✧Koniecznie zajżyj na <#450284760489787402> by zobaczyć listę ról które możesz sobie dodać, listę administracji , link zaproszeniowy, opis serwera i strony powiązane
