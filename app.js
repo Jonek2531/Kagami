@@ -30,23 +30,6 @@ bot.on("message", async message =>{
 
     message.channel.send(embed)
   }
-
-  
-  bot.on('guildMemberAdd', member => {
-	  
-	  member.guild.channels.get(`434008775750582282`).send('**' + member.user.username + '**, dołączył/a do GamerStay!' +
-
-
-'✧Koniecznie zajżyj na <#450284760489787402> by zobaczyć listę ról które możesz sobie dodać, listę administracji , link zaproszeniowy, opis serwera i strony powiązane' +
-
-'✧Na kanale #komendy możesz zarabiać pieniądze za które możesz kupować wartościowe przedmioty!' +
-
-'✧Na kanale #klucze_steam użytkownicy wstawiają klucze dla innych użytkowników :3' +
-
-'Życzymy miłego pobytu na serwerze!' +
-'https://imgur.com/nNe3iqC');
-});
-  
 	
 	
   
