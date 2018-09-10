@@ -131,7 +131,7 @@ if(cmd === `${prefix}kick`){
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
-
+  }
 
 
   if(cmd === `${prefix}zglos`){
@@ -472,6 +472,6 @@ if (cmd.startsWith(prefix + 'hug')) {
         embed: ghembed
     })
 }
-}
+})
 
 bot.login(process.env.BOT_TOKEN)
