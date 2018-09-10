@@ -175,7 +175,7 @@ if(cmd === `${prefix}kick`){
 		let user = message.mentions.users.first() || message.author;
 
 	  let serverembed = new Discord.RichEmbed()
-    .setDescription("Informacje o użytkowniku", `${member.username}`)
+    .setDescription("Informacje o użytkowniku", `${user.username}`)
 	  .addField("W grze:", message.user.game)
 	  .addField("Status:", message.user.status)
 	  .addField("Konto stworzone:", message.user.createdAt)
