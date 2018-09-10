@@ -170,10 +170,7 @@ if(cmd === `${prefix}kick`){
 
     return;
   }
-   
-		
-    return message.channel.send(serverembed);
-   }
+
 
 
   if(cmd === `${prefix}serverinfo`){
