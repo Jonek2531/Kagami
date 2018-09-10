@@ -176,12 +176,12 @@ if(cmd === `${prefix}kick`){
 
 	  let serverembed = new Discord.RichEmbed()
     .setDescription("Informacje o użytkowniku", `${member.username}`)
-	  .addField("W grze:", message.member.game)
-	  .addField("Status:", message.member.status)
-	  .addField("Konto stworzone:", message.member.createdAt)
-	  .addField("Discord Tag:", message.member.discriminator)
-	  .addField("ID:", message.member.id)
-	  .addThumbnail(`${message.member.avatarURL}`);
+	  .addField("W grze:", message.user.game)
+	  .addField("Status:", message.user.status)
+	  .addField("Konto stworzone:", message.user.createdAt)
+	  .addField("Discord Tag:", message.user.discriminator)
+	  .addField("ID:", message.user.id)
+	  .addThumbnail(`${message.user.avatarURL}`);
    
 		
     return message.channel.send(serverembed);
@@ -206,8 +206,9 @@ if(cmd === `${prefix}kick`){
 
 
     return message.channel.send(serverembed);
-  }
 
+  }
+	
   if(cmd === `${prefix}logoserwera`){
 
     let embed = new Discord.RichEmbed()
