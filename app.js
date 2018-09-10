@@ -126,7 +126,6 @@ if(cmd === `${prefix}kick`){
     // Ooooh nice, combined conditions. <3
     if(!deleteCount || deleteCount < 1 || deleteCount > 50)
       return message.reply("Proszę podaj liczbę od 1 do 50.");
-	  if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Nie możesz usunąć wiadomości, ponieważ nie masz uprawnień!");
     
     // So we get our messages, and delete them. Simple enough, right?
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
