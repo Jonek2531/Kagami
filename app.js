@@ -176,7 +176,6 @@ if(cmd === `${prefix}kick`){
 
 	  let serverembed = new Discord.RichEmbed()
     .setDescription("Informacje o użytkowniku", `${user.username}`)
-    .AddField("Aktualnie gra w:", message.user.game)
 	  .addField("Status:", message.user.status)
 	  .addField("Konto stworzone:", message.user.createdAt)
 	  .addField("Discord Tag:", message.user.discriminator)
