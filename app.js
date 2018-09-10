@@ -202,7 +202,7 @@ if(cmd === `${prefix}kick`){
     .addField("Region serwera", message.guild.region)
     .addField("Liczba użytkowników", message.guild.memberCount)
     .addField("Poziom potwierdzenia konta", message.guild.verificationLevel)
-    .setThumbnail(`${message.guild.avatarURL}`);
+    .setThumbnail(`${message.author.avatarURL}`);
 
 
     return message.channel.send(serverembed);
