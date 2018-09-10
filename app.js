@@ -175,11 +175,13 @@ if(cmd === `${prefix}kick`){
 		let user = message.mentions.users.first() || message.author;
 
 	  let serverembed = new Discord.RichEmbed()
-    .setDescription("Informacje o użytkowniku", `${user.username}`)
-	  .addField("Konto stworzone:", message.user.createdAt)
-	  .addField("Discord Tag:", message.user.discriminator)
-	  .addField("ID:", message.user.id)
-	  .addThumbnail(`${message.author.avatarURL}`);
+    .setDescription("Informacje o użytkowniku", `${member.username}`)
+	  .addField("W grze:", message.member.game)
+	  .addField("Status:", message.member.status)
+	  .addField("Konto stworzone:", message.member.createdAt)
+	  .addField("Discord Tag:", message.member.discriminator)
+	  .addField("ID:", message.member.id)
+	  .addThumbnail(`${message.member.avatarURL}`);
    
 		
     return message.channel.send(serverembed);
