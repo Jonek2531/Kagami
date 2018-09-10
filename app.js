@@ -6,7 +6,7 @@ bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("!pomoc", {type: "STREAMING"});
+  bot.user.setActivity("!pomoc", {type: "WATCHING"});
 })
 
 bot.on("message", async message =>{
@@ -176,7 +176,6 @@ if(cmd === `${prefix}kick`){
 
 	  let serverembed = new Discord.RichEmbed()
     .setDescription("Informacje o użytkowniku", `${user.username}`)
-	  .addField("Status:", message.user.status)
 	  .addField("Konto stworzone:", message.user.createdAt)
 	  .addField("Discord Tag:", message.user.discriminator)
 	  .addField("ID:", message.user.id)
