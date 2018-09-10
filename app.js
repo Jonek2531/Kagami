@@ -170,18 +170,6 @@ if(cmd === `${prefix}kick`){
 
     return;
   }
- 
-	if(cmd === `${prefix}info`){
-		let user = message.mentions.users.first() || message.author;
-
-	  let serverembed = new Discord.RichEmbed()
-    .setDescription("Informacje o użytkowniku", `${user.username}`)
-	  .addField("W grze:", message.user.game)
-	  .addField("Status:", message.user.status)
-	  .addField("Konto stworzone:", message.user.createdAt)
-	  .addField("Discord Tag:", message.user.discriminator)
-	  .addField("ID:", message.user.id)
-	  .addThumbnail(`${message.user.avatarURL}`);
    
 		
     return message.channel.send(serverembed);
