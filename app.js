@@ -417,10 +417,10 @@ if(cmd === `${prefix}trump`){
 });
 };
 	
-	case 'say': if (message.startsWith("!say") == true) {//Check if the message send starts with "say" 
-		var newMessage = message.replace("say ", "");//Making a variable where "say " is removed 
-		bot.sendMessage({to: channelID, message:newMessage})//Send the new variable. } break;
-	
+if (message.startsWith("say") == true) {//Check if the message send starts with "say"
+    var newMessage = message.replace("say ", "");//Making a variable where "say " is removed
+    bot.sendMessage({to: channelID, message:newMessage})//Send the new variable.
+}
 if (cmd.startsWith(prefix + 'hug')) {
     let hug = [
         "https://data.whicdn.com/images/221692186/original.gif",
