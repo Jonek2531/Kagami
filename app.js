@@ -110,7 +110,7 @@ if(cmd === `${prefix}kick`){
     let banChannel = message.guild.channels.find(`name`, "logi");
     if(!banChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
 
-    message.guild.member(bUser).kick(bReason);
+    message.guild.member(bUser).ban(bReason);
 
     banChannel.send(banEmbed);
 
