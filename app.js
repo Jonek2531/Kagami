@@ -34,7 +34,7 @@ bot.on("message", async message =>{
 	  if(cmd === `${prefix}zakończmójżywotpls`) {
     let user = message.author;
     let embed = new Discord.RichEmbed()
-.addField("Żywot", message.author, "właśnie zakończył swój żywot.")
+.addField("Swój żywot właśnie zakończył", message.author)
 	  message.channel.send(embed)
 	  }
 
