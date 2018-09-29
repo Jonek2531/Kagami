@@ -235,6 +235,28 @@ if(cmd === `${prefix}kick`){
     return message.channel.send(helpembed);
   }
   
+	  if(cmd === `${prefix}pomoc 2`){
+
+    let helpembed = new Discord.RichEmbed()
+    .setDescription("Komendy bota")
+    .setColor("RANDOM")
+    .addField("!report <nick> <powód>", "reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie")
+    .addField("!serverinfo", "informacje dotyczące serwera")
+    .addField("!ban <nick> <powód>", "banujesz osobę. [Tylko dla Administracji]")
+    .addField("!kick <nick> <powód>", "wyrzucasz osobę z serwera [Tylko dla Administracji]")
+    .addField("!zapytaj <treść>", "pytasz się o coś bota, a on Ci odpowiada")
+    .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby")
+    .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
+    .addField("!zapal", "zaczynasz palić gumę :3")
+    .addField("!hug", "przytulasz oznaczoną osobę")
+    .addField("SEKRETNE/NIEPUBLICZNE KOMENDY")
+    .addField("!trump","pokazuje gify o trumpie")
+    .addField("!profil","pokazuje informacje o użytkowniku")
+    .addField("!say","bot coś za Ciebie pisze");
+
+    return message.channel.send(helpembed);
+  }
+  
   if(cmd === `${prefix}wybierz`){
     var choice = args[0];
   if (choice == "papier" || choice == "p") {
