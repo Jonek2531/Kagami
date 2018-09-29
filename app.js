@@ -102,7 +102,7 @@ if(cmd === `${prefix}kick`){
                  .setColor("#4286f4")
                  .setThumbnail(`${message.author.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${message.author.username}`, inline = true)
-            return message.channel.send(botembed);
+            return message.channel.send(embed);
         }
 
  if(cmd === `${prefix}ban`){
