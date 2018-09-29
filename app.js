@@ -79,7 +79,23 @@ if(cmd === `${prefix}kick`){
 
    return;
  }
+if(cmd === `${prefix}list`) {
+    var i = 0;
 
+    let embed = new Discord.RichEmbed()
+      .addField("List", "Content");
+
+    let anotherembed = new Discord.RichEmbed()
+      .addField("Message", "List has been completed!");
+
+    return message.channel.send(embed);
+
+    do {
+      message.channel.send(anotherembed + 1);
+    }
+    while (i !== 0) && (reaction.emoji.name === "✅");
+
+}
  if(cmd === `${prefix}profil`) {
        let botembed = new Discord.RichEmbed()
                  .setTitle("Profil")
