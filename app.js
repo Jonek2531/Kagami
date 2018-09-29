@@ -235,7 +235,7 @@ if(cmd === `${prefix}kick`){
     return message.channel.send(helpembed);
   }
   
-	  if(cmd === `${prefix}pomoc 2`){
+	  if(cmd === `${prefix}pomoc2`){
 
     let helpembed = new Discord.RichEmbed()
     .setDescription("Komendy bota")
