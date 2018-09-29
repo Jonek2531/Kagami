@@ -31,7 +31,12 @@ bot.on("message", async message =>{
     message.channel.send(embed)
   }
 	
-	
+	  if(cmd === `${prefix}zakończmójżywotpls`) {
+    let user = message.author;
+    let embed = new Discord.RichEmbed()
+.addField("Żywot","`${user.username} właśnie zakończył swój żywot.`);
+	  }
+
   
   if(cmd === `${prefix}zapytaj`){
   if(!args[1]) return message.reply("Zadaj pytanie!!!");
