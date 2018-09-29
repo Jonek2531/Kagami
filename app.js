@@ -95,6 +95,7 @@ if(cmd === `${prefix}kick`){
    return;
  }
  if(cmd === `${prefix}profil`) {
+	 let user = message.mentions.users.first() || message.author;
        let botembed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
