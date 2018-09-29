@@ -46,8 +46,8 @@ bot.on("message", async message =>{
   let ballembed = new Discord.RichEmbed()
   .setAuthor(message.author.tag)
   .setColor("#00e7ff")
-  .addField("Pytanie", question)
-  .addField("Odpowiedź", replies[result]);
+  .addField("Komenda jest tymczasowo zablokowana")
+  .addField("Powód: Zmienianie Odpowiedzi.);
 
   message.channel.send(ballembed)
 
