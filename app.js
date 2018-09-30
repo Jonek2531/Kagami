@@ -269,7 +269,8 @@ if(cmd === `${prefix}kick`){
     .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby")
     .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
     .addField("!zapal", "zaczynasz palić gumę :3")
-    .addField("!hug", "przytulasz oznaczoną osobę");
+    .addField("!hug", "przytulasz oznaczoną osobę")
+    .addField("!ankieta","tworzysz publiczną ankietę");
 
     return message.channel.send(helpembed);
   }
@@ -288,6 +289,7 @@ if(cmd === `${prefix}kick`){
     .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
     .addField("!zapal", "zaczynasz palić gumę :3")
     .addField("!hug", "przytulasz oznaczoną osobę")
+    .addField("!ankieta","tworzysz publiczną ankietę")
     .addField("SEKRETNE/NIEPUBLICZNE KOMENDY")
     .addField("!trump","pokazuje gify o trumpie")
     .addField("!profil","pokazuje informacje o użytkowniku")
