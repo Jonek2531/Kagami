@@ -42,6 +42,10 @@ bot.on("message", async message =>{
     	message.channel.send("Pong!");
 	}
 	
+		if(cmd === `${prefix}giveaway`) {
+    	message.channel.send("@Giveaway aby wziąć udział należy zareagować reakcją 🎉");
+	}
+	
   if(cmd === `${prefix}zapytaj`){
   if(!args[1]) return message.reply("Zadaj pytanie!!!");
   let replies = ["Tak", "Nie", "Myślę, że tak", "Myślę, że nie", "idk", "domyśl się", "rusz głową", "kappa","nwm","Igor","( ͡° ͜ʖ ͡°)","xDDD","XD","XDDDD","WINIARY","( ͡ ͡° ͡°  ʖ ͡° ͡°)","ryż","płatki","maxus","maxus6","maxus69",
