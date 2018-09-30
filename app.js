@@ -74,7 +74,7 @@ if (!message.member.roles.find("name", "@everyone"))  //Whatever role you want, 
 
     
     // Create Embed
-    const embed = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
         .setColor("#ffffff") //To change color do .setcolor("#fffff")
         .setFooter('React to Vote.')
         .setDescription(args.join(' '))
