@@ -51,7 +51,6 @@ bot.on("message", async message =>{
     }
     if (!command.startsWith(prefix)) return;
     if(cmd) cmd.run(bot, message, args)
-)
 	
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
