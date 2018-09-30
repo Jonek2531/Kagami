@@ -69,7 +69,6 @@ bot.on("message", async message =>{
 		if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want, I pick @everyone because everyone can use this command
 		message.channel.send('Invalid permissions.');
 		return;
-	}
     
     // Check for input
     if (!args[0]) return message.channel.send('Proper usage: a.poll <question>');
