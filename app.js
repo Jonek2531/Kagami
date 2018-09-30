@@ -76,8 +76,8 @@ if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want,
     let embed = new Discord.RichEmbed()
         .setColor("#ffffff") //To change color do .setcolor("#fffff")
         .setFooter('Aby zagłosować wystarczy wybrać odpowiednią reakcję.')
-        .setDescription(args.join(' '));
-	.setTitle(`Ankieta!`)
+        .setDescription(args.join(' '))
+	.setTitle(`Ankieta!`);
         
     if(cmd === `${prefix}ankieta`)
 	    message.channel.send(embed)
