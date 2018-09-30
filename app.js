@@ -38,8 +38,8 @@ bot.on("message", async message =>{
 .addField("Swój żywot właśnie zakończył", message.author)
 	  message.channel.send(embed)
 	  }
-	if (cmd === `${prefix}ping`) {
-    	msg.channel.sendMessage("Pong!");
+	if(cmd === `${prefix}ping`) {
+    	message.channel.send("Pong!");
 	}
 	
   if(cmd === `${prefix}zapytaj`){
