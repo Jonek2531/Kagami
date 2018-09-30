@@ -24,8 +24,6 @@ bot.on("message", async message =>{
 	if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     let messageArray = message.content.split(" ");
-    let command = messageArray[0];
-    let args = messageArray.slice(1);
     if (message.guild) {
         let score = bot.getScore.get(message.author.id, message.guild.id);
         if (!score) {
