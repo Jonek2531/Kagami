@@ -65,8 +65,9 @@ bot.on("message", async message =>{
   message.channel.send(ballembed)
 
  }
-	
-if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want, I pick @everyone because everyone can use this command
+
+	if(cmd === `${prefix}ankieta`){
+if (!message.member.roles.find("name", "@everyone"))  //Whatever role you want, I pick @everyone because everyone can use this command
 		message.channel.send('Invalid permissions.');
 		return;
 	}
