@@ -67,7 +67,7 @@ bot.on("message", async message =>{
  }
 
 if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want, I pick @everyone because everyone can use this command
-		message.channel.send('Invalid permissions.');
+		message.channel.send('Nie masz uprawnień');
 		return;
 	}
 
@@ -75,9 +75,8 @@ if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want,
     // Create Embed
     let embed = new Discord.RichEmbed()
         .setColor("#ffffff") //To change color do .setcolor("#fffff")
-        .setFooter('React to Vote.')
-        .setDescription(args.join(' '))
-        .setTitle(`Poll Created By ${message.author.username}`);
+        .setFooter('Aby zagłosować wystarczy wybrać odpowiednią reakcję.')
+        .setDescription(args.join(' '));
         
     if(cmd === `${prefix}ankieta`)
 	    message.channel.send(embed)
