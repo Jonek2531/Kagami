@@ -38,6 +38,9 @@ bot.on("message", async message =>{
 .addField("Swój żywot właśnie zakończył", message.author)
 	  message.channel.send(embed)
 	  }
+	if (cmd === `${prefix}ping`) {
+    	msg.channel.sendMessage("Pong!");
+	}
 	
   if(cmd === `${prefix}zapytaj`){
   if(!args[1]) return message.reply("Zadaj pytanie!!!");
