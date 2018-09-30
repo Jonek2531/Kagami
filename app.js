@@ -70,9 +70,7 @@ if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want,
 		message.channel.send('Invalid permissions.');
 		return;
 	}
-    
-    // Check for input
-    if (!args[0]) return message.channel.send('Proper usage: a.poll <question>');
+
     
     // Create Embed
     const embedd = new Discord.RichEmbed()
