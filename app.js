@@ -39,7 +39,7 @@ bot.on("message", async message =>{
 
 
     // Define our embed
-    const embed = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
         .setColor(role.hexColor)
         .setTitle(`Role: ${role.name}`)
         .addField('Members', role.members.size, true)
