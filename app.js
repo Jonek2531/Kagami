@@ -66,8 +66,7 @@ bot.on("message", async message =>{
 
  }
 
-	if(cmd === `${prefix}ankieta`){
-if (!message.member.roles.find("name", "@everyone"))  //Whatever role you want, I pick @everyone because everyone can use this command
+if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want, I pick @everyone because everyone can use this command
 		message.channel.send('Invalid permissions.');
 		return;
 	}
@@ -80,7 +79,8 @@ if (!message.member.roles.find("name", "@everyone"))  //Whatever role you want, 
         .setDescription(args.join(' '))
         .setTitle(`Poll Created By ${message.author.username}`);
         
-    let msg = await message.channel.send(embed)
+    if(cmd === `${prefix}ankieta`)
+	    message.channel.send(embed)
         .then(function (msg) {
             msg.react("❎");
             msg.react("✅"); // You can only add two reacts
