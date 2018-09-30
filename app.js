@@ -75,7 +75,7 @@ if (!message.member.roles.find("name", "@everyone")) { //Whatever role you want,
     if (!args[0]) return message.channel.send('Proper usage: a.poll <question>');
     
     // Create Embed
-    const embed = new Discord.RichEmbed()
+    const embedd = new Discord.RichEmbed()
         .setColor("#ffffff") //To change color do .setcolor("#fffff")
         .setFooter('React to Vote.')
         .setDescription(args.join(' '))
