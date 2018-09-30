@@ -21,37 +21,7 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
        
-	if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-    let messageArray = message.content.split(" ");
-    if (message.guild) {
-        let score = bot.getScore.get(message.author.id, message.guild.id);
-        if (!score){ 
-          score = {
-            id: `${message.guild.id}-${message.author.id}`,
-            user: message.author.id,
-            guild: message.guild.id,
-            points: 0,
-            level: 1
-          }
-        }
-        // Increment the score
-        score.points++;
-         
-        // Calculate the current level through MATH OMG HALP.
-        const curLevel = Math.floor(0.1 * Math.sqrt(score.points));
-         
-        // Check if the user has leveled up, and let them know if they have:
-        if(score.level < curLevel) {
-          // Level up!
-          score.level++;
-          message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
-        }
-        bot.setScore.run(score);
-    }
-    if (!command.startsWith(prefix)) return;
-    if(cmd) cmd.run(bot, message, args)
-	
+
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
 
