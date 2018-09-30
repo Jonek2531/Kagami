@@ -26,7 +26,7 @@ bot.on("message", async message =>{
     let messageArray = message.content.split(" ");
     if (message.guild) {
         let score = bot.getScore.get(message.author.id, message.guild.id);
-        if (!score) {
+        if (!score){ 
           score = {
             id: `${message.guild.id}-${message.author.id}`,
             user: message.author.id,
@@ -51,7 +51,7 @@ bot.on("message", async message =>{
     }
     if (!command.startsWith(prefix)) return;
     if(cmd) cmd.run(bot, message, args)
-})
+)
 	
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
