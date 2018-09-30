@@ -433,7 +433,7 @@ if(cmd === `${prefix}trump`){
 
           ];
           let gif = (replys[Math.floor(Math.random() * replys.length)])
-          var embed = new Discord.RichEmbed()
+          let embed = new Discord.RichEmbed()
           .setColor("RANDOM")
           .setImage(gif)
           .setFooter('Trump')  
