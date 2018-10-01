@@ -37,7 +37,7 @@ bot.on("message", async message =>{
 
     let gayembed = new Discord.RichEmbed()
         .setColor("#f442d4")
-        .setTitle(`:gay_pride_flag: **I think ${message.author.username} is ${gay}% gay!** :gay_pride_flag:`);
+        .setTitle(`:gay_pride_flag: **${message.author.username} jest w ${gay}% gejem!** :gay_pride_flag:`);
     return message.channel.send(gayembed);
 };
 
