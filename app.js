@@ -46,7 +46,8 @@ bot.on("message", async message =>{
     let embed = new Discord.RichEmbed()
 .addField("Swój żywot właśnie zakończył", message.author)
 	  message.channel.send(embed)
-	  }
+	  
+       
 	if(cmd === `${prefix}ping`) {
     	message.channel.send("Pong!");
 	}
