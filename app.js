@@ -41,15 +41,7 @@ bot.on("message", async message =>{
     return message.channel.send(gayembed);
 };
 
-	    if (cmd === `${prefix}nick`) {
-		    
-   let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-   if(!kUser) return message.channel.send("Nie ma takiego użytkownika!");
-   let kReason = args.join(" ").slice(22);
-		    if(!message.member.hasPermission("MANAGE_NICKNAMES")) return message.channel.send("Nie możesz zmienić nicku tej osobie, ponieważ nie masz uprawnień!");
-   if(kUser.hasPermission("MANAGE_NICKNAMES")) return message.channel.send("Nie możesz zmienić nicku tej osoby!");
-        client.setNickname({nick: message.content.replace('changeNick ', '')});	
-	  if(cmd === `${prefix}zakończmójżywotpls`) {
+
     let user = message.author;
     let embed = new Discord.RichEmbed()
 .addField("Swój żywot właśnie zakończył", message.author)
@@ -543,6 +535,6 @@ if (cmd.startsWith(prefix + 'hug')) {
         embed: ghembed
     })
 }
-}
+})
 
 bot.login(process.env.BOT_TOKEN)
