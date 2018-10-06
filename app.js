@@ -145,10 +145,6 @@ if(cmd === `${prefix}kik`){
     if(!message.member.roles.some(r=>["HeadAdmin", "Administrator", "Moderator"].includes(r.name)) )
       return message.reply("Sory ziomix, ale nie masz do tego uprawnień");
 
-
-
-
-   kickChannel.send(kickEmbed);
     // Let's first check if we have a member and if we can kick them!
     // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
     // We can also support getting the member by ID, which would be args[0]
