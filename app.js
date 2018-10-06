@@ -31,6 +31,17 @@ bot.on("message", async message =>{
 
     message.channel.send(embed)
   }
+	 if(cmd === `${prefix}profil`) {
+   let user = message.mentions.users.first() || message.author;
+       let embed = new Discord.RichEmbed()
+                 .setTitle("Profil")
+                 .setTimestamp(new Date())
+                 .setColor("#4286f4")
+                 .setThumbnail(`${message.author.avatarURL}`)
+                 .addField("Nazwa Użytkownika", `${user.username}` , inline = true)
+            return message.channel.send(embed);
+        }
+
 
 	if(cmd === `${prefix}gay`){
 	    let gay = Math.round(Math.random() * 100);
@@ -167,17 +178,6 @@ if(cmd === `${prefix}kik`){
   }
   
 	
-	
- if(cmd === `${prefix}profil`) {
-   let user = message.mentions.users.first();
-       let embed = new Discord.RichEmbed()
-                 .setTitle("Profil")
-                 .setTimestamp(new Date())
-                 .setColor("#4286f4")
-                 .setThumbnail(`${message.author.avatarURL}`)
-                 .addField("Nazwa Użytkownika", `${message.author.username}` , inline = true)
-            return message.channel.send(embed);
-        }
 
  if(cmd === `${prefix}ban`){
 
