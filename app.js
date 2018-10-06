@@ -37,7 +37,7 @@ bot.on("message", async message =>{
                  .setTitle("Profil")
                  .setTimestamp(new Date())
                  .setColor("#4286f4")
-                 .setThumbnail(`${message.author.avatarURL}`)
+                 .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}` , inline = true)
             return message.channel.send(embed);
         }
