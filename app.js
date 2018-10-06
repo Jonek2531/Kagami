@@ -162,7 +162,7 @@ if(cmd === `${prefix}kik`){
     // Now, time for a swift kick in the nuts!
     await member.kick(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.reply(`${member.user.tag}  ${message.author.tag} because: ${reason}`);
+    message.reply(`${member.user.tag} wyrzucił z serwera ${message.author.tag} ponieważ: ${reason}`);
 
   }
   
