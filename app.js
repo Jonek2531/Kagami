@@ -144,18 +144,8 @@ if(cmd === `${prefix}kik`){
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
     if(!message.member.roles.some(r=>["HeadAdmin", "Administrator", "Moderator"].includes(r.name)) )
       return message.reply("Sory ziomix, ale nie masz do tego uprawnień");
-    
-		     let kickEmbed = new Discord.RichEmbed()
-   .setDescription("Kick")
-   .setColor("#00e7ff")
-   .addField("Wyrzucony użytkownik", `${kUser}, ID użytkownika ${kUser.id}`)
-   .addField("Wyrzucony przez", `<@${message.author.id}>, ID użytkownika: ${message.author.id}`)
-   .addField("Na kanale", message.channel)
-   .addField("O godzinie", message.createdAt)
-   .addField("Powód", kReason);
 
-   let kickChannel = message.guild.channels.find(`name`, "logi");
-   if(!kickChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
+
 
 
    kickChannel.send(kickEmbed);
