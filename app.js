@@ -50,7 +50,7 @@ if (message.content.startsWith(prefix + "reply")) {
     var Rargs = message.content.split(" ").slice(2).join(" ")
     var userID = args[1]
     if (isNaN(args[1])) return message.reply("This is not an ID!") //if args is Not A Number!
-    var embed = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setTitle("the staff answered you!")
         .setDescription(Rargs)
