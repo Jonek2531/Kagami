@@ -57,7 +57,7 @@ if (message.content.startsWith(prefix + "reply")) {
         .setFooter("this message was sent to you by: " + message.author.username + " !")
     bot.users.get(userID).send(embed)
     message.channel.send("Send!").catch(console.error) 
-	
+}
 	 if(cmd === `${prefix}profil`) {
    let user = message.mentions.users.first() || message.author;
        let embed = new Discord.RichEmbed()
