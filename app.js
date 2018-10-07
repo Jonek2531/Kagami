@@ -39,7 +39,7 @@ bot.on("message", async message =>{
     message.channel.send("This message has been send to the staff! :incoming_envelope:");
     if (message.content.startsWith(prefix)) return
     if (args.length > 256) return message.reply("Your message content too many characters :/") //if the message contnt more than 256 character, what fields do not allow
-    var embed = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setTitle("New request in DM!")
         .addField(args, "Send by: " + message.author.username + " with the ID: " + message.author.id)
