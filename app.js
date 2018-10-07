@@ -47,7 +47,6 @@ bot.on("message", async message =>{
 
 if (message.content.startsWith(prefix + "reply")) {
     if (message.author.id !== "YOUR_ID") return message.reply('You cannot use that!')
-    var args = message.content.split(" ").slice(0)
     var Rargs = message.content.split(" ").slice(2).join(" ")
     var userID = args[1]
     if (isNaN(args[1])) return message.reply("This is not an ID!") //if args is Not A Number!
