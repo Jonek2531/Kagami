@@ -21,10 +21,6 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
        
-client.on('channelCreate', async channel => {
-
-  console.log(`${channel.name} has been created.`);
-
 if (channel.type != 'text') return;
   let sChannel = channel.guild.channels.find('name', 'logi');
   sChannel.send(`The channel ${channel} has been created`);
