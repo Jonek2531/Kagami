@@ -32,7 +32,8 @@ bot.on("message", async message =>{
   }
 	
 	if (message.channel.type === "dm") { //if the channel is a DM channel
-
+   var args = message.content.split(" ").slice(0)
+    var args = args.slice(0).join(" ") //create the args
     if (message.content.startsWith(prefix)) return message.channel.send(":x: Please use commands in real server! :x:") //if the message is a command
     message.channel.send("This message has been send to the staff! :incoming_envelope:");
     if (message.content.startsWith(prefix)) return
@@ -47,6 +48,7 @@ bot.on("message", async message =>{
 
 if (message.content.startsWith(prefix + "reply")) {
     if (message.author.id !== "YOUR_ID") return message.reply('You cannot use that!')
+	var args = message.content.split(" ").slice(0)
     var Rargs = message.content.split(" ").slice(2).join(" ")
     var userID = args[1]
     if (isNaN(args[1])) return message.reply("This is not an ID!") //if args is Not A Number!
