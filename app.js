@@ -24,8 +24,6 @@ bot.on("message", async message =>{
 if (channel.type != 'text') return;
   let sChannel = channel.guild.channels.find('name', 'logi');
   sChannel.send(`The channel ${channel} has been created`);
-
-});
 	
 	
   if(cmd === `${prefix}avatar`) {
