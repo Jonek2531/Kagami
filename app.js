@@ -11,6 +11,7 @@ bot.on("ready", async () =>{
 
 bot.on("message", async message =>{
   if(message.author.bot) return;
+	  if(message.channel.type === "dm") return;
 
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
@@ -31,7 +32,6 @@ bot.on("message", async message =>{
   }
 	
 	if (message.channel.type === "dm") { //if the channel is a DM channel
-   let args = message.content.split(" ").slice(0)
     let args = args.slice(0).join(" ") //create the args
     if (message.content.startsWith(prefix)) return message.channel.send(":x: Please use commands in real server! :x:") //if the message is a command
     message.channel.send("This message has been send to the staff! :incoming_envelope:");
