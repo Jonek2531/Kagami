@@ -30,6 +30,37 @@ bot.on("message", async message =>{
 
     message.channel.send(embed)
   }
+	
+	if (message.channel.type === "dm") { //if the channel is a DM channel
+    var args = message.content.split(" ").slice(0)
+    var args = args.slice(0).join(" ") //create the args
+
+    if (message.content.startsWith(prefix)) return message.channel.send(":x: Please use commands in real server! :x:") //if the message is a command
+    message.channel.send("This message has been send to the staff! :incoming_envelope:");
+    if (message.content.startsWith(prefix)) return
+    if (args.length > 256) return message.reply("Your message content too many characters :/") //if the message contnt more than 256 character, what fields do not allow
+    var embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle("New request in DM!")
+        .addField(args, "Send by: " + message.author.username + " with the ID: " + message.author.id)
+    bot.guilds.get("495654037207646219").channels.get("498456659480412171").send(embed) //send the embed in a specific channel
+}
+
+
+if (message.content.startsWith(prefix + "reply")) {
+    if (message.author.id !== "YOUR_ID") return message.reply('You cannot use that!')
+    var args = message.content.split(" ").slice(0)
+    var Rargs = message.content.split(" ").slice(2).join(" ")
+    var userID = args[1]
+    if (isNaN(args[1])) return message.reply("This is not an ID!") //if args is Not A Number!
+    var embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle("the staff answered you!")
+        .setDescription(Rargs)
+        .setFooter("this message was sent to you by: " + message.author.username + " !")
+    bot.users.get(userID).send(embed)
+    message.channel.send("Send!").catch(console.error) 
+	
 	 if(cmd === `${prefix}profil`) {
    let user = message.mentions.users.first() || message.author;
        let embed = new Discord.RichEmbed()
