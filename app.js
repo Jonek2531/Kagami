@@ -46,7 +46,7 @@ bot.on("message", async message =>{
 
 
 if (message.content.startsWith(prefix + "reply")) {
-    if (message.author.id !== "YOUR_ID") return message.reply('You cannot use that!')
+    if (message.author.id !== "329694416472375298") return message.reply('You cannot use that!')
 	let args = message.content.split(" ").slice(0)
     var Rargs = message.content.split(" ").slice(2).join(" ")
     var userID = args[1]
