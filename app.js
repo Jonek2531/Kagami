@@ -79,6 +79,7 @@ bot.on("channelDelete", async channel => {
                  .setColor("#4286f4")
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}` , inline = true)
+                 .addField("ID", `${user.id}`)
             return message.channel.send(embed);
         }
 
