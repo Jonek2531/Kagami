@@ -17,9 +17,9 @@ bot.on("channelCreate", async channel => {
 	var logs = channel.guild.channels.find(c => c.name === 'logi');
 	if (!logs) return console.log("Can't find logs channel.");
 	const cembed = new Discord.RichEmbed()
-		.setTitle("Channel Created")
+		.setTitle("Stworzenie Kanału")
 		.setColor("RANDOM")
-		.setDescription(`A **${channel.type} channel**, by the name of **${channel.name}**, was just created!`)
+		.setDescription(`Właśnie został stworzony kanał tekstowy z nazwą **${channel.name}**!`)
 		.setTimestamp(new Date());
 	logs.send(cembed)
 });
@@ -28,9 +28,9 @@ bot.on("channelDelete", async channel => {
 	var logs = channel.guild.channels.find(c => c.name === 'logi');
 	if (!logs) return console.log("Can't find logs channel.");
 	const cembed = new Discord.RichEmbed()
-		.setTitle("Channel Deleted")
+		.setTitle("Usunięcie Kanału")
 		.setColor("RANDOM")
-		.setDescription(`A **${channel.type} channel**, by the name of **${channel.name}**, was just deleted!`)
+		.setDescription(`Właśnie został usunięty kanał głosowy z nazwą **${channel.name}**`)
 		.setTimestamp(new Date())
 	logs.send(cembed)
 });
