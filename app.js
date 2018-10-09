@@ -83,7 +83,7 @@ bot.on("channelDelete", async channel => {
                  .addField("Discord Tag", `${user.discriminator}`)
                  .addField("Utworzono dnia", `${user.createdAt}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage}`)
-       .addField("hmm", `${user.createdTimestamp}`)
+       .addField("Status", `${user.status}`)
             return message.channel.send(embed);
         }
 
