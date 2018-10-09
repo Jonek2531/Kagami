@@ -14,7 +14,7 @@ bot.on("message", async message =>{
 	  if(message.channel.type === "dm") return;
 	
 bot.on("channelCreate", async channel => {
-	var logs = channel.guild.channels.find(c => c.name === 'logs');
+	var logs = channel.guild.channels.find(c => c.name === 'logi');
 	if (!logs) return console.log("Can't find logs channel.");
 	const cembed = new Discord.RichEmbed()
 		.setTitle("Channel Created")
@@ -25,7 +25,7 @@ bot.on("channelCreate", async channel => {
 });
 
 bot.on("channelDelete", async channel => {
-	var logs = channel.guild.channels.find(c => c.name === 'logs');
+	var logs = channel.guild.channels.find(c => c.name === 'logi');
 	if (!logs) return console.log("Can't find logs channel.");
 	const cembed = new Discord.RichEmbed()
 		.setTitle("Channel Deleted")
