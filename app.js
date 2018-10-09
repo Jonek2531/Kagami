@@ -80,6 +80,7 @@ bot.on("channelDelete", async channel => {
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}` , inline = true)
                  .addField("ID", `${user.id}`)
+                 .addField("Discord Tag", `${user.discriminator}`)
             return message.channel.send(embed);
         }
 
