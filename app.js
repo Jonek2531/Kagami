@@ -12,28 +12,7 @@ bot.on("ready", async () =>{
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;
-	
-bot.on("channelCreate", async channel => {
-	var logs = channel.guild.channels.find(c => c.name === 'logi');
-	if (!logs) return console.log("Can't find logs channel.");
-	const cembed = new Discord.RichEmbed()
-		.setTitle("Stworzenie Kanału")
-		.setColor("RANDOM")
-		.setDescription(`Właśnie został stworzony kanał tekstowy z nazwą **${channel.name}**!`)
-		.setTimestamp(new Date());
-	logs.send(cembed)
-});
 
-bot.on("channelDelete", async channel => {
-	var logs = channel.guild.channels.find(c => c.name === 'logi');
-	if (!logs) return console.log("Can't find logs channel.");
-	const cembed = new Discord.RichEmbed()
-		.setTitle("Usunięcie Kanału")
-		.setColor("RANDOM")
-		.setDescription(`Właśnie został usunięty kanał głosowy z nazwą **${channel.name}**`)
-		.setTimestamp(new Date())
-	logs.send(cembed)
-});
 
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
