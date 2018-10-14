@@ -33,7 +33,7 @@ module.exports = (client, member, message) => {
     .setTimestamp();
     welcomeChannel.send(WelcomeEmbed)
   }
-	
+}	
 	
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
