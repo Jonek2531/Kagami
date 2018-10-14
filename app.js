@@ -27,7 +27,7 @@ module.exports = (client, member, message) => {
      let WelcomeEmbed = new Discord.RichEmbed()
     .setTitle("Nowy użytkownik na serwerze!")
     .setThumbnail(member.user.displayAvatarURL)
-    .setDescription(`Witaj ${member.user} na serwerze ${member.guild.name}, \nPrzeczytaj <#450284760489787402> \n oraz zapoznaj się z <#446406712191090718>`)
+    .setDescription(`Witaj ${member.user} na serwerze ${member.guild.name}. Przeczytaj <#450284760489787402> oraz zapoznaj się z <#446406712191090718>`)
     .setColor("#4286f4")
     .setFooter(`Jesteś ${member.guild.memberCount} na serwerze!`)
     .setTimestamp();
