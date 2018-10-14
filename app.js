@@ -103,10 +103,10 @@ bot.on("message", async message =>{
 
   let ballembed = new Discord.RichEmbed()
   .setAuthor(message.author.tag)
+  .setTimestamp(new Date())
   .setColor("#00e7ff")
   .addField("Pytanie", question)
-  .addField("Odpowiedź", replies[result])
-  .setTimestamp("Pamiętaj, że bot losuje odpowiedzi i nawet nie wie co piszesz.");
+  .addField("Odpowiedź", replies[result]);
 
   message.channel.send(ballembed)
 
