@@ -558,6 +558,7 @@ if (cmd.startsWith(prefix + 'hug')) {
         embed: ghembed
     })
 }
+})
 
 
 bot.login(process.env.BOT_TOKEN)
