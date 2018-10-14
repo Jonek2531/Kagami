@@ -166,33 +166,6 @@ if(cmd === `${prefix}kik`){
 	
 
  }
-	  if(cmd === `${prefix}kick`) {
-    // This command must be limited to mods and admins. In this example we just hardcode the role names.
-    // Please read on Array.some() to understand this bit: 
-    // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.some(r=>["HeadAdmin", "Administrator", "Moderator"].includes(r.name)) )
-      return message.reply("Sory ziomix, ale nie masz do tego uprawnień");
-
-    // Let's first check if we have a member and if we can kick them!
-    // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
-    // We can also support getting the member by ID, which would be args[0]
-    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-    if(!member)
-      return message.reply("Oznacz osobę którą mam wyrzucić");
-    if(!member.kickable) 
-      return message.reply("Niestety, ale nie mogę wyrzucić osoby która ma rolę wyższą ode mnie -,-");
-    
-    // slice(1) removes the first part, which here should be the user mention or ID
-    // join(' ') takes all the various parts to make it a single string.
-    let reason = args.slice(1).join(' ');
-    if(!reason) reason = "Nie podano powodu";
-    
-    // Now, time for a swift kick in the nuts!
-    await member.kick(reason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.reply(`${member.user.tag} został wyrzucony z serwera przez ${message.author.tag} z powodem: ${reason}`);
-
-  }
   
 	
 
