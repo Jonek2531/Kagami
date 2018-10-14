@@ -106,8 +106,8 @@ bot.on("message", async message =>{
   .setTimestamp(new Date())
   .setColor("#00e7ff")
   .addField("Pytanie", question)
-  .addField("Odpowiedź", replies[result]);
-
+  .addField("Odpowiedź", replies[result])
+.addField("------------------", "Pamiętaj że bot losuje odpowiedzi i nie wie nawet co piszesz");
   message.channel.send(ballembed)
 
   }
