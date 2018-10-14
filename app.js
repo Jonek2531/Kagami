@@ -12,6 +12,9 @@ bot.on("ready", async () =>{
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;
+	Client.on('guildMemberAdd', (guild, member) => {
+guild.channels.get("lobby").sendMessage("Witaj "+ member + " na serwerze! Zapoznaj się z informacjami na <#450284760489787402> :wink:");
+	});
 
 
   let prefix = botconfig.prefix;
@@ -75,18 +78,6 @@ bot.on("message", async message =>{
         .setTitle(`:gay_pride_flag: **${message.author.username} jest w ${gay}% gejem!** :gay_pride_flag:`);
     return message.channel.send(gayembed);
 };
-
-	client.on("guildMemberAdd", (member) => {
-  const guild = member.guild;
-  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
-  newUsers[guild.id].set(member.id, member.user);
-
-  if (newUsers[guild.id].size > 10) {
-    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.find("name", "lobby").send("Witamy na serwerze!" + userlist);
-    newUsers[guild.id].clear();
-  }
-});
 	
 	
 	  if(cmd === `${prefix}zakończmójżywotpls`) {
