@@ -2,17 +2,6 @@ const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
-  const welcomeChannel = member.guild.channels.find('name', 'lobby');
-  if (welcomeChannel) {
-     let WelcomeEmbed = new Discord.RichEmbed()
-    .setTitle("Nowy użytkownik na serwerze!")
-    .setThumbnail(member.user.displayAvatarURL)
-    .setDescription(`Witaj ${member.user} na serwerze ${member.guild.name}, \nPrzeczytaj <#450284760489787402> \n oraz zapoznaj się z <#446406712191090718>`)
-    .setColor("#4286f4")
-    .setFooter(`Jesteś ${member.guild.memberCount} na serwerze!`)
-    .setTimestamp();
-    welcomeChannel.send(WelcomeEmbed)
-  }
 bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
@@ -31,6 +20,20 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
+	
+module.exports = (client, member, message) => {
+	  const welcomeChannel = member.guild.channels.find('name', 'lobby');
+  if (welcomeChannel) {
+     let WelcomeEmbed = new Discord.RichEmbed()
+    .setTitle("Nowy użytkownik na serwerze!")
+    .setThumbnail(member.user.displayAvatarURL)
+    .setDescription(`Witaj ${member.user} na serwerze ${member.guild.name}, \nPrzeczytaj <#450284760489787402> \n oraz zapoznaj się z <#446406712191090718>`)
+    .setColor("#4286f4")
+    .setFooter(`Jesteś ${member.guild.memberCount} na serwerze!`)
+    .setTimestamp();
+    welcomeChannel.send(WelcomeEmbed)
+  }
+	
 	
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
