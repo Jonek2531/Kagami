@@ -2,6 +2,17 @@ const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+  const welcomeChannel = member.guild.channels.find('name', 'lobby');
+  if (welcomeChannel) {
+     let WelcomeEmbed = new Discord.RichEmbed()
+    .setTitle("Nowy użytkownik na serwerze!")
+    .setThumbnail(member.user.displayAvatarURL)
+    .setDescription(`Witaj ${member.user} na serwerze ${member.guild.name}, \nPrzeczytaj <#450284760489787402> \n oraz zapoznaj się z <#446406712191090718>`)
+    .setColor("#4286f4")
+    .setFooter(`Jesteś ${member.guild.memberCount} na serwerze!`)
+    .setTimestamp();
+    welcomeChannel.send(WelcomeEmbed)
+  }
 bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
@@ -12,11 +23,7 @@ bot.on("ready", async () =>{
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;
-	Client.on('guildMemberAdd', (guild, member) => {
-guild.channels.get("lobby").sendMessage("Witaj "+ member + " na serwerze! Zapoznaj się z informacjami na <#450284760489787402> :wink:");
-	});
-
-
+	
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
   let cmd = msgArray[0];
@@ -34,6 +41,7 @@ guild.channels.get("lobby").sendMessage("Witaj "+ member + " na serwerze! Zapozn
 
     message.channel.send(embed)
   }
+
 	
  
     // Create Embed
