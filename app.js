@@ -35,14 +35,12 @@ module.exports = (client, member, message) => {
 }	
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-if (!dUser) return message.channel.send("Can't find user!")
-if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You can't you that command!")
+if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
+if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Nie masz uprawnień!")
 let dMessage = args.join(" ").slice(22);
-if(dMessage.length < 1) return message.reply('You must supply a message!')
+if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
 
-dUser.send(`${dUser} A moderator from WP Coding Club sent you: ${dMessage}`)
-
-message.author.send(`${message.author} You have sent your message to ${dUser}`)
+dUser.send(`${dUser} została wysłana do Ciebie wiadomość. Treść wiadomości: ${dMessage}`)
 
 }
 
