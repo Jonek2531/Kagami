@@ -33,17 +33,16 @@ module.exports = (client, member, message) => {
     welcomeChannel.send(WelcomeEmbed)
   }
 }	
-if(cmd === !dm){
-	
+if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Can't find user!")
-if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Nie masz uprawnień!")
+if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You can't you that command!")
 let dMessage = args.join(" ").slice(22);
-if(dMessage.length < 1) return message.reply('Musisz coś napisać w wiadomości!')
+if(dMessage.length < 1) return message.reply('You must supply a message!')
 
-dUser.send(`${dUser} jeden z członków administracji wysłał do Ciebie wiadomość: ${dMessage}`)
+dUser.send(`${dUser} A moderator from WP Coding Club sent you: ${dMessage}`)
 
-message.author.send(`${message.author} pomyślnie wysłano wiadomość do ${dUser}`)
+message.author.send(`${message.author} You have sent your message to ${dUser}`)
 
 }
 
