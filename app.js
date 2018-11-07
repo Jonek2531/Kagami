@@ -88,7 +88,7 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator}` , inline = true)
                  .addField("ID", `${user.id}`)
                  .addField("Utworzono dnia", `${user.createdAt}`)
-                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${user.lastMessage.id}`)
+                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${user.lastMessage.id})`)
             return message.channel.send(embed);
         }
 
