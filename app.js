@@ -85,12 +85,11 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
                  .setTimestamp(new Date())
                  .setColor("#4286f4")
                  .setThumbnail(`${user.avatarURL}`)
-                 .addField("Nazwa Użytkownika", `${user.username}` , inline = true)
+                 .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator}` , inline = true)
                  .addField("ID", `${user.id}`)
                  .addField("Discord Tag", `${user.discriminator}`)
                  .addField("Utworzono dnia", `${user.createdAt}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage}`)
-       .addField("c0ś", `${user.presence}`)
             return message.channel.send(embed);
         }
 
