@@ -28,7 +28,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Witaj na serwerze, ${member}! Zapoznaj się z regulaminem oraz z informacjami. Jesteś message.guild.memberCount użytkownikiem na serwerze! `);
+  channel.send(`Witaj na serwerze, ${member}! Zapoznaj się z regulaminem oraz z informacjami. Jesteś message.guild.memberCount użytkownikiem na serwerze! `)
 
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
