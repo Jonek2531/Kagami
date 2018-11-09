@@ -70,6 +70,7 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
 	
 	 if(cmd === `${prefix}profil`) {
    let user = message.mentions.users.first() || message.author;
+		 let game = message.mentions.users.first() || message.author;
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
@@ -79,7 +80,7 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
                  .addField("ID", `${user.id}`)
                  .addField("Utworzono dnia", `${user.createdAt}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${user.lastMessageID})`)
-       .addField("Notatka", `${user.note}`)
+       .addField("Gra", `${.game.applicationID}`)
             return message.channel.send(embed);
         }
 
