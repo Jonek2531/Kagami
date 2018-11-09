@@ -258,6 +258,7 @@ if(cmd === `${prefix}kik`){
 
     .setDescription("**Informacje serwera**", message.guild.name)
     .setColor("#00e7ff")
+    .setTimestamp(new Date())
     .addField("Data stworzenia serwera", message.guild.createdAt)
     .addField("Data dołączenia na serwer", message.member.joinedAt)
     .addField("Założyciel serwera", message.guild.owner)
@@ -296,6 +297,7 @@ if(cmd === `${prefix}kik`){
     let helpembed = new Discord.RichEmbed()
     .setDescription("Komendy bota")
     .setColor("RANDOM")
+    .setTimestamp(new Date())
     .addField("!report <nick> <powód>", "reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie")
     .addField("!serverinfo", "informacje dotyczące serwera")
     .addField("!ban <nick> <powód>", "banujesz osobę. [Tylko dla Administracji]")
@@ -315,6 +317,7 @@ if(cmd === `${prefix}kik`){
     let helpembed = new Discord.RichEmbed()
     .setDescription("Komendy bota")
     .setColor("RANDOM")
+    .setTimestamp(new Date())
     .addField("!report <nick> <powód>", "reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie")
     .addField("!serverinfo", "informacje dotyczące serwera")
     .addField("!ban <nick> <powód>", "banujesz osobę. [Tylko dla Administracji]")
