@@ -72,7 +72,6 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
 	
 	 if(cmd === `${prefix}profil`) {
    let user = message.mentions.users.first() || message.author;
-		 let game = message.mentions.users.first() || message.author;
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
@@ -80,7 +79,6 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${user.createdAt}`)
-           .addField("W grze", `${member.user.presence.game ? `${member.user.presence.game.name}` : "not playing anything."}`, true)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${user.lastMessageID})`)
             return message.channel.send(embed);
         }
