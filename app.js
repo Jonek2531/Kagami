@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+
 bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
@@ -20,19 +21,15 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
-	
-module.exports = (client, member, message) => {
-	  const welcomeChannel = member.guild.channels.find('name', 'lobby');
-  if (welcomeChannel) {
-     let WelcomeEmbed = new Discord.RichEmbed()
-    .setTitle("Nowy użytkownik na serwerze!")
-    .setThumbnail(member.user.displayAvatarURL)
-    .setDescription(`Witaj ${member.user} na serwerze ${member.guild.name} . Przeczytaj <#450284760489787402> oraz zapoznaj się z <#446406712191090718>`)
-    .setColor("#4286f4")
-    .setTimestamp();
-    welcomeChannel.send(WelcomeEmbed)
-  }
-}	
+		
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === 'lobby');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Witaj na serwerze, ${member}! Zapoznaj się z regulaminem oraz z informacjami. Jesteś message.guild.memberCount użytkownikiem na serwerze! `);
+
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
