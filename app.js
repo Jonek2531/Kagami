@@ -22,15 +22,6 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
-		
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === 'lobby');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Witaj na serwerze, ${member}! Zapoznaj się z regulaminem oraz z informacjami. Jesteś message.guild.memberCount użytkownikiem na serwerze! `);
-});
 
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
