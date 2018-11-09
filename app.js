@@ -79,6 +79,7 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${user.createdAt}`)
+       .addField("Status", `${user.presence.status}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${user.lastMessageID})`)
             return message.channel.send(embed);
         }
