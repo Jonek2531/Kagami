@@ -24,7 +24,7 @@ bot.on("message", async message =>{
   if(commandfile) commandfile.run(bot, message, args);
 	
 if(cmd === `${prefix}rola`) {
-    let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
+    let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[1]);
     if (!role) role = message.member.highestRole;
 
 
