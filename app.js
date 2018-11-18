@@ -30,12 +30,10 @@ if(cmd === `${prefix}rola`) {
 
     let embed = new Discord.RichEmbed()
         .setColor(role.hexColor)
-        .setTitle(`Role: ${role.name}`)
-        .addField('Members', role.members.size, true)
+        .setTitle(`Rola: ${role.name}`)
+        .addField('Liczba użytkowników w roli', role.members.size, true)
         .addField('Hex', role.hexColor, true)
-        .addField('Creation Date', role.createdAt.toDateString(), true)
-        .addField('Editable', role.editable.toString(), true)
-        .addField('Managed', role.managed.toString(), true)
+        .addField('Data stworzenia', role.createdAt.toDateString(), true)
         .addField('ID', role.id, true);
     return message.channel.send(embed)
 }
