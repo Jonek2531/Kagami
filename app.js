@@ -34,6 +34,8 @@ if(cmd === `${prefix}rola`) {
         .addField('Liczba użytkowników w roli', role.members.size, true)
         .addField('Hex', role.hexColor, true)
         .addField('Data stworzenia', role.createdAt.toDateString(), true)
+            .addField('Pingowalna', role.mentionable.toString(), true)
+        .addField('Pozycja w rolach', role.calculatedPosition .toString(), true)
         .addField('ID', role.id, true);
     return message.channel.send(embed)
 }
