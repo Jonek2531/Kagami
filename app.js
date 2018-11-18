@@ -28,7 +28,7 @@ if(cmd === `${prefix}rola`) {
     if (!role) role = message.member.highestRole;
 
 
-    const embed = new Discord.RichEmbed()
+    let embed = new Discord.RichEmbed()
         .setColor(role.hexColor)
         .setTitle(`Role: ${role.name}`)
         .addField('Members', role.members.size, true)
