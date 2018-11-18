@@ -37,8 +37,8 @@ if(cmd === `${prefix}rola`) {
         .addField('Editable', role.editable.toString(), true)
         .addField('Managed', role.managed.toString(), true)
         .addField('ID', role.id, true);
-    return message.channel.send
-};
+    return message.channel.send(embed)
+}
 
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
