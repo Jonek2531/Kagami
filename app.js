@@ -22,6 +22,23 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
+	
+if(cmd === `${prefix}rola`) {
+    let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
+    if (!role) role = message.member.highestRole;
+
+
+    const embed = new RichEmbed()
+        .setColor(role.hexColor)
+        .setTitle(`Role: ${role.name}`)
+        .addField('Members', role.members.size, true)
+        .addField('Hex', role.hexColor, true)
+        .addField('Creation Date', role.createdAt.toDateString(), true)
+        .addField('Editable', role.editable.toString(), true)
+        .addField('Managed', role.managed.toString(), true)
+        .addField('ID', role.id, true);
+    return message.channel.send
+};
 
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
