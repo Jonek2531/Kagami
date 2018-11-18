@@ -35,7 +35,7 @@ if(cmd === `${prefix}rola`) {
         .addField('Hex', role.hexColor, true)
         .addField('Data stworzenia', role.createdAt.toDateString(), true)
             .addField('Pingowalna', role.mentionable.toString(), true)
-        .addField('Pozycja w rolach', role.position .toString(), true)
+        .addField('Pozycja w rolach (od dołu)', role.position .toString(), true)
         .addField('ID', role.id, true);
     return message.channel.send(embed)
 }
