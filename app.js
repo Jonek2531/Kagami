@@ -50,7 +50,9 @@ if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości
 dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay. Treść wiadomości: ${dMessage}.`)
 
 }
-
+  if (cmd === `${prefix}info`) {
+    message.channel.send(userInfo(message.author));
+  }
 	
 	
 
