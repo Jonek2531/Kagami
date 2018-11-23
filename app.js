@@ -57,7 +57,7 @@ dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay
 	
 
   if (cmd === `${prefix}przypomnienierang`){
-    message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?nsfw_memy, ?tyralnia.");
+    message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia.");
   }
 
   if(cmd === `${prefix}avatar`) {
