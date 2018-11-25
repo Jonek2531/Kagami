@@ -47,7 +47,7 @@ if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Nie mas
 let dMessage = args.join(" ").slice(22);
 if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
 
-dUser.send(`${message.author} wysłał do Ciebie wiadomość z serwera GamerStay. Treść wiadomości: ${dMessage}.`)
+dUser.send(`Masz nową wiadomość z serwera GamerStay. Oto treść wiadomości: ${dMessage}.`)
 
 }
   if (cmd === `${prefix}info`) {
