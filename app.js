@@ -90,8 +90,7 @@ dUser.send(`Masz nową wiadomość z serwera GamerStay. Oto treść wiadomości:
         });
 	
 	 if(cmd === `${prefix}profil`) {
-   let user = message.mentions.users.first() || message.author || message.guild.roles.find(role => role.name === args[0]);
- let role = message.mentions.users.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
+   let user = message.mentions.users.first() || message.author || message.guild.users.find(role => role.name === args[0]);
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
