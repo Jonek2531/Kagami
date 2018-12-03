@@ -43,7 +43,7 @@ if(cmd === `${prefix}rola`) {
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
-if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Nie masz uprawnień!")
+if(!message.member.hasPermission("MANAGE_GUILD")) return message.reply("Nie masz uprawnień!")
 let dMessage = args.join(" ").slice(22);
 if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
 
