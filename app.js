@@ -19,11 +19,34 @@ bot.on("message", async message =>{
   let msgArray = message.content.split(" ");
   let cmd = msgArray[0];
   let args = msgArray.slice(1);
+	let userData  = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 	
-if(cmd === `${prefix}rola`) {
+
+if (!userData[sender.id + message.guild.id]) userData[sender.id + message.guild.id] = {}
+	if (!userData[sender.id + message.guild.id].money) userData[sender.id + message.guild.id].money = 0;
+	
+	fs.writeFile('Storage/userData.json', JSON.stringify(userData), (err) => {
+		if (err) console.error(err);
+	})
+	if(cmd === `${prefix}monety`){
+		message.channel.send({embed:{
+			title: "Ilość monet",
+			color: 0xf442e5,
+			fields:[{
+				name:"Konto użytkownika",
+				value:message.author.username,
+				inline:true
+			},
+				{
+					name:"Monety",
+					value:userData[sender.id + message.guild.id].money,
+					inline:true
+				}]
+	
+	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
 
