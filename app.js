@@ -46,7 +46,7 @@ if (!userData[sender.id + message.guild.id]) userData[sender.id + message.guild.
 					inline:true
 				}]
 			
-		}})
+		)
 	
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
