@@ -34,7 +34,7 @@ if (!userData[sender.id + message.guild.id]) userData[sender.id + message.guild.
 	
 	fs.writeFile('Storage/userData.json', JSON.stringify(userData), (err) => {
 		if (err) console.error(err);
-	}
+	})
 	if(cmd === `${prefix}monety`){
 		message.channel.send({embed:{
 			title: "Ilość monet",
