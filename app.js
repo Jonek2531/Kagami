@@ -23,13 +23,18 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
+	let userData  = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));	
 	
+	bot.on('message', message => {
+		
+		let sender = message.author;
+		
 if (!userData[sender.id + message.guild.id]) userData[sender.id + message.guild.id] = {}
 	if (!userData[sender.id + message.guild.id].money) userData[sender.id + message.guild.id].money = 0;
 	
 	fs.writeFile('Storage/userData.json', JSON.stringify(userData), (err) => {
 		if (err) console.error(err);
-	})
+	}
 	if(cmd === `${prefix}monety`){
 		message.channel.send({embed:{
 			title: "Ilość monet",
@@ -44,7 +49,7 @@ if (!userData[sender.id + message.guild.id]) userData[sender.id + message.guild.
 					value:userData[sender.id + message.guild.id].money,
 					inline:true
 				}]
-			}})
+}})
 	
 	
 	
