@@ -10,7 +10,10 @@ bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("!pomoc", {type: "WATCHING"});
 })
-	
+bot.on("message", async message =>{
+  if(message.author.bot) return;
+	  if(message.channel.type === "dm") return;	
+
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
   let cmd = msgArray[0];
@@ -19,34 +22,7 @@ bot.on("ready", async () =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
-	let userData  = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));	
-	
-	bot.on('message', message => {
-		
-		let sender = message.author;
-		
-if (!userData[sender.id + message.guild.id]) userData[sender.id + message.guild.id] = {}
-	if (!userData[sender.id + message.guild.id].money) userData[sender.id + message.guild.id].money = 0;
-	
-	fs.writeFile('Storage/userData.json', JSON.stringify(userData), (err) => {
-		if (err) console.error(err);
-	})
-	if(cmd === `${prefix}monety`){
-		message.channel.send({embed:{
-			title: "Ilość monet",
-			color: 0xf442e5,
-			fields:[{
-				name:"Konto użytkownika",
-				value:message.author.username,
-				inline:true
-			},
-				{
-					name:"Monety",
-					value:userData[sender.id + message.guild.id].money,
-					inline:true
-				}]
-}})
-	
+
 	
 	
 	if(cmd === `${prefix}rola`) {
