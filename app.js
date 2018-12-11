@@ -59,7 +59,7 @@ dUser.send(`${dMessage}`)
 	
 
   if (cmd === `${prefix}przypomnienierang`){
-    message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia, ?osu, ?rocketleague, ?rust, ?subnautica, ?projectzomboid, ?pathofexile, ?simsy, ?geometrydash, ?pubg, ?gta, ?eu, ?scrapmechanic, ?townofsalem.");
+    message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia, ?osu, ?rocketleague, ?rust, ?subnautica, ?projectzomboid, ?pathofexile, ?simsy, ?geometrydash, ?pubg, ?gta, ?eu, ?scrapmechanic, ?townofsalem, ?quake.");
   }
 
   if(cmd === `${prefix}avatar`) {
