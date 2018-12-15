@@ -91,6 +91,23 @@ dUser.send(`${dMessage}`)
             console.log(error);
         });
 	
+	 // Create Embed
+    let embed = new Discord.RichEmbed()
+        .setColor("#ffffff") //To change color do .setcolor("#fffff")
+        .setFooter('Jest to głosowanie o przyjęcie nowej osoby do Administracji.')
+        .setDescription(args.join(' '))
+	.setTitle(`Ankieta od użytkownika ${message.author.username}`);
+        
+    if(cmd === `${prefix}adm-ankieta`)
+	    message.channel.send(embed)
+        .then(function (msg) {
+            msg.react("❎");
+            msg.react("✅"); // You can only add two reacts
+            message.delete({timeout: 1000});
+            }).catch(function(error) {
+            console.log(error);
+        });
+	
 	 if(cmd === `${prefix}profil`) {
 let user = message.mentions.users.first() || message.author;
        let embed = new Discord.RichEmbed()
