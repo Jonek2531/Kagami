@@ -117,7 +117,7 @@ dUser.send(`${dMessage}`)
     if(cmd === `${prefix}ankieta2`)
 	    message.channel.send(embeddd)
         .then(function (msg) {
-            msg.react("<:kotek:528574941725982728>");
+            msg.react(":kotek:");
             msg.react("😂"); // You can only add two reacts
             message.delete({timeout: 1000});
             }).catch(function(error) {
