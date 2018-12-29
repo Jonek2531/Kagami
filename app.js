@@ -110,14 +110,14 @@ dUser.send(`${dMessage}`)
 	
 	 let embeddd = new Discord.RichEmbed()
         .setColor("#ffffff") //To change color do .setcolor("#fffff")
-        .setFooter('Jeśli jesteś na TAK, daj reakcje - 😂, a jeśli jesteś na NIE, daj reakcje - <:kotek:528574941725982728>')
+        .setFooter('Jeśli jesteś na TAK, daj reakcje - 😂, a jeśli jesteś na NIE, daj reakcje - :kotek:')
         .setDescription(args.join(' '))
 	.setTitle(`Ankieta od użytkownika ${message.author.username}`);
         
     if(cmd === `${prefix}ankieta2`)
 	    message.channel.send(embeddd)
         .then(function (msg) {
-            msg.react("<:kotek:528574941725982728>");
+            msg.react("528574941725982728");
             msg.react("😂"); // You can only add two reacts
             message.delete({timeout: 1000});
             }).catch(function(error) {
