@@ -110,7 +110,7 @@ dUser.send(`${dMessage}`)
 	
 	 let embeddd = new Discord.RichEmbed()
         .setColor("#ffffff") //To change color do .setcolor("#fffff")
-        .setFooter('Jest to głosowanie o przyjęcie nowej osoby do Administracji.')
+        .setFooter('Jeśli jesteś na TAK, daj reakcje - 😂, a jeśli jesteś na NIE, daj reakcje - <:kotek:528574941725982728>')
         .setDescription(args.join(' '))
 	.setTitle(`Ankieta od użytkownika ${message.author.username}`);
         
