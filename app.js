@@ -25,6 +25,19 @@ bot.on("message", async message =>{
 
 	
 	
+	  if(cmd === `${prefix}administracja`){
+
+    let admembed = new Discord.RichEmbed()
+    .setDescription("Administracja Serwera")
+    .setColor("RANDOM")
+    .setTimestamp(new Date())
+    .addField("<@&422172729026936855>", "<@329694416472375298>, <@306150715678654464>, <@287999995230027787>")
+    .addField("<@&434004013776633856>", "<@336576701414899735>, <@273427160835031040>, <@287348049385095169>")
+    .addField("<@&446016126887919617>", "<@301263420471246848>, <@470312950213902356>, <@352156710074449920>")
+    .addField("<@&434004016783949836>", "<@318664079969353740>")
+    return message.channel.send(admembed);
+  }
+	
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
