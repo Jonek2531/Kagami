@@ -23,28 +23,6 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 
-	bot.on('guildMemberAdd', member => {
-let logChannel = member.guild.channels.find('name', '✦》lobby');
-
-  let logEmbed = new Discord.RichEmbed()
-  .setAuthor("Witaj!") 
-  .setDescription(member.user.username + " dołączył na serwer! (" + member.user.id + ")")
-  .setColor('RANDOM')
-  .setFooter("o/", member.user.displayAvatarURL)
-  .setTimestamp()
-  logChannel.send(logEmbed);
-})
-bot.on('guildMemberRemove', member => {
-let logChannel = member.guild.channels.find('name', '✦》lobby');
-
-  let logEmbed = new Discord.RichEmbed()
-  .setAuthor("Żegnaj ;_;") 
-    .setDescription(member.user.username + " wyszedł z serwera. (" + member.user.id + ")")
-  .setFooter("s0 s@d", member.user.displayAvatarURL)
-  .setColor('RANDOM')
-  .setTimestamp()
-  logChannel.send(logEmbed);
-})
 	
 	  if(cmd === `${prefix}administracja`){
 
