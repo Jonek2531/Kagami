@@ -28,7 +28,7 @@ let logChannel = member.guild.channels.find('name', '✦》lobby');
 
   let logEmbed = new Discord.RichEmbed()
   .setAuthor("Witaj!") 
-  .setDescription(member.user.username + "dołączył na serwer!")
+  .setDescription(member.user.username + " dołączył na serwer! (" + member.user.id + ")")
   .setColor('RANDOM')
   .setFooter("o/", member.user.displayAvatarURL)
   .setTimestamp()
@@ -38,8 +38,8 @@ bot.on('guildMemberRemove', member => {
 let logChannel = member.guild.channels.find('name', '✦》lobby');
 
   let logEmbed = new Discord.RichEmbed()
-  .setAuthor("Żegnaj") 
-    .setDescription(member.user.username + "wyszedł z serwera. (" + member.user.id + ")")
+  .setAuthor("Żegnaj ;_;") 
+    .setDescription(member.user.username + " wyszedł z serwera. (" + member.user.id + ")")
   .setFooter("s0 s@d", member.user.displayAvatarURL)
   .setColor('RANDOM')
   .setTimestamp()
