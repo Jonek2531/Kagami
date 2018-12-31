@@ -31,7 +31,7 @@ bot.on("message", async message =>{
     .setColor("RANDOM")
     .setTimestamp(new Date())
     .addField("HeadAdministratorzy", "<@329694416472375298>, <@306150715678654464>, <@287999995230027787>")
-    .addField("Administratorzy", "<@336576701414899735>, <@273427160835031040>, <@287348049385095169>")
+    .addField("Administratorzy", "<@336576701414899735>, <@273427160835031040>, <@287348049385095169>, <@348468240520970260>")
     .addField("Moderatorzy", "<@301263420471246848>, <@470312950213902356>, <@352156710074449920>")
     .addField("Helperzy", "<@318664079969353740>")
     return message.channel.send(admembed);
