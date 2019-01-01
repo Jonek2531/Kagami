@@ -71,7 +71,6 @@ dUser.send(`${dMessage}`)
 	if(cmd === `${prefix}ustaw-awatar`) {
     let messageArray = message.content.split(" ");
     let command = messageArray[0]
-    if(!cmd.${prefix} return;
     const args = messageArray.slice(1);
     let botmessage = args.join(" ");
     if(message.author.id !== '329694416472375298') return message.reply("Tylko <@329694416472375298> może użyć tej komendy!");
