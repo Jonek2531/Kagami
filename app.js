@@ -68,7 +68,26 @@ dUser.send(`${dMessage}`)
     message.channel.send(userInfo(message.author));
   }
 	
-	
+	if(cmd === `${prefix}ustaw-awatar`) {
+    let messageArray = message.content.split(" ");
+    let command = messageArray[0]
+    if(!cmd.${prefix} return;
+    const args = messageArray.slice(1);
+    let botmessage = args.join(" ");
+    if(message.author.id !== '329694416472375298') return message.reply("Tylko <@329694416472375298> może użyć tej komendy!");
+
+
+    let image = message.attachments.first().url;
+
+
+    bot.user.setAvatar(image);
+
+    let iEmbed = new Discord.RichEmbed()
+        .setAuthor('✅ Photo altered successfully')
+        .setColor('#1E90FF')
+        .addField("Your message 1", "your message 2")
+    message.channel.send(iEmbed)
+}
 
   if (cmd === `${prefix}rangi`){
     message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia, ?osu, ?rocketleague, ?rust, ?subnautica, ?projectzomboid, ?pathofexile, ?simsy, ?geometrydash, ?pubg, ?gta, ?eu, ?scrapmechanic, ?townofsalem, ?quake, ?brawlhalla, ?qotd, ?clashroyale, ?theforest, ?battlefield, ?r6s.");
