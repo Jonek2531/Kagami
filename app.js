@@ -76,7 +76,7 @@ dUser.send(`${dMessage}`)
     if(message.author.id !== '329694416472375298') return message.reply("Tylko <@329694416472375298> może użyć tej komendy!");
 
 
-    let image = message.attachments.first().url;
+    let image = message.attachments.first();
 
 
     bot.user.setAvatar(image);
