@@ -5,7 +5,11 @@ const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.commands = new Discord.Collection()
-emitter.setMaxListeners()
+
+bot.on("ready", async () =>{
+  console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("Natsuki#6475 to moja siostra <3", {type: "PLAYING"});
+})
 
 bot.on("message", async message =>{
   if(message.author.bot) return;
