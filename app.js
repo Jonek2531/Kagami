@@ -6,10 +6,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.commands = new Discord.Collection()
 
-bot.on("ready", async () =>{
-  console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Natsuki#6475 to moja siostra <3", {type: "PLAYING"});
-})
+
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;	
@@ -23,6 +20,31 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 
+	
+	client.on('ready', function() {
+      setInterval(async () => {
+    const statuslist = [
+      `${bot.guilds.size} serwery (Bot jest na serwerach GamerStay, Natsuki! i Serwer przeznaczony do testów tego bota).`,
+      `${bot.users.size} osób!`,
+	    `Natsuki#6475 to moja siostra <3`,
+	    `<!pomoc <== Spis wszystkich komend`
+    ];
+    const random = Math.floor(Math.random() * statuslist.length);
+
+    try {
+      await bot.user.setPresence({
+        game: {
+          name: `${statuslist[random]}`,
+          type: "PLAYING"
+          //url: 'https://www.twitch.tv/spokloo'
+        },
+        status: "online"
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }, 10000);
+});
 	
 	  if(cmd === `${prefix}administracja`){
 
