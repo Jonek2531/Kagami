@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.commands = new Discord.Collection()
-
+emitter.setMaxListeners().20
 
 bot.on("message", async message =>{
   if(message.author.bot) return;
