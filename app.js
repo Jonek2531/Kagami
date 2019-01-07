@@ -28,13 +28,13 @@ bot.on("message", async message =>{
 
 exports.run = async (client, message) => {
  
-	if(cmd === `${prefix}topka`) {
+	if(cmd === `${prefix}topka`) 
   if (client.guilds.size < 3) return message.reply("3 największe serwery na których jestem!")
   
 const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
 message.channel.send(`1. **${top[0].name}**: ${top[0].memberCount} Kişi Bulunuyor.\n2. **${top[1].name}**: ${top[1].memberCount} Kişi Bulunuyor.\n3. **${top[2].name}**: ${top[2].memberCount} Kişi Bulunuyor.\n4.`)
   
-}}
+}
 	
 	  if(cmd === `${prefix}administracja`){
 
