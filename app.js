@@ -103,6 +103,10 @@ dUser.send(`${dMessage}`)
   if (cmd === `${prefix}rangi`){
     message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia, ?osu, ?rocketleague, ?rust, ?subnautica, ?projectzomboid, ?pathofexile, ?simsy, ?geometrydash, ?pubg, ?gta, ?eu, ?scrapmechanic, ?townofsalem, ?quake, ?brawlhalla, ?qotd, ?clashroyale, ?theforest, ?battlefield, ?r6s.");
   }
+	
+	if (cmd === `${prefix}mrr`){
+    message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
+  }
 
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
