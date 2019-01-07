@@ -25,7 +25,6 @@ bot.on("message", async message =>{
   if(commandfile) commandfile.run(bot, message, args);
 
 
-    const random = Math.floor(Math.random() * statuslist.length);
 
 exports.run = async (client, message) => {
  
