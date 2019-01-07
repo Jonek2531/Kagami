@@ -40,7 +40,7 @@ bot.on("message", async message =>{
         game: {
           name: `${statuslist[random]}`,
           type: "PLAYING"
-          //url: 'https://www.twitch.tv/spokloo'
+          //url: 'https://www.twitch.tv/spoklooo'
         },
         status: "online"
       });
