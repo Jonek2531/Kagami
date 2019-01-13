@@ -26,9 +26,9 @@ bot.on("message", async message =>{
 
 
 
-exports.run = async (client, message) => {
  
-	if(cmd === `${prefix}topka`) 
+ 
+	if(cmd === `${prefix}topka`) {
   if (client.guilds.size < 3) return message.reply("3 największe serwery na których jestem!")
   
 const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
@@ -38,7 +38,7 @@ message.channel.send(`1. **${top[0].name}**: ${top[0].memberCount} Kişi Bulunuy
 	
 
 if (cmd === `${prefix}1vs1`){
-	(!message.guild) {
+	(!message.guild) 
       return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.').setFooter('', client.user.avatarURL).setTimestamp()); }
     let user = message.mentions.users.first();
     if (message.mentions.users.size < 2) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription(message.author.tag + ', kullanım: d-1vs1 <@kullanıcı> <@kullanıcı> .').setFooter('', client.user.avatarURL).setTimestamp());
