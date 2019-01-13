@@ -24,33 +24,6 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 
-
-
- 
- 
-	if(cmd === `${prefix}topka`) {
-  if (client.guilds.size < 3) return message.reply("3 największe serwery na których jestem!")
-  
-const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
-message.channel.send(`1. **${top[0].name}**: ${top[0].memberCount} Kişi Bulunuyor.\n2. **${top[1].name}**: ${top[1].memberCount} Kişi Bulunuyor.\n3. **${top[2].name}**: ${top[2].memberCount} Kişi Bulunuyor.\n4.`)
-  
-}
-	
-
-if (cmd === `${prefix}1vs1`){
-      return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.'); }
-    let user = message.mentions.users.first();
-    if (message.mentions.users.size < 2) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription(message.author.tag + ', kullanım: d-1vs1 <@kullanıcı> <@kullanıcı> .');
-    var sans = ["10'a","1'e","20'ye","30'a","2 ye"]
-    var sonuc = sans[Math.floor((Math.random() * sans.length))];
-      message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş başladı!').setFooter('Rahatsızların  Savaşı yapılıyor.');
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat Küt.').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat Küp.').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat küt.').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş Sonuçlanıyor.').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş bitti!').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşın Galibi: **' + user.tag+'** Helal olsun sana Ne Vurdun Be Adımın Canını 100 den **'+ sonuc +'** Kadar Düşürdün Ve Adam Pes Etti.').setImage("https://media.giphy.com/media/3oEhmVCSmpW56nR6rm/giphy.gif").setFooter('1vs1 Savaşı Bitti.')));
-       
 	  if(cmd === `${prefix}administracja`){
 
     let admembed = new Discord.RichEmbed()
