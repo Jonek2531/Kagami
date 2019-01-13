@@ -38,12 +38,12 @@ message.channel.send(`1. **${top[0].name}**: ${top[0].memberCount} Kişi Bulunuy
 	
 
 if (cmd === `${prefix}1vs1`){
-      return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.').setFooter('', client.user.avatarURL).setTimestamp()); }
+      return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.'); }
     let user = message.mentions.users.first();
-    if (message.mentions.users.size < 2) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription(message.author.tag + ', kullanım: d-1vs1 <@kullanıcı> <@kullanıcı> .').setFooter('', client.user.avatarURL).setTimestamp());
+    if (message.mentions.users.size < 2) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription(message.author.tag + ', kullanım: d-1vs1 <@kullanıcı> <@kullanıcı> .');
     var sans = ["10'a","1'e","20'ye","30'a","2 ye"]
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
-      message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş başladı!').setFooter('Rahatsızların  Savaşı yapılıyor.', client.user.avatarURL).setTimestamp())
+      message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş başladı!').setFooter('Rahatsızların  Savaşı yapılıyor.');
       .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat Küt.').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
       .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat Küp.').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
       .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat küt.').setFooter('Profesyonellerin  Savaşı yapılıyor.')))
