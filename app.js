@@ -172,8 +172,12 @@ let user = message.mentions.users.first() || message.author;
             return message.channel.send(embed);
         }
 
-
+   if(cmd === `${prefix}najnowsza-wiadomość`){
+	   let user = message.mentions.users.first() || message.author;
+	   let nEmbed = new Discord.RichEmbed()
+	   .addField("Najnowsza wiadomość napisana przez użytkownika ", `<@${user.id}>: ${user.lastMessage}`)
 	if(cmd === `${prefix}gay`){
+
 	    let gay = Math.round(Math.random() * 100);
 
     let gayembed = new Discord.RichEmbed()
