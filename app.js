@@ -46,11 +46,11 @@ bot.on("message", async message =>{
         .setColor(role.hexColor)
         .setTitle(`Rola: ${role.name}`)
         .addField('Liczba użytkowników w roli', role.members.size, true)
-        .addField('Hex', role.hexColor, true)
-        .addField('Data stworzenia', role.createdAt.toDateString(), true)
-            .addField('Pingowalna', role.mentionable.toString(), true)
+        .addField('Hex roli', role.hexColor, true)
+        .addField('Data stworzenia roli', role.createdAt.toDateString(), true)
+            .addField('Możliwa do wzmianki', role.mentionable.toString(), true)
         .addField('Pozycja w rolach (od dołu)', role.position .toString(), true)
-        .addField('ID', role.id, true);
+        .addField('ID roli', role.id, true);
     return message.channel.send(embed)
 }
 
