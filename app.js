@@ -178,7 +178,7 @@ let user = message.mentions.users.first() || message.author;
 	   .setTitle("Najnowsza wiadomość")
 	   .setTimestamp(new Date())
 	   .setColor("#123456")
-	   .addField("Najnowsza wiadomość napisana przez użytkownika <@${user.id}>: ", `${user.lastMessage}`)
+	   .addField("Najnowsza wiadomość napisana przez użytkownika" , `<@${user.id}>: ${user.lastMessage}`)
 		 return message.channel.send(nEmbed);
 		     }
 	if(cmd === `${prefix}gay`){
