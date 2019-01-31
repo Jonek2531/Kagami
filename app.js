@@ -160,6 +160,7 @@ dUser.send(`${dMessage}`)
 	
 	 if(cmd === `${prefix}profil`) {
 let user = message.mentions.users.first() || message.author;
+		 let channel = message.mentions.users.first() || message.author;
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
@@ -168,7 +169,7 @@ let user = message.mentions.users.first() || message.author;
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${user.createdAt}`)
        .addField("Status", `${user.presence.status}`)
-                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${user.lastMessageID})`)
+                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
             return message.channel.send(embed);
         }
 
@@ -177,7 +178,7 @@ let user = message.mentions.users.first() || message.author;
 	   let nEmbed = new Discord.RichEmbed()
 	   .setTimestamp(new Date())
 	   .setColor("#123456")
-	   .addField("Najnowsza wiadomość napisana przez użytkownika" , `<@${user.id}>: ${user.lastMessage}, wysłane na kanale {user.lastMessage.channel}`)
+	   .addField("Najnowsza wiadomość napisana przez użytkownika" , `<@${user.id}>: ${user.lastMessage}, wysłane na kanale {message.channel.id}`)
 		 return message.channel.send(nEmbed);
 		     }
 	if(cmd === `${prefix}gay`){
