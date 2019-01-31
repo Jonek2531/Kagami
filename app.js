@@ -179,7 +179,7 @@ let user = message.mentions.users.first() || message.author;
 	   let nEmbed = new Discord.RichEmbed()
 	   .setTimestamp(new Date())
 	   .setColor("#123456")
-	   .addField("Najnowsza wiadomość napisana przez użytkownika" , `<@${user.id}>: ${user.lastMessage}, wysłane na kanale {message.channel.id}`)
+	   .addField("Najnowsza wiadomość napisana przez użytkownika" , `<@${user.id}>: ${user.lastMessage}`)
 		 return message.channel.send(nEmbed);
 		     }
 	if(cmd === `${prefix}gay`){
