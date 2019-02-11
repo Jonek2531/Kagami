@@ -181,7 +181,7 @@ let user = message.mentions.users.first() || message.author;
 		.setTitle("Walentynka")
 		.setTimestamp(new Date())
 		.setColor("#fc2f3d")
-		.addField("Walentynka!", `${message.author} wybrał swoją walentynkę! Jest nią ${user.username}!)`)
+		.addField("Walentynka!", `${message.author} wybrał swoją walentynkę! Jest nią <@${user.id}>!)`)
 		}
 	
    if(cmd === `${prefix}najnowsza-wiadomość`){
