@@ -90,7 +90,7 @@ dUser.send(`${dMessage}`)
 }
 
   if (cmd === `${prefix}rangi`){
-    message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia, ?osu, ?rocketleague, ?rust, ?subnautica, ?projectzomboid, ?pathofexile, ?simsy, ?geometrydash, ?pubg,		?gta, ?eu, ?scrapmechanic, ?townofsalem, ?quake, ?brawlhalla, ?qotd, ?clashroyale, ?theforest, ?battlefield, ?r6s, ?brick, ?ringofelysium, ?coh2, marplestory2, ?grw, ?warface, ?ds, ?dsc, ?starwars, ?apexlegends, ?anime, ?metalowiec, ?programowanie, ?html, ?css, ?python.");
+    message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia, ?osu, ?rocketleague, ?rust, ?subnautica, ?projectzomboid, ?pathofexile, ?simsy, ?geometrydash, ?pubg,		?gta, ?eu, ?scrapmechanic, ?townofsalem, ?quake, ?brawlhalla, ?qotd, ?clashroyale, ?theforest, ?battlefield, ?r6s, ?brick, ?ringofelysium, ?coh2, maplestory2, ?grw, ?warface, ?ds, ?dsc, ?starwars, ?apexlegends, ?anime, ?metalowiec, ?programowanie, ?html, ?css, ?python.");
   }
 	
 	if (cmd === `${prefix}mrr`){
