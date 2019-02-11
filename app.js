@@ -181,7 +181,6 @@ let user = message.mentions.users.first() || message.author;
 		.setTitle("Walentynka")
 		.setTimestamp(new Date())
 		.setColor("#fc2f3d")
-		.setThumbnail(`${user.avatarURL}`)
 		.addField("Walentynka!", `${message.author} wybrał swoją walentynkę! Jest nią ${user.username}!)`)
 		}
 	
