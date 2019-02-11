@@ -175,13 +175,13 @@ let user = message.mentions.users.first() || message.author;
         }
 
 	if(cmd === `${prefix}walentynka`){
-		let user = message.mentions.users.first()
+		let user = message.mentions.users.first();
 		let channel = message.mentions.users.first()
 		let wEmbed = new Discord.RichEmbed()
 		.setTitle("Walentynka")
 		.setTimestamp(new Date())
 		.setColor("#fc2f3d")
-		.addField("Walentynka!", `${message.author} wybrał swoją walentynkę! Jest nią <@${user.id}>!)`)
+		.addField("Walentynka!", `${message.author} wybrał swoją walentynkę! Jest nią <@${user.username}>!)`)
 		}
 	
    if(cmd === `${prefix}najnowsza-wiadomość`){
