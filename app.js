@@ -175,8 +175,8 @@ let user = message.mentions.users.first() || message.author;
         }
 
 	if(cmd === `${prefix}walentynka`){
-		let user = message.mentions.users.first();
-		let channel = message.mentions.users.first()
+		let user = message.mentions.users.first() || message.author;
+		let channel = message.mentions.users.first() || message.author;
 		let wEmbed = new Discord.RichEmbed()
 		.setTitle("Walentynka")
 		.setTimestamp(new Date())
