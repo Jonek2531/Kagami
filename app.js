@@ -10,7 +10,9 @@ bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("Natsuki#6475 to moja siostra <3", {type: "PLAYING"});
 })
-
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('434008775750582282').send("test"); 
+});
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;	
