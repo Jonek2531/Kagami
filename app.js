@@ -10,9 +10,7 @@ bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("Natsuki#6475 to moja siostra <3", {type: "PLAYING"});
 })
-bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('434008775750582282').send("test"); 
-});
+
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;	
@@ -160,6 +158,10 @@ dUser.send(`${dMessage}`)
             console.log(error);
         });
 	
+	bot.on('guildMemberAdd', member => {
+	let user = message.mentions.users.first();
+    member.guild.channels.get('434008775750582282').send("[Informacja] Na serwer właśnie dołączył nowy użytkownik!"); 
+});
 	 if(cmd === `${prefix}profil`) {
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
