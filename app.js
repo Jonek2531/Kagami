@@ -159,8 +159,7 @@ dUser.send(`${dMessage}`)
         });
 	
 	bot.on('guildMemberAdd', member => {
-	let user = message.mentions.users.first();
-    member.guild.channels.get('434008775750582282').send("[Informacja] Na serwer właśnie dołączył nowy użytkownik!"); 
+    member.guild.channels.get('495654037757362188').send("[Informacja] Na serwer właśnie dołączył nowy użytkownik!"); 
 });
 	 if(cmd === `${prefix}profil`) {
 let user = message.mentions.users.first() || message.author;
