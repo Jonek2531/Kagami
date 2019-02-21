@@ -159,7 +159,6 @@ dUser.send(`${dMessage}`)
         });
 	
 	bot.on('guildMemberAdd', member => {
-		emitter.setMaxListeners(1)
     member.guild.channels.get('495654037757362188').send("[Informacja] Na serwer właśnie dołączył nowy użytkownik!"); 
 });
 	 if(cmd === `${prefix}profil`) {
