@@ -682,7 +682,8 @@ bot.on('raw', event => {
         }
         })
  
-    }   
+    }  
+	});
 
 	
 if (cmd.startsWith(prefix + 'hug')) {
