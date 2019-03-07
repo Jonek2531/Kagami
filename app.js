@@ -625,7 +625,7 @@ if(cmd === `${prefix}trump`){
 	const yourID = ""; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = "!createrolemessage"
 let initialMessage = `**Zareaguj pod wiadomością, aby otrzymać rolę!**`;
-const roles = ["Dziweczyna", "Chłopak];
+const roles = ["Dziweczyna", "Chłopak"];
 const reactions = ["💻", "🖌"];
 const botToken = ""; /*You'll have to set this yourself; read more
                      here https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token*/
