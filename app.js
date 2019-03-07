@@ -38,7 +38,7 @@ bot.on("message", async message =>{
     return message.channel.send(admembed);
   }
 	
-	    let dembed = new Discord.RichEmbed()
+	    let dembed = new Discord.RichEmbed(){
     .setDescription("**Donejtorzy serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
