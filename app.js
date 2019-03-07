@@ -27,13 +27,14 @@ bot.on("message", async message =>{
 	  if(cmd === `${prefix}administracja`){
 
     let admembed = new Discord.RichEmbed()
-    .setDescription("Administracja Serwera")
+    .setDescription("**Administracja Serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
     .addField("HeadAdministratorzy", "<@329694416472375298>, <@306150715678654464>, <@287999995230027787>, <@348468240520970260>, <@301263420471246848>")
     .addField("Administratorzy", "ne ma :((")
     .addField("Moderatorzy", "<@470312950213902356>, <@351722490487373834>")
     .addField("Helperzy", "<@336755369667723276>")
+    .addField("Chcesz zostać się do administracji?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
 	
