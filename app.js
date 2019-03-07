@@ -38,6 +38,14 @@ bot.on("message", async message =>{
     return message.channel.send(admembed);
   }
 	
+	    let dembed = new Discord.RichEmbed()
+    .setDescription("**Donejtorzy serwera GamerStay**")
+    .setColor("RANDOM")
+    .setTimestamp(new Date())
+    .addField("Lista donejtorów:", "Chmielu 100 zł, DavidViper 69 zł, <@336576701414899735> 30 zł, <@329694416472375298>20 zł, <@287999995230027787> 10 zł")
+    return message.channel.send(dembed);
+  }
+	
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
