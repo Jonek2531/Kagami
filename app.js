@@ -42,7 +42,11 @@ bot.on("message", async message =>{
     .setDescription("**Donejtorzy serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
-    .addField("Lista donejtorów:", "Chmielu 100 zł, DavidViper 69 zł, <@336576701414899735> 30 zł, <@329694416472375298>20 zł, <@287999995230027787> 10 zł")
+    .addField("Lista donejtorów:", "Chmielu 100 zł,
+	      "DawidViper 69 zł,
+	      "<@336576701414899735> 30 zł,
+	      "<@329694416472375298> 20 zł,
+	      "<@287999995230027787> 10 zł")
     return message.channel.send(dembed);
   }
 	
