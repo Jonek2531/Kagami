@@ -37,8 +37,8 @@ bot.on("message", async message =>{
     .addField("Chcesz zostać się do administracji?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
-	
-	    let dembed = new Discord.RichEmbed(){
+	if(cmd === `${prefix}donatorzy`){
+	    let dembed = new Discord.RichEmbed()
     .setDescription("**Donejtorzy serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
