@@ -93,7 +93,7 @@ dUser.send(`${dMessage}`)
     message.channel.send("Możliwe rangi do dodania sobie: ?fortnite, ?minecraft, ?csgo, ?gmod, ?tf2, ?overwatch, ?lol, ?paladins, ?isaac, ?roblox, ?dbd, ?giveaway, ?furry, ?nsfw, ?tyralnia, ?osu, ?rocketleague, ?rust, ?subnautica, ?projectzomboid, ?pathofexile, ?simsy, ?geometrydash, ?pubg,		?gta, ?eu, ?scrapmechanic, ?townofsalem, ?quake, ?brawlhalla, ?qotd, ?clashroyale, ?theforest, ?battlefield, ?r6s, ?brick, ?ringofelysium, ?coh2, maplestory2, ?grw, ?warface, ?ds, ?dsc, ?starwars, ?apexlegends, ?anime, ?metalowiec, ?programowanie, ?html, ?css, ?python.");
   }
 	 if (cmd === `${prefix}weryfikacja`){
-    message.channel.send("**Jak poprawnie się zweryfikować?** Zobacz na ten obrazek: https://cdn.discordapp.com/attachments/527242378336010250/556935546098810890/weryfikacja2.PNG. Następnie zaznacz pod wiadomością na obrazku **2 RAZY** reakcję. <a:orangejustice:470882311399800833>");
+    message.channel.send("**Jak poprawnie się zweryfikować?** Zobacz na ten obrazek: https://cdn.discordapp.com/attachments/527242378336010250/556935546098810890/weryfikacja2.PNG ^^. Następnie zaznacz pod wiadomością na obrazku **2 RAZY** reakcję. <a:orangejustice:470882311399800833>");
 	 }
 			 
 	if (cmd === `${prefix}mrr`){
