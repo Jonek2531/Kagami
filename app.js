@@ -427,7 +427,7 @@ if(cmd === `${prefix}kik`){
 
     return message.channel.send(helpembed);
 
-    let helpembed = new Discord.RichEmbed()
+    let helpaembed = new Discord.RichEmbed()
     .setDescription("Komendy administracyjne bota.")
     .setColor("RANDOM")
     .setTimestamp(new Date())
@@ -435,7 +435,7 @@ if(cmd === `${prefix}kik`){
  .addField("!kick <nick> <powód>", "Wyrzucasz oznaczonego użytkownika.")
  .addField("!ustaw-awatar <link>", "Ustawiasz botowi dowolny awatar.");
     
-    return message.channel.send(helpembed);
+    return message.channel.send(helpaembed);
   }
   
 	  if(cmd === `${prefix}pomoc2`){
