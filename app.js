@@ -414,16 +414,16 @@ if(cmd === `${prefix}kik`){
     .setDescription("Komendy bota")
     .setColor("RANDOM")
     .setTimestamp(new Date())
-    .addField("!report <nick> <powód>", "reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie")
-    .addField("!serverinfo", "informacje dotyczące serwera")
-    .addField("!ban <nick> <powód>", "banujesz osobę. [Tylko dla Administracji]")
-    .addField("!kick <nick> <powód>", "wyrzucasz osobę z serwera [Tylko dla Administracji]")
-    .addField("!zapytaj <treść>", "pytasz się o coś bota, a on Ci odpowiada")
-    .addField("!avatar <nick>", "pokazuje avatar oznaczonej osoby")
+    .addField("!report <nick> <powód>", "Reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie.")
+    .addField("!serverinfo", "Informacje dotyczące serwera.")
+    .addField("!ban <nick> <powód>", "Banujesz oznaczonego użytkownika. [Tylko dla Administracji]")
+    .addField("!kick <nick> <powód>", "Wyrzucasz oznaczonego użytkownika. [Tylko dla Administracji]")
+    .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.")
+    .addField("!avatar <nick>", "Pokazuje avatar oznaczonej osoby.")
     .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
-    .addField("!zapal", "zaczynasz palić gumę :3")
-    .addField("!hug <nick>", "przytulasz oznaczoną osobę")
-    .addField("!ankieta <treść>","tworzysz publiczną ankietę");
+    .addField("!zapal", "Zaczynasz palić gumę.")
+    .addField("!hug <nick>", "Przytulasz oznaczoną osobę.")
+    .addField("!ankieta <treść>","Tworzysz publiczną ankietę.");
 
     return message.channel.send(helpembed);
   }
