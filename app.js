@@ -426,10 +426,8 @@ if(cmd === `${prefix}kik`){
     .addField("!ankieta <treść>","Tworzysz publiczną ankietę.");
 
     return message.channel.send(helpembed);
-  }
 
- if(cmd === `${prefix}pomoc`){
-    let helpadmembed = new Discord.RichEmbed()
+    let helpembed = new Discord.RichEmbed()
     .setDescription("Komendy administracyjne bota.")
     .setColor("RANDOM")
     .setTimestamp(new Date())
@@ -437,7 +435,7 @@ if(cmd === `${prefix}kik`){
  .addField("!kick <nick> <powód>", "Wyrzucasz oznaczonego użytkownika.")
  .addField("!ustaw-awatar <link>", "Ustawiasz botowi dowolny awatar.");
     
-    return message.channel.send(helpadmembed);
+    return message.channel.send(helpembed);
   }
   
 	  if(cmd === `${prefix}pomoc2`){
