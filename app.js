@@ -426,7 +426,9 @@ if(cmd === `${prefix}kik`){
     .addField("!ankieta <treść>","Tworzysz publiczną ankietę.");
 
     return message.channel.send(helpembed);
+  }
 
+ if(cmd === `${prefix}pomoc`){
     let helpadmembed = new Discord.RichEmbed()
     .setDescription("Komendy administracyjne bota.")
     .setColor("RANDOM")
