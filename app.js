@@ -416,8 +416,6 @@ if(cmd === `${prefix}kik`){
     .setTimestamp(new Date())
     .addField("!report <nick> <powód>", "Reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie.")
     .addField("!serverinfo", "Informacje dotyczące serwera.")
-    .addField("!ban <nick> <powód>", "Banujesz oznaczonego użytkownika. [Tylko dla Administracji]")
-    .addField("!kick <nick> <powód>", "Wyrzucasz oznaczonego użytkownika. [Tylko dla Administracji]")
     .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.")
     .addField("!avatar <nick>", "Pokazuje avatar oznaczonej osoby.")
     .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
@@ -427,7 +425,7 @@ if(cmd === `${prefix}kik`){
 
     return message.channel.send(helpembed);
   }
-  if(cmd === `${prefix}pomoc`){
+  if(cmd === `${prefix}pomoc-admin`){
     let helpaembed = new Discord.RichEmbed()
     .setDescription("Komendy administracyjne bota.")
     .setColor("RANDOM")
