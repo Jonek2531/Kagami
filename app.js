@@ -34,7 +34,7 @@ bot.on("message", async message =>{
     .addField("Administratorzy", "ne ma :((")
     .addField("Moderatorzy", "<@470312950213902356>, <@351722490487373834>")
     .addField("Helperzy", "<@336755369667723276>")
-    .addField("Chcesz zostać się do administracji?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
+    .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
 
