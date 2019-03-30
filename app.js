@@ -105,7 +105,7 @@ dUser.send(`${dMessage}`)
     let user = message.mentions.users.first() || message.author;
 
     let embed = new Discord.RichEmbed()
-    .setAuthor(`${user.username}`)
+    .setAuthor(`${user.username}#${user.discriminator}`)
     .setImage(user.displayAvatarURL)
 
     message.channel.send(embed)
