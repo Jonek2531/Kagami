@@ -357,7 +357,11 @@ if(cmd === `${prefix}kik`){
     return;
   }
 
-
+if(cmd === `${prefix}serwer`){
+message.channel.send({embed: {
+  color: 3447003,
+  description: "Witaj w menu informacji o serwerze. Jeśli chcesz zobaczyć wszystkie informacje o serwerze, to wpisz !serverinfo, jeśli chcesz tylko nazwę serwera to wyślij emotkę :one:, jeśli chcesz zobaczyć liczbę członków to wyślij emotkę :two:."
+}});
 
   if(cmd === `${prefix}serverinfo`){
 
