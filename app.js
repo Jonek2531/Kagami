@@ -431,6 +431,7 @@ if(cmd === `${prefix}kik`){
     .setTimestamp(new Date())
     .addField("!ban <nick> <powód>", "Banujesz oznaczonego użytkownika.")
  .addField("!kick <nick> <powód>", "Wyrzucasz oznaczonego użytkownika.")
+ .addField("!mrr", "Nani.")
  .addField("!say <treść>", "Wysyłasz wiadomość używając bota.")
  .addField("!ustaw-awatar <link>", "Ustawiasz botowi dowolny awatar.")
  .addField("!wiadomość <nick>", "Wysyłasz oznaczonemu użytkownikowi wiadomość na PW.");
