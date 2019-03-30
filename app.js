@@ -349,16 +349,16 @@ if(cmd === `${prefix}kik`){
     let reason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Reporty")
+    .setDescription("Reporty.")
     .setColor("#00e7ff")
-    .addField("Zgłoszony użytkownik", `${rUser}, ID użytkownika: ${rUser.id}`)
-    .addField("Zgłoszony przez", `${message.author}. ID zgłaszającego: ${message.author.id}`)
-    .addField("Godzina wysłania", message.createdAt)
-    .addField("Na kanale", message.channel)
-    .addField("Powód", reason)
+    .addField("Zgłoszony użytkownik:", `${rUser}, ID użytkownika: ${rUser.id}.`)
+    .addField("Zgłoszony przez:", `${message.author}, ID zgłaszającego: ${message.author.id}.`)
+    .addField("Godzina wysłania:", message.createdAt)
+    .addField("Na kanale:", message.channel)
+    .addField("Powód:", reason)
 
     let reportschannel = message.guild.channels.find(`name`, "reporty");
-    if(!reportschannel) return message.channel.send("Nie ma kanału od reportów");
+    if(!reportschannel) return message.channel.send("Nie ma kanału od reportów.");
 
       message.delete().catch(O_o=>{});
       reportschannel.send(reportEmbed);
