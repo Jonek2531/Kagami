@@ -98,6 +98,7 @@ dUser.send(`${dMessage}`)
 	 }
 			 
 	if (cmd === `${prefix}mrr`){
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Brak uprawnień do używania tej k0z4k komendy.");
     message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
   }
 
