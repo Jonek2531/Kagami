@@ -38,9 +38,6 @@ bot.on("message", async message =>{
     .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
-if(cmd === `${prefix}ping`) {
-		message.channel.send('Pong.');
-	}
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
