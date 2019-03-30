@@ -357,13 +357,6 @@ if(cmd === `${prefix}kik`){
     return;
   }
 
-if(cmd === `${prefix}serwer`){
-message.channel.send("Witaj w menu informacji o serwerze. Jeśli chcesz zobaczyć wszystkie informacje o serwerze, to wpisz !serverinfo, jeśli chcesz tylko nazwę serwera to wyślij emotkę :one:, jeśli chcesz zobaczyć liczbę członków to wyślij emotkę :two:.");
-}
-	
-	if (message.content === 'asd') {
-		message.channel.send(`Nazwa serwera: **${message.guild.name}**`);
-}
 
   if(cmd === `${prefix}serverinfo`){
 
