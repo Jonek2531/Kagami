@@ -181,16 +181,6 @@ let user = message.mentions.users.first() || message.author;
             return message.channel.send(embed);
         }
 
-	if(cmd === `${prefix}walentynka`){
-		let user = message.mentions.users.first() || message.author;
-		let channel = message.mentions.users.first() || message.author;
-		let wEmbed = new Discord.RichEmbed()
-		.setTitle("Walentynka")
-		.setTimestamp(new Date())
-		.setColor("#fc2f3d")
-		.addField("Walentynka!", `${message.author} wybrał swoją walentynkę! Jest nią <@${user.username}>!)`)
-		}
-	
    if(cmd === `${prefix}najnowsza-wiadomość`){
 	   let user = message.mentions.users.first() || message.author;
 	   let nEmbed = new Discord.RichEmbed()
@@ -440,7 +430,9 @@ if(cmd === `${prefix}kik`){
     .setTimestamp(new Date())
     .addField("!ban <nick> <powód>", "Banujesz oznaczonego użytkownika.")
  .addField("!kick <nick> <powód>", "Wyrzucasz oznaczonego użytkownika.")
- .addField("!ustaw-awatar <link>", "Ustawiasz botowi dowolny awatar.");
+ .addField("!say <treść>", "Wysyłasz wiadomość używając bota.")
+ .addField("!ustaw-awatar <link>", "Ustawiasz botowi dowolny awatar.")
+ .addField("!wiadomość <nick>", "Wysyłasz oznaczonemu użytkownikowi wiadomość na PW.");
     
     return message.channel.send(helpaembed);
   }
