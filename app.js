@@ -409,6 +409,7 @@ if(cmd === `${prefix}kik`){
     .addField("!ankieta <treść>","Tworzysz publiczną ankietę.")
     .addField("!avatar <nick>", "Pokazuje avatar oznaczonej osoby.")
     .addField("!botinfo", "Informacje o serwerowym bocie.")
+    .addField("!gay", "Bot pokazuje Ci w ilu procentach jesteś gejem.")
     .addField("!hug <nick>", "Przytulasz oznaczoną osobę.")
     .addField("!najnowsza-wiadomość <nick>", "Możesz zobaczyć najnowszą wiadomość oznaczonej osoby.")
     .addField("!profil","Pokazuje informacje o użytkowniku.")
