@@ -221,7 +221,7 @@ let user = message.mentions.users.first() || message.author;
 	}
 	
 		if(cmd === `${prefix}giveaway`) {
-    	message.channel.send("@Giveaway aby wziąć udział należy zareagować reakcją 🎉");
+    	message.channel.send("<@&476766899611369483> aby wziąć udział należy zareagować reakcją 🎉");
 	}
 	
   if(cmd === `${prefix}zapytaj`){
@@ -414,14 +414,22 @@ if(cmd === `${prefix}kik`){
     .setDescription("Komendy bota.")
     .setColor("RANDOM")
     .setTimestamp(new Date())
-    .addField("!report <nick> <powód>", "Reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie.")
-    .addField("!serverinfo", "Informacje dotyczące serwera.")
-    .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.")
+    .addField("!administracja", "Spis administracji serwera.")
+    .addField("!ankieta <treść>","Tworzysz publiczną ankietę.")
     .addField("!avatar <nick>", "Pokazuje avatar oznaczonej osoby.")
+    .addField("!botinfo", "Informacje o serwerowym bocie.")
+    .addField("!hug <nick>", "Przytulasz oznaczoną osobę.")
+    .addField("!najnowsza-wiadomość <nick>", "Możesz zobaczyć najnowszą wiadomość oznaczonej osoby.")
+    .addField("!profil","Pokazuje informacje o użytkowniku.")
+    .addField("!report <nick> <powód>", "Reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie.")
+    .addField("!rola <nazwa roli>", "Informacje na temat danej roli.")
+    .addField("!serverinfo", "Informacje dotyczące serwera.")
+    .addField("!slot", "Losujesz sobie, jeśli trafisz trzy :seven:, to coś się stanie.")
+    .addField("!trump","Pokazuje gify o Trumpie.")
+    .addField("!weryfikacja", "Informacja jak się poprawnie zweryfikować.")
     .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
     .addField("!zapal", "Zaczynasz palić gumę.")
-    .addField("!hug <nick>", "Przytulasz oznaczoną osobę.")
-    .addField("!ankieta <treść>","Tworzysz publiczną ankietę.");
+    .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.");
 
     return message.channel.send(helpembed);
   }
