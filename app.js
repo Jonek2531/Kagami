@@ -806,7 +806,6 @@ if (cmd.startsWith(prefix + 'hug')) {
         .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
     message.channel.send({
         embed: ghembed
-    })
 }
 })
 
