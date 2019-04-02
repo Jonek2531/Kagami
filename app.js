@@ -775,7 +775,7 @@ if (cmd.startsWith(prefix + 'hug')) {
     })
 	
 		if (cmd.startsWith(prefix + 'slap')) {
-    let sslap = [
+    let slap = [
         "https://media.giphy.com/media/jLeyZWgtwgr2U/giphy.gif",
 	    "https://media3.giphy.com/media/LB1kIoSRFTC2Q/giphy.gif"
     ]
