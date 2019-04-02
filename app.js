@@ -807,6 +807,9 @@ if (cmd.startsWith(prefix + 'hug')) {
     message.channel.send({
         embed: ghembed
 })
+if(cmd === `${prefix}test`){
+message.channel.send("adsdjrfurfhiur")
+}
 
 }
 	 })
