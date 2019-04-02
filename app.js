@@ -800,13 +800,7 @@ if (cmd.startsWith(prefix + 'hug')) {
         })
         return;
     }
-    const ghembed = new Discord.RichEmbed()
-        .setColor(0xFF0000)
-        .setTitle(`${message.author.username} sam się pacnął.`)
-        .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
-    message.channel.send({
-        embed: ghembed
-})
+
 if(cmd === `${prefix}test`){
 message.channel.send("adsdjrfurfhiur")
 }
