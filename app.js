@@ -422,6 +422,7 @@ if(cmd === `${prefix}kik`){
     .setDescription("Komendy bota.")
     .setColor("RANDOM")
     .setTimestamp(new Date())
+    .addField("!admin-pomoc","Lista komend administracyjnych dla administracji.")
     .addField("!administracja", "Spis administracji serwera.")
     .addField("!ankieta <treść>","Tworzysz publiczną ankietę.")
     .addField("!avatar <nick>", "Pokazuje avatar oznaczonej osoby.")
