@@ -798,14 +798,8 @@ if (cmd.startsWith(prefix + 'hug')) {
         message.channel.send({
             embed: sembed
         })
-        return;
-    }
-
-if(cmd === `${prefix}test`){
-message.channel.send("adsdjrfurfhiur")
+ 
 }
-
-}
-	 })
+})
 
 bot.login(process.env.BOT_TOKEN)
