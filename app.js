@@ -775,11 +775,11 @@ if (cmd.startsWith(prefix + 'hug')) {
     })
 	
 		if (cmd.startsWith(prefix + 'slap')) {
-    let slap = [
+    let sslap = [
         "https://media.giphy.com/media/jLeyZWgtwgr2U/giphy.gif",
 	    "https://media3.giphy.com/media/LB1kIoSRFTC2Q/giphy.gif"
     ]
-    let slap = Math.floor((Math.random() * slap.length));
+    let sslap = Math.floor((Math.random() * sslap.length));
     if (!args[0]) {
         const gsembed = new Discord.RichEmbed()
             .setColor(0xFF0000)
@@ -791,10 +791,10 @@ if (cmd.startsWith(prefix + 'hug')) {
         return;
     }
     if (!message.mentions.members.first().user.username === message.isMentioned(message.author)) {
-        const sembed = new Discord.RichEmbed()
+        const sslapresult = new Discord.RichEmbed()
             .setColor(0xFF0000)
             .setTitle(`${message.author.username} slapnął ${message.mentions.members.first().user.username}!`)
-            .setImage(slap[slapresult])
+            .setImage(sslap[sslapresult])
         message.channel.send({
             embed: sembed
         })
