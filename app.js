@@ -773,6 +773,40 @@ if (cmd.startsWith(prefix + 'hug')) {
     message.channel.send({
         embed: ghembed
     })
+	
+	if (cmd.startsWith(prefix + 'slap')) {
+    let slap = [
+        "https://media.giphy.com/media/jLeyZWgtwgr2U/giphy.gif",
+	    "https://media3.giphy.com/media/LB1kIoSRFTC2Q/giphy.gif"
+    ]
+    let slap = Math.floor((Math.random() * slap.length));
+    if (!args[0]) {
+        const gsembed = new Discord.RichEmbed()
+            .setColor(0xFF0000)
+            .setTitle(`${message.author.username} sam się pacnął.`)
+            .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
+        message.channel.send({
+            embed: gsembed
+        })
+        return;
+    }
+    if (!message.mentions.members.first().user.username === message.isMentioned(message.author)) {
+        const sembed = new Discord.RichEmbed()
+            .setColor(0xFF0000)
+            .setTitle(`${message.author.username} slapnął ${message.mentions.members.first().user.username}!`)
+            .setImage(slap[slapresult])
+        message.channel.send({
+            embed: sembed
+        })
+        return;
+    }
+    const ghembed = new Discord.RichEmbed()
+        .setColor(0xFF0000)
+        .setTitle(`${message.author.username} sam się pacnął.`)
+        .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
+    message.channel.send({
+        embed: ghembed
+    })
 }
 })
 
