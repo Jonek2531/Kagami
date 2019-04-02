@@ -809,5 +809,6 @@ if (cmd.startsWith(prefix + 'hug')) {
 })
 
 }
+	 })
 
 bot.login(process.env.BOT_TOKEN)
