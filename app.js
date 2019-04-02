@@ -807,7 +807,7 @@ if (cmd.startsWith(prefix + 'hug')) {
     message.channel.send({
         embed: ghembed
 })
-})
+}
 
 
 bot.login(process.env.BOT_TOKEN)
