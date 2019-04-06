@@ -30,7 +30,7 @@ bot.on("message", async message =>{
     .setDescription("**Administracja Serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
-.addField("Obecna ilość osób w administracji: **9**", "'")
+.addField("Obecna ilość osób w administracji: **9**", "")
     .addField("HeadAdministratorzy", "<@329694416472375298>,\n <@306150715678654464>,\n <@287999995230027787>,\n <@348468240520970260>,\n <@301263420471246848>,\n <@351722490487373834>.")
     .addField("Administratorzy", "Aktualnie brak.")
     .addField("Moderatorzy", "<@470312950213902356>,\n <@336755369667723276>")
