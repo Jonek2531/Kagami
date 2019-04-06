@@ -20,7 +20,6 @@ bot.on("message", async message =>{
   let cmd = msgArray[0];
   let args = msgArray.slice(1);
 
-
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 
@@ -38,9 +37,6 @@ bot.on("message", async message =>{
     .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
-	if(cmd === `${prefix}online`){
-members.filter(m => m.presence.status === 'online')
-	}
 	
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
