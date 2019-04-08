@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
-const moment = require('moment');
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 
@@ -197,8 +196,7 @@ let user = message.mentions.users.first() || message.author;
        
        
        .addField("Status", `${user.presence.status}`)
-                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
-       .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true);
+                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
             return message.channel.send(embed);
         }
 
