@@ -411,8 +411,8 @@ if(cmd === `${prefix}kik`){
     let botembed = new Discord.RichEmbed()
     .setDescription("Bot powstał dnia 13.08.18.")
     .setColor("#00f4ff")
-    .addField("Natsuki", "Bot tworzony przez <@329694416472375298> dla serwera GamerStay. Nazwa wzięła się od jednego z moderatorów serwera - <@470312950213902356>. Kiedyś tu będzie więcej info.");
-
+    .addField("Natsuki", "Bot tworzony przez <@329694416472375298> dla serwera GamerStay. Nazwa wzięła się od jednego z moderatorów serwera - <@470312950213902356>. Kiedyś tu będzie więcej info.")
+.addField("Inne informacje", "Liczba komend: 34\nWersja bota: 1.2.0
     return message.channel.send(botembed);
   }
 
