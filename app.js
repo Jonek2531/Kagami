@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
+const moment = require('moment');
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 
@@ -193,6 +194,7 @@ let user = message.mentions.users.first() || message.author;
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${user.createdAt}`)
+       
        
        .addField("Status", `${user.presence.status}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
