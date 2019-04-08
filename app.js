@@ -193,8 +193,10 @@ let user = message.mentions.users.first() || message.author;
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${user.createdAt}`)
+       
        .addField("Status", `${user.presence.status}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
+       .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
             return message.channel.send(embed);
         }
 
