@@ -196,7 +196,7 @@ let user = message.mentions.users.first() || message.author;
        
        .addField("Status", `${user.presence.status}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
-       .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
+       .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true);
             return message.channel.send(embed);
         }
 
