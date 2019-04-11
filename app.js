@@ -436,7 +436,6 @@ if(cmd === `${prefix}kik`){
     .addField("!rola <nazwa roli>", "Informacje na temat danej roli.")
     .addField("!serverinfo", "Informacje dotyczące serwera.")
     .addField("!slot", "Losujesz sobie, jeśli trafisz trzy :seven:, to coś się stanie.")
-    .addField("!trump","Pokazuje gify o Trumpie.")
     .addField("!weryfikacja", "Informacja jak się poprawnie zweryfikować.")
     .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
     .addField("!zapal", "Zaczynasz palić gumę.")
