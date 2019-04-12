@@ -154,7 +154,7 @@ channel.send('Propozycja:\n' + args.join(' '))
       text: "© Example"
     }
   }
-			     }
+			     });			     
 	
 	if (cmd === `${prefix}mrr`){
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
