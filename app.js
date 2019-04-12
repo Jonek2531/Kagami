@@ -114,48 +114,48 @@ dUser.send(`${dMessage}`)
 	 }
 		
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
-const channel = message.guild.channels.find(ch => ch.name === '✦》propozycje');  //finds the channel named suggestions 
+const channel = message.guild.channels.find(ch => ch.name === 'tylko-administracja');  //finds the channel named suggestions 
 		
-let embed = new Discord.RichEmbed()
-channel.send('Propozycja:\n' + args.join(' '))
-             .then(function (msg) {
+let proembed = new Discord.RichEmbed()
+.setDescription('Propozycja od użytkownika `${message.author}`:\n' + args.join(' '))
+    .setColor("#00ffd4")
+.setTimestamp(new Date())
+             
+		     
+		     return message.channel.send(proembed)
+		.then(function (msg) {
             msg.react("✅");
             msg.react("❎"); // You can only add two reacts
       ({timeout: 1000});
             })
 }     //Closes the if (command === 'suggest'){ 
-	
-	if(cmd === `${prefix}embed`){
-	message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "This is an embed",
-    url: "http://google.com",
-    description: "This is a test embed to showcase what they look like and what they can do.",
-    fields: [{
-        name: "Fields",
-        value: "They can have different fields with small headlines."
-      },
-      {
-        name: "Masked links",
-        value: "You can put [masked links](http://google.com) inside of rich embeds."
-      },
-      {
-        name: "Markdown",
-        value: "You can put all the *usual* **__Markdown__** inside of them."
-      }
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "© Example"
-    }
+			     
+	if(cmd === `${prefix}pomoc`){
+
+    let helpembed = new Discord.RichEmbed()
+    .setDescription("Komendy bota.")
+    .setColor("#00ffd4")
+    .setTimestamp(new Date())
+    .addField("!administracja", "Spis administracji serwera.")
+    .addField("!ankieta <treść>","Tworzysz publiczną ankietę.")
+    .addField("!avatar <nick>", "Pokazuje avatar oznaczonej osoby.")
+    .addField("!botinfo", "Informacje o serwerowym bocie.")
+    .addField("!gay", "Bot pokazuje Ci w ilu procentach jesteś gejem.")
+    .addField("!hug <nick>", "Przytulasz oznaczoną osobę.")
+    .addField("!najnowsza-wiadomość <nick>", "Możesz zobaczyć najnowszą wiadomość oznaczonej osoby.")
+    .addField("!pomoc-admin","Lista komend dla administracji.")
+    .addField("!profil","Pokazuje informacje o użytkowniku.")
+    .addField("!report <nick> <powód>", "Reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie.")
+    .addField("!rola <nazwa roli>", "Informacje na temat danej roli.")
+    .addField("!serverinfo", "Informacje dotyczące serwera.")
+    .addField("!slot", "Losujesz sobie, jeśli trafisz trzy :seven:, to coś się stanie.")
+    .addField("!weryfikacja", "Informacja jak się poprawnie zweryfikować.")
+    .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę, to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś czy zremisowałeś.")
+    .addField("!zapal", "Zaczynasz palić gumę.")
+    .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.");
+
+    return message.channel.send(helpembed);
   }
-			     });			     
-	
 	if (cmd === `${prefix}mrr`){
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
     message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
