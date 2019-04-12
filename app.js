@@ -75,7 +75,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
-if(!message.member.hasPermission("MANAGE_GUILD")) return message.reply("Nie masz uprawnień!")
+if(!message.member.hasPermission("MANAGE_GUILD")) return message.reply("Nie masz uprawnień do używania tej komendy.")
 let dMessage = args.join(" ").slice(22);
 if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
 
@@ -114,7 +114,7 @@ dUser.send(`${dMessage}`)
 	 }
 			 
 	if (cmd === `${prefix}mrr`){
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Brak uprawnień do używania tej k0z4k komendy.");
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
     message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
   }
 
@@ -258,7 +258,7 @@ let user = message.mentions.users.first() || message.author;
 	
 	
 	 if(cmd === `${prefix}say`) {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do korzystania z tej komendy.");
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
     const sayMessage = args.join(" ");
@@ -304,7 +304,7 @@ if(cmd === `${prefix}kik`){
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) return message.channel.send("Nie ma takiego użytkownika!");
     let bReason = args.join(" ").slice(22);
-    if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Nie możesz zbanować tej osoby, ponieważ nie masz uprawnień!");
+    if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
     if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("Nie możesz zbanować z serwera tej osoby!");
 
     let banEmbed = new Discord.RichEmbed()
