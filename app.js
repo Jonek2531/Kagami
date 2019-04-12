@@ -120,7 +120,7 @@ channel.send('Propozycja:\n' + args.join(' '))
              .then(function (msg) {
             msg.react("❎");
             msg.react("✅"); // You can only add two reacts
-            message.delete({timeout: 1000});
+      
             })
 }     //Closes the if (command === 'suggest'){ 
 		      	
