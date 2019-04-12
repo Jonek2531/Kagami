@@ -117,8 +117,11 @@ dUser.send(`${dMessage}`)
 const channel = message.guild.channels.find(ch => ch.name === 'tylko-administracja');  //finds the channel named suggestions 
 
 channel.send('Propozycja:\n' + args.join(' '))
-            message.react("❎");
-            message.react("✅")//Sends the arguments
+             .then(function (msg) {
+            msg.react("❎");
+            msg.react("✅"); // You can only add two reacts
+            message.delete({timeout: 1000});
+            })
 }     //Closes the if (command === 'suggest'){ 
 		      	
 	
