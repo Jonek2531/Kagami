@@ -116,7 +116,7 @@ dUser.send(`${dMessage}`)
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
 const channel = message.guild.channels.find(ch => ch.name === 'tylko-administracja');  //finds the channel named suggestions 
 
-channel.send('Propozycja:\n' + args.join(' ')) '\nPropozycja od:' message.author //Sends the arguments
+channel.send('Propozycja:\n' + args.join(' ')) //Sends the arguments
 }     //Closes the if (command === 'suggest'){ 
 	
 	
