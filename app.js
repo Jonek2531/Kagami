@@ -115,7 +115,8 @@ dUser.send(`${dMessage}`)
 		
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
 const channel = message.guild.channels.find(ch => ch.name === '✦》propozycje');  //finds the channel named suggestions 
-
+		
+let embed = new Discord.RichEmbed()
 channel.send('Propozycja:\n' + args.join(' '))
              .then(function (msg) {
             msg.react("✅");
@@ -123,7 +124,37 @@ channel.send('Propozycja:\n' + args.join(' '))
       ({timeout: 1000});
             })
 }     //Closes the if (command === 'suggest'){ 
-		      	
+	
+	if(cmd === `${prefix}embed`){
+	message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "This is an embed",
+    url: "http://google.com",
+    description: "This is a test embed to showcase what they look like and what they can do.",
+    fields: [{
+        name: "Fields",
+        value: "They can have different fields with small headlines."
+      },
+      {
+        name: "Masked links",
+        value: "You can put [masked links](http://google.com) inside of rich embeds."
+      },
+      {
+        name: "Markdown",
+        value: "You can put all the *usual* **__Markdown__** inside of them."
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Example"
+    }
+  }
+			     }
 	
 	if (cmd === `${prefix}mrr`){
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
