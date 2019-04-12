@@ -112,7 +112,14 @@ dUser.send(`${dMessage}`)
 	 if (cmd === `${prefix}weryfikacja`){
     message.channel.send("**Jak poprawnie się zweryfikować?** Zobacz na ten obrazek: https://cdn.discordapp.com/attachments/527242378336010250/556935546098810890/weryfikacja2.PNG ^^. Następnie zaznacz pod wiadomością na obrazku **2 RAZY** reakcję. <a:orangejustice:470882311399800833>");
 	 }
-			 
+		
+	if (cmd ===`${prefix}propozycja`){   //if command is suggest
+const channel = message.guild.channels.find(ch => ch.name === 'tylko-administracja');  //finds the channel named suggestions 
+
+channel.send('Propozycja:\n ' + args.join(' '))  //Sends the arguments
+}     //Closes the if (command === 'suggest'){ 
+	
+	
 	if (cmd === `${prefix}mrr`){
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
     message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
