@@ -121,7 +121,7 @@ let proembed = new Discord.RichEmbed()
 .setDescription('**Propozycja od użytkownika:**\n\n' +              args.join(' '))
     .setColor("#00ffd4")
 .setTimestamp(new Date())
-.setFooter(`${user.username}`)
+.setFooter(`${user.username}#${user.discriminator}`)
                   .setThumbnail(`${user.avatarURL}`)
 		     
 		     return message.channel.send(proembed)
