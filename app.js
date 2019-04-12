@@ -437,7 +437,7 @@ if(cmd === `${prefix}kik`){
     .addField("!serverinfo", "Informacje dotyczące serwera.")
     .addField("!slot", "Losujesz sobie, jeśli trafisz trzy :seven:, to coś się stanie.")
     .addField("!weryfikacja", "Informacja jak się poprawnie zweryfikować.")
-    .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
+    .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę, to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś czy zremisowałeś.")
     .addField("!zapal", "Zaczynasz palić gumę.")
     .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.");
 
