@@ -115,7 +115,7 @@ dUser.send(`${dMessage}`)
 		
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
 		let user = message.author;
-const channel = message.guild.channels.find(ch => ch.name === '✦》propozycje');  //finds the channel named suggestions 
+const channel = message.guild.channels.find(ch => ch.name === 'propozycje');  //finds the channel named suggestions 
 		
 let proembed = new Discord.RichEmbed()
 .setDescription('**Propozycja od użytkownika:**\n\n' +              args.join(' '))
