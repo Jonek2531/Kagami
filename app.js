@@ -116,9 +116,11 @@ dUser.send(`${dMessage}`)
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
 const channel = message.guild.channels.find(ch => ch.name === 'tylko-administracja');  //finds the channel named suggestions 
 
-channel.send('Propozycja:\n' + args.join(' ')) //Sends the arguments
+channel.send('Propozycja:\n' + args.join(' '))
+            message.react("❎");
+            message.react("✅")//Sends the arguments
 }     //Closes the if (command === 'suggest'){ 
-	
+		      	
 	
 	if (cmd === `${prefix}mrr`){
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
