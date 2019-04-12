@@ -118,7 +118,7 @@ dUser.send(`${dMessage}`)
 const channel = message.guild.channels.find(ch => ch.name === 'tylko-administracja');  //finds the channel named suggestions 
 		
 let proembed = new Discord.RichEmbed()
-.setDescription('**Propozycja od użytkownika ${message.author}:**\n\n' +              args.join(' '))
+.setDescription('**Propozycja:**\n\n' +              args.join(' '))
     .setColor("#00ffd4")
 .setTimestamp(new Date())
                   .setThumbnail(`${user.avatarURL}`)
