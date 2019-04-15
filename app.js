@@ -133,26 +133,10 @@ let proembed = new Discord.RichEmbed()
 }     //Closes the if (command === 'suggest'){ 
 			     
 	if(cmd === `${prefix}przypnij`){
-message.channel.send("Test")
+		 const pinMessage = args.join(" ");
+message.channel.send(pinMessage)
 		.then(function (msg) {
             msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
-	msg.pin();
-	msg.unpin();
       ({timeout: 1000});
             })
 	}
