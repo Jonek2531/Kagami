@@ -481,6 +481,7 @@ if(cmd === `${prefix}kik`){
     .addField("!ban <nick> <powód>", "Banujesz oznaczonego użytkownika.")
  .addField("!kick <nick> <powód>", "Wyrzucasz oznaczonego użytkownika.")
  .addField("!mrr", "Nani.")
+    .addField("!przypnij <treść>", "Robi to samo co !say, ale dodatkowo przypina wiadomość.")
  .addField("!purge <ilość>", "Usuwasz od 2 do 50 najnowszych wiadomości.")
  .addField("!say <treść>", "Wysyłasz wiadomość używając bota.")
  .addField("!ustaw-awatar <link>", "Ustawiasz botowi dowolny awatar.")
