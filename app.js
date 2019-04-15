@@ -133,6 +133,7 @@ let proembed = new Discord.RichEmbed()
 }     //Closes the if (command === 'suggest'){ 
 			     
 	if(cmd === `${prefix}przypnij`){
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
 		 const pinMessage = args.join(" ");
 message.channel.send(pinMessage)
 		.then(function (msg) {
