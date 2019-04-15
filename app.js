@@ -132,7 +132,15 @@ let proembed = new Discord.RichEmbed()
             })
 }     //Closes the if (command === 'suggest'){ 
 			     
-	
+	if(cmd === `${prefix}przypnij`){
+message.channel.send("Test")
+		.then(function (msg) {
+            msg.pin();
+      ({timeout: 1000});
+            })
+	}
+		
+		
 	if (cmd === `${prefix}mrr`){
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
     message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
