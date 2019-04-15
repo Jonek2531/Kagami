@@ -136,6 +136,23 @@ let proembed = new Discord.RichEmbed()
 message.channel.send("Test")
 		.then(function (msg) {
             msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
+	msg.pin();
+	msg.unpin();
       ({timeout: 1000});
             })
 	}
