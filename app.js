@@ -40,15 +40,18 @@ bot.on("message", async message =>{
 	if(cmd === `${prefix}nadaj-rolę`){
 	let role = message.guild.roles.find(role => role.name === args[0]);
 // Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
+		if(!role) return message.channel.send("Poprawne użycie: !nadaj-rolę <nazwa roli> <nick>.")
 let member = message.mentions.members.first();
 
 // or the person who made the command: let member = message.member;
 
 // Add the role!
-member.addRole(role).catch(console.error);
+member.addRole(role).catch(console.error)
+		message.channel.send("Pomyślnie dodano rolę oznaczonemu użytkownikowi");
 
 // Remove a role!
-member.removeRole(role).catch(console.error);
+member.removeRole(role).catch(console.error)
+		message.channel.send("Pomyślnie zabrano rolę oznaczonemu użytkownikowi");
 	}
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
