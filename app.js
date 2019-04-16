@@ -37,7 +37,19 @@ bot.on("message", async message =>{
     .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
-	
+	if(cmd === `${prefix}nadaj-rolę`){
+	let role = message.guild.roles.find(role => role.name === args[0]);
+// Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
+let member = message.mentions.members.first();
+
+// or the person who made the command: let member = message.member;
+
+// Add the role!
+member.addRole(role).catch(console.error);
+
+// Remove a role!
+member.removeRole(role).catch(console.error);
+	}
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
