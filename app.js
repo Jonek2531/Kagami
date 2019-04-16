@@ -51,7 +51,8 @@ bot.on("message", async message =>{
         .addField('Data stworzenia roli', role.createdAt.toDateString(), true)
             .addField('Możliwa do wzmianki', role.mentionable.toString(), true)
         .addField('Pozycja w rolach (od dołu)', role.position .toString(), true)
-        .addField('ID roli', role.id, true);
+        .addField('ID roli', role.id, true)
+    .addField('Permisje roli', role.permissions, true);
     return message.channel.send(embed)
 }
 
