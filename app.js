@@ -701,7 +701,37 @@ if(cmd === `${prefix}kik`){
   }, 4000);
 });
 };
-	
+		if(cmd === `${prefix}dzień-dobry`){
+	  message.channel.send('D').then(async msg => {
+  setTimeout(() => {
+    msg.edit('Dz');
+  }, 500);
+  setTimeout(() => {
+    msg.edit('Dzi ');
+  }, 1000);
+  setTimeout(() => {
+    msg.edit('Dzie ');
+  }, 1500);
+  setTimeout(() => {
+    msg.edit('Dzień ');
+  }, 2000);
+  setTimeout(() => {
+    msg.edit('Dzień D');
+  }, 2500);
+  setTimeout(() => {
+    msg.edit('Dzień Do);
+  }, 3000);
+  setTimeout(() => {
+    msg.edit('Dzień Dob ');
+  }, 3500);
+  setTimeout(() => {
+    msg.edit(`Dzień Dobr`);
+  }, 4000);
+	  setTimeout(() => {
+		  msg.edit(`Dzień Dobry`);
+	  }, 4000);
+});
+};
 	const yourID = ""; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = "!createrolemessage"
 let initialMessage = `**Zareaguj pod wiadomością, aby otrzymać rolę!**`;
