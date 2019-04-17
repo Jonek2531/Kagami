@@ -226,9 +226,6 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
             console.log(error);
         });
 	
-	bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('495654037757362188').send("[Informacja] Na serwer właśnie dołączył nowy użytkownik!"); 
-});
 	 if(cmd === `${prefix}profil`) {
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
