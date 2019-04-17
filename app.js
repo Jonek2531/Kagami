@@ -705,31 +705,31 @@ if(cmd === `${prefix}kik`){
 	  message.channel.send('D').then(async msg => {
   setTimeout(() => {
     msg.edit('Dz');
-  }, 500);
+  }, 750);
   setTimeout(() => {
     msg.edit('Dzi ');
-  }, 1000);
-  setTimeout(() => {
-    msg.edit('Dzie ');
   }, 1500);
   setTimeout(() => {
+    msg.edit('Dzie ');
+  }, 2250);
+  setTimeout(() => {
     msg.edit('Dzień ');
-  }, 2000);
-  setTimeout(() => {
-    msg.edit('Dzień D');
-  }, 2500);
-  setTimeout(() => {
-    msg.edit('Dzień Do);
   }, 3000);
   setTimeout(() => {
+    msg.edit('Dzień D');
+  }, 3750);
+  setTimeout(() => {
+    msg.edit('Dzień Do');
+  }, 4500);
+  setTimeout(() => {
     msg.edit('Dzień Dob ');
-  }, 3500);
+  }, 5250);
   setTimeout(() => {
     msg.edit(`Dzień Dobr`);
-  }, 4000);
+  }, 6000);
 	  setTimeout(() => {
 		  msg.edit(`Dzień Dobry`);
-	  }, 4000);
+	  }, 6750);
 });
 };
 	const yourID = ""; //Instructions on how to get this: https://redd.it/40zgse
