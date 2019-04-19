@@ -748,7 +748,7 @@ if(cmd === `${prefix}kik`){
     msg.edit('Dobran');
   }, 3750);
   setTimeout(() => {
-    msg.edit('Dobrano);
+    msg.edit('Dobrano');
   }, 4500);
   setTimeout(() => {
     msg.edit('Dobranoc ');
