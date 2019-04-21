@@ -72,7 +72,7 @@ member.removeRole(role).catch(console.error)
 }
 	
 	if(cmd === `${prefix}emoji`) {
-    let emoji = message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
+    let emoji = message.guild.emojis.get(args[0]) || message.guild.emojis.find(emoji => emoji.name === args[0]);
     if (!emoji) emoji = message.member.highestEmoji;
 
 
