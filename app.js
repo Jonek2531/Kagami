@@ -78,7 +78,7 @@ member.removeRole(role).catch(console.error)
 
     let embed = new Discord.RichEmbed()
         .setColor("#873873")
-        .setTitle(`Emoji: ${emoji.name}`)
+        .setTitle(`Emoji: <:${emoji.name}:${emoji.id}>`)
         .addField('Animowana?', emoji.animated, true)
         .addField('Info', emoji.identifier, true)
         .addField('Data stworzenia emotki', emoji.createdAt.toDateString(), true)
