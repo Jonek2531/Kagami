@@ -73,12 +73,12 @@ member.removeRole(role).catch(console.error)
 	
 	if(cmd === `${prefix}emoji`) {
     let emoji = message.guild.emojis.get(args[0]) || message.guild.emojis.find(emoji => emoji.name === args[0]);
-    if (!emoji) emoji = message.member.highestEmoji;
+    if (!emoji) emoji = message.highestEmoji;
 
 
     let embed = new Discord.RichEmbed()
         .setColor("#873873")
-        .setTitle(`Rola: ${emoji.name}`)
+        .setTitle('Informacje o emotce')
         .addField('Animowana?', emoji.animated, true)
         .addField('Jeszcze idk', emoji.identifier, true)
         .addField('Data stworzenia roli', emoji.createdAt.toDateString(), true)
