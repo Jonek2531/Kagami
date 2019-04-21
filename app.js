@@ -84,7 +84,7 @@ member.removeRole(role).catch(console.error)
         .addField('Data stworzenia emotki', emoji.createdAt.toDateString(), true)
             .addField('Na serwerze', emoji.guild.toString(), true)
         .addField('ID emoji', emoji.id.toString(), true)
-    .addField('Jeszcze idk', emoji.requiresColons, true)
+    .addField('Posiada dwukropki?', emoji.requiresColons, true)
     .addField('URL', emoji.url, true);
     return message.channel.send(embed)
 }
