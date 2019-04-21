@@ -8,7 +8,7 @@ bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Ｂｅｓｔ Ｂｏｔ ：Ｄ; !pomoc", {type: "LISTENING"});
+  bot.user.setActivity("!pomoc", {type: "LISTENING"});
 })
 
 bot.on("message", async message =>{
