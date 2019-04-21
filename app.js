@@ -70,6 +70,24 @@ member.removeRole(role).catch(console.error)
     .addField('Permisje roli', role.permissions, true);
     return message.channel.send(embed)
 }
+	
+	if(cmd === `${prefix}emoji`) {
+    let emoji = message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
+    if (!emoji) emoji = message.member.highestEmoji;
+
+
+    let embed = new Discord.RichEmbed()
+        .setColor("#873873")
+        .setTitle(`Rola: ${emoji.name}`)
+        .addField('Animowana?', emoji.animated, true)
+        .addField('Jeszcze idk', emoji.identifier, true)
+        .addField('Data stworzenia roli', emoji.createdAt.toDateString(), true)
+            .addField('Na serwerze', emoji.guild.toString(), true)
+        .addField('URL)', emoji.url .toString(), true)
+        .addField('ID emoji', emoji.id, true)
+    .addField('Jeszcze idk', emoji.requiresColons, true);
+    return message.channel.send(embed)
+}
 
 	if(cmd === `${prefix}purge`) {
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
