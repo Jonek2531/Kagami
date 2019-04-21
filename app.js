@@ -73,19 +73,19 @@ member.removeRole(role).catch(console.error)
 	
 	if(cmd === `${prefix}emoji`) {
     let emoji = message.guild.emojis.get(args[0]) || message.guild.emojis.find(emoji => emoji.name === args[0]);
-    if (!emoji) emoji = message.highestEmoji;
+    if (!emoji) emoji = message.channel.send("Musisz podać jakąś emotkę! Pamiętaj, aby nie dawać dwukropka.");
 
 
     let embed = new Discord.RichEmbed()
         .setColor("#873873")
-        .setTitle('Informacje o emotce')
+        .setTitle(`Emoji: ${emoji.name}`)
         .addField('Animowana?', emoji.animated, true)
-        .addField('Jeszcze idk', emoji.identifier, true)
-        .addField('Data stworzenia roli', emoji.createdAt.toDateString(), true)
+        .addField('Info', emoji.identifier, true)
+        .addField('Data stworzenia emotki', emoji.createdAt.toDateString(), true)
             .addField('Na serwerze', emoji.guild.toString(), true)
-        .addField('URL)', emoji.url .toString(), true)
-        .addField('ID emoji', emoji.id, true)
-    .addField('Jeszcze idk', emoji.requiresColons, true);
+        .addField('ID emoji', emoji.id.toString(), true)
+    .addField('Jeszcze idk', emoji.requiresColons, true)
+    .addField('URL', emoji.url, true);
     return message.channel.send(embed)
 }
 
