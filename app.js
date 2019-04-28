@@ -26,7 +26,7 @@ bot.on("message", async message =>{
 	if (message.content === "!loop") { 
       var interval = setInterval (function () {
         message.channel.send("123")
-      }, 1 * 10); 
+      }, 10 * 10); 
     }
 	  if(cmd === `${prefix}administracja`){
 
