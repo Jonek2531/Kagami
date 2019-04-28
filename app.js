@@ -10,7 +10,7 @@ bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("!propozycja <treść> - napisz własną propozycję!", {type: "LISTENING"});
 })
-
+// lol
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;	
