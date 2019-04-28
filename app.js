@@ -43,6 +43,16 @@ bot.on("message", async message =>{
     .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
+	if(cmd === `${prefix}pisz-wiecznie`){
+		let channel = message.channel
+		channel.startTyping(999999);
+	}
+	
+	if(cmd === `${prefix}zatrzymaj-pisanie`){
+		let channel = message.channel
+		channel.stopTyping(true);
+	}
+	
 	if(cmd === `${prefix}nadaj-rolę`){
 	let role = message.guild.roles.find(role => role.name === args[0]);
 // Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
