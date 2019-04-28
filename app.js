@@ -141,7 +141,7 @@ dUser.send(`${dMessage}`)
 }
 
   if (cmd === `${prefix}rangi`){
-    message.channel.send("Możliwe rangi do dodania sobie: \n ?giveaway,\n ?furry,\n ?nsfw,\n ?tyralnia,\n ?qotd,\n ?anime,\n ?metalowiec,\n ?programowanie,\n ?html,\n ?css,\n ?python.");
+    message.channel.send("Możliwe rangi do dodania sobie: \n ?anime,\n ?css,\n ?eventy,\n ?furry,\n ?giveaway,\n ?html,\n ?metalowiec,\n ?nsfw,\n ?programowanie,\n ?python,\n ?qotd,\n ?tyralnia.");
   }
 	 if (cmd === `${prefix}weryfikacja`){
     message.channel.send("**Jak poprawnie się zweryfikować?** Zobacz na ten obrazek: https://cdn.discordapp.com/attachments/527242378336010250/556935546098810890/weryfikacja2.PNG ^^. Następnie zaznacz pod wiadomością na obrazku **2 RAZY** reakcję. <a:orangejustice:470882311399800833>");
