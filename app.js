@@ -24,7 +24,7 @@ bot.on("message", async message =>{
   if(commandfile) commandfile.run(bot, message, args);
 
 	if (message.content === "!zaspamuj") { 
-		if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
       var interval = setInterval (function () {
         message.channel.send("=== ŚCIANA SPAMU ===")
       }, 1 * 1); 
@@ -44,11 +44,13 @@ bot.on("message", async message =>{
     return message.channel.send(admembed);
   }
 	if(cmd === `${prefix}pisz-wiecznie`){
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
 		let channel = message.channel
 		channel.startTyping(999999);
 	}
 	
 	if(cmd === `${prefix}zatrzymaj-pisanie`){
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
 		let channel = message.channel
 		channel.stopTyping(true);
 	}
