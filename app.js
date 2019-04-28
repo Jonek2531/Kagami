@@ -26,8 +26,8 @@ bot.on("message", async message =>{
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
       var interval = setInterval (function () {
-        message.channel.send("123")
-      }, 10 * 10); 
+        message.channel.send("=== ŚCIANA SPAMU ===")
+      }, 1 * 1); 
     }
 	  if(cmd === `${prefix}administracja`){
 
@@ -523,7 +523,8 @@ if(cmd === `${prefix}kik`){
  .addField("!purge <ilość>", "Usuwasz od 2 do 50 najnowszych wiadomości.")
  .addField("!say <treść>", "Wysyłasz wiadomość używając bota.")
  .addField("!ustaw-awatar <link>", "Ustawiasz botowi dowolny awatar.")
- .addField("!wiadomość <nick>", "Wysyłasz oznaczonemu użytkownikowi wiadomość na PW.");
+ .addField("!wiadomość <nick>", "Wysyłasz oznaczonemu użytkownikowi wiadomość na PW.")
+	   .addField("!zaspamuj", "Bot zacznie spamić na kanale.");
     
     return message.channel.send(helpaembed);
   }
