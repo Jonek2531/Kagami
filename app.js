@@ -23,6 +23,11 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 
+	if (message.content === "!loop") { 
+      var interval = setInterval (function () {
+        message.channel.send("123")
+      }, 1 * 10); 
+    }
 	  if(cmd === `${prefix}administracja`){
 
     let admembed = new Discord.RichEmbed()
