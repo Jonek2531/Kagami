@@ -50,7 +50,7 @@ bot.on('message', message => {
     // commands
 
   // money access
-  if ( msg === prefix + 'PUNKTY') {
+ if (msg === prefix + 'MONEY' || msg === prefix + 'HAJS') {
     message.channel.send({"embed": {
       title: "Bank",
       color: 0xF1C40F,
