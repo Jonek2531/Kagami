@@ -905,8 +905,11 @@ if (cmd.startsWith(prefix + 'hug')) {
 	
 	if (cmd.startsWith(prefix + 'slap')) {
     let slap = [
-        "https://tenor.com/view/spank-tomandjerry-gif-5196956",
-        "https://tenor.com/view/slap-gif-9342231",
+        "https://cdn.discordapp.com/attachments/468468353367932929/572460262829981719/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif",
+        "https://cdn.discordapp.com/attachments/468468353367932929/572460221213966336/giphy_1.gif",
+	"https://cdn.discordapp.com/attachments/468468353367932929/572460090674905088/379.gif",
+	"https://cdn.discordapp.com/attachments/468468353367932929/572460310196256793/giphy.gif",
+	 "https://i.gifer.com/VF8X.gif",
     ]
     let slapresult = Math.floor((Math.random() * slap.length));
     if (!args[0]) {
