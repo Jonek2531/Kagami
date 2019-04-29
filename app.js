@@ -92,6 +92,8 @@ client.on("message", message => {
     fs.writeFile("./database.json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
       });
+	})
+
 	
 	if(cmd === `${prefix}nadaj-rolę`){
 	let role = message.guild.roles.find(role => role.name === args[0]);
