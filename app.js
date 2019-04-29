@@ -32,42 +32,6 @@ bot.on("message", async message =>{
 	
 	// json files
 let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
-
-
-// listener events
-bot.on('message', message => {
-  // variables
-  let sender = message.author;
-  let msg = message.content.toUpperCase();
-  let prefix = '!'
-  // events
-  if (!userData[sender.id + message.guild.id]) userData[sender.id + message.guild.id] = {}
-  if (!userData[sender.id + message.guild.id].money) userData[sender.id + message.guild.id].money = 1000;
-
-  fs.writeFile('Storage/userData.json', JSON.stringify(userData), (err) => {
-    if (err) console.error(err);
-  })
-    // commands
-
-  // money access
- if (msg === prefix + 'MONEY' || msg === prefix + 'HAJS') {
-    message.channel.send({"embed": {
-      title: "Bank",
-      color: 0xF1C40F,
-      fields:[{
-        name:"Account Holder",
-        value:message.author.username,
-        inline:true
-      },
-    {
-      name:"Account Balance",
-      value:userData[sender.id + message.guild.id].money,
-      inline:true
-    }]
-    }})
-  }
-
-});
 	
 	  if(cmd === `${prefix}administracja`){
 
@@ -176,9 +140,6 @@ if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości
 dUser.send(`${dMessage}`)
 
 }
-  if (cmd === `${prefix}info`) {
-    message.channel.send(userInfo(message.author));
-  }
 	
 	if(cmd === `${prefix}ustaw-awatar`) {
     let messageArray = message.content.split(" ");
