@@ -546,30 +546,6 @@ if(cmd === `${prefix}kik`){
     return message.channel.send(helpaembed);
   }
   
-	  if(cmd === `${prefix}pomoc2`){
-
-    let helpembed = new Discord.RichEmbed()
-    .setDescription("Komendy bota")
-    .setColor("RANDOM")
-    .setTimestamp(new Date())
-    .addField("!report <nick> <powód>", "reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie")
-    .addField("!serverinfo", "informacje dotyczące serwera")
-    .addField("!ban <nick> <powód>", "banujesz osobę. [Tylko dla Administracji]")
-    .addField("!kick <nick> <powód>", "wyrzucasz osobę z serwera [Tylko dla Administracji]")
-    .addField("!zapytaj <treść>", "pytasz się o coś bota, a on Ci odpowiada")
-    .addField("!avatar <Nick>", "pokazuje avatar oznaczonej osoby")
-    .addField("!wybierz <papier|kamień|nożyce>", "Działa to tak, że wpiszesz komendę to bot wybierze papier, kamień lub nożyce i napisze czy wygrałeś, czy przegrałeś.")
-    .addField("!zapal", "zaczynasz palić gumę :3")
-    .addField("!hug", "przytulasz oznaczoną osobę")
-    .addField("!ankieta","tworzysz publiczną ankietę")
-    .addField("SEKRETNE/NIEPUBLICZNE KOMENDY")
-    .addField("!trump","pokazuje gify o trumpie")
-    .addField("!profil","pokazuje informacje o użytkowniku")
-    .addField("!say","bot coś za Ciebie pisze");
-
-    return message.channel.send(helpembed);
-  }
-  
   if(cmd === `${prefix}wybierz`){
     var choice = args[0];
   if (choice == "papier" || choice == "p") {
@@ -919,6 +895,43 @@ if (cmd.startsWith(prefix + 'hug')) {
     const ghembed = new Discord.RichEmbed()
         .setColor(0xFF0000)
         .setTitle(`${message.author.username} sam/a siebie przytulił/a...`)
+        .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
+    message.channel.send({
+        embed: ghembed
+    })
+	
+
+}
+	
+	if (cmd.startsWith(prefix + 'slap')) {
+    let slap = [
+        "https://tenor.com/view/spank-tomandjerry-gif-5196956",
+        "https://tenor.com/view/slap-gif-9342231",
+    ]
+    let slapresult = Math.floor((Math.random() * slap.length));
+    if (!args[0]) {
+        const gsembed = new Discord.RichEmbed()
+            .setColor(0xFF0000)
+            .setTitle(`${message.author.username} sam/a siebie pacnął/eła...`)
+            .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
+        message.channel.send({
+            embed: gsembed
+        })
+        return;
+    }
+    if (!message.mentions.members.first().user.username === message.isMentioned(message.author)) {
+        const sembed = new Discord.RichEmbed()
+            .setColor(0xFF0000)
+            .setTitle(`${message.author.username} slapnął/eła ${message.mentions.members.first().user.username}! Co za cwel!`)
+            .setImage(slap[slapresult])
+        message.channel.send({
+            embed: sembed
+        })
+        return;
+    }
+    const ghembed = new Discord.RichEmbed()
+        .setColor(0xFF0000)
+        .setTitle(`${message.author.username} sam/a siebie pacnął/eła...`)
         .setImage('https://media3.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif')
     message.channel.send({
         embed: ghembed
