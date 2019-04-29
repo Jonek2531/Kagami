@@ -157,7 +157,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
       return message.reply("Proszę podać liczbę od 2 do 50.");
     
     // So we get our messages, and delete them. Simple enough, right?
-    const fetched = await message.channel.fetchMessages({limit: deleteCount});
+    const fetched = message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Nie mogę wykonać polecenia, ponieważ: ${error}`));
   }
