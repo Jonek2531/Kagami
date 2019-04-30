@@ -311,10 +311,10 @@ let user = message.mentions.users.first() || message.author;
 	
 		if(cmd === `${prefix}giveaway`) {
 			if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do korzystania z tej komendy.");
-    	message.channel.send("Czy jesteś pewien, że chcesz pingnąć rolę Giveaway?");
+    	message.channel.send("Czy jesteś pewien, że chcesz pingnąć rolę Giveaway? Napisz 'TAK' jeśli tak lub 'NIE' jeśli nie.");
 			if(message.content === 'TAK'){
 message.channel.send('<@&476766899611369483> aby wziąć udział należy zareagować reakcją 🎉')
-				else if(message.content === 'NIE')
+		 if(message.content === 'NIE')
 					message.channel.send("Anulowano.");
 			}
 	}
