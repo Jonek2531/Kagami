@@ -223,6 +223,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 	.setTitle(`Ankieta od użytkownika ${message.author.username}`);
         
     if(cmd === `${prefix}ankieta`)
+	    if(message.length < 1) return message.reply('Musisz napisać coś w ankiecie!')
 	    message.channel.send(embed)
         .then(function (msg) {
             msg.react("❎");
