@@ -192,7 +192,7 @@ let proembed = new Discord.RichEmbed()
 		 const pinMessage = message.id;
 message.channel.send("Pomyślnie przypięto wiadomość.")
 		.then(function (msg) {
-            msg.pin(message.id);
+            msg.pin(pinMessage);
       ({timeout: 1000});
             })
 	}
