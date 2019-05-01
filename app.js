@@ -532,6 +532,8 @@ if(cmd === `${prefix}kik`){
 	      .addField("Autor Komendy", helpembed.author)
 	      .addField("ID wiadomości", helpembed.id)
 	      .addField("O godzinie", helpembed);
+	  
+	  return message.channel.send(logipomoc);
   }
   if(cmd === `${prefix}pomoc-admin`){
     let helpaembed = new Discord.RichEmbed()
