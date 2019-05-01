@@ -189,10 +189,10 @@ let proembed = new Discord.RichEmbed()
 			     
 	if(cmd === `${prefix}przypnij`){
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
-		 const pinMessage = args.join(" ");
-message.channel.send(pinMessage)
+		 const pinMessage = message.id;
+message.channel.send("Pomyślnie przypięto wiadomość.")
 		.then(function (msg) {
-            msg.pin();
+            msg.pin(message.id);
       ({timeout: 1000});
             })
 	}
