@@ -531,7 +531,7 @@ if(cmd === `${prefix}kik`){
 	      .setTimestamp(new Date())
 	      .addField("Autor Komendy", helpembed.author)
 	      .addField("ID wiadomości", helpembed.id)
-	      .addField("O godzinie", helpembed);
+	      .addField("O godzinie", helpembed.createdAt);
 	  
 	  return logi.send(logipomoc);
   }
