@@ -523,29 +523,10 @@ if(cmd === `${prefix}kik`){
     .addField("!zapal", "Zaczynasz palić gumę.")
     .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.");
 
-    return message.channel.startTyping(3)
-	  .then(function (msg) {
-            msg.react(helpembed);
-      ({timeout: 3000});
-            })
+  
 	
-message.channel.send(helpembed);
-	   return message.channel.startTyping(3)
-	  .then(function (msg) {
-            msg.react("✅");
-      ({timeout: 3000});
-            })
-	     let logi = message.guild.channels.find(`name`, "logi");
-              let logipomoc = new Discord.RichEmbed()
-	      .setDescription("Logi")
-	      .setColor("#FFB2AA")
-	      .setTimestamp(new Date())
-	      .addField("Autor Komendy", helpembed.author)
-	      .addField("ID wiadomości", helpembed.id)
-	      .addField("O godzinie", helpembed.createdAt);
-	  message.channel.stopTyping(true);
-	  
-	  return logi.send(logipomoc);
+return message.channel.send(helpembed);
+	   
   }
   if(cmd === `${prefix}pomoc-admin`){
     let helpaembed = new Discord.RichEmbed()
