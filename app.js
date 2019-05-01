@@ -189,8 +189,8 @@ let proembed = new Discord.RichEmbed()
 			     
 	if(cmd === `${prefix}przypnij`){
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
-		 const pinMessage = message.id;
-message.channel.send("Pomyślnie przypięto wiadomość.")
+		 const pinMessage = message.pin;
+message.channel.send(pinMessage)
 		.then(function (msg) {
             msg.pin(pinMessage);
       ({timeout: 1000});
@@ -524,6 +524,14 @@ if(cmd === `${prefix}kik`){
     .addField("!zapytaj <treść>", "Pytasz się o coś bota, a on Ci odpowiada.");
 
     return message.channel.send(helpembed);
+	     let logi = message.guild.channels.find(`name`, "logi");
+              let logipomoc = new Discord.RichEmbed()
+	      .setDescription("Logi")
+	      .setColor("#FFB2AA")
+	      .setTimestamp(new Date())
+	      .addField("Autor Komendy", helpembed.author)
+	      .addField("ID wiadomości", helpembed.id)
+	      .addField("O godzinie", helpembed);
   }
   if(cmd === `${prefix}pomoc-admin`){
     let helpaembed = new Discord.RichEmbed()
