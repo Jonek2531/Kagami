@@ -397,11 +397,13 @@ if(cmd === `${prefix}kik`){
     .addField("Powód", bReason);
 
     let banChannel = message.guild.channels.find(`name`, "logi");
+	 let banChannel2 = message.channel
     if(!banChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
 
     message.guild.member(bUser).ban(bReason);
 
     banChannel.send(banEmbed);
+	  banChannel2.send(banEmbed);
 
     return;
   }
