@@ -289,7 +289,7 @@ let user = message.mentions.users.first() || message.author;
 		 return message.channel.send(nEmbed);
 		     }
 	if(cmd === `${prefix}gay`){
-
+// lll
 	    let gay = Math.round(Math.random() * 100);
 
     let gayembed = new Discord.RichEmbed()
