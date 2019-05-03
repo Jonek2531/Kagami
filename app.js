@@ -512,7 +512,7 @@ if(cmd === `${prefix}kik`){
     .addField("!hug <nick>", "Przytulasz oznaczoną osobę.")
     .addField("!najnowsza-wiadomość <nick>", "Możesz zobaczyć najnowszą wiadomość oznaczonej osoby.")
     .addField("!pomoc-admin","Lista komend dla administracji.")
-    .addField("!profil","Pokazuje informacje o użytkowniku.")
+    .addField("~~!profil~~ Aktualnie komenda niedostępna.","~~Pokazuje informacje o użytkowniku.~~")
     .addField("!rangi", "Lista ról, które można sobie samemu dodać.")
     .addField("!report <nick> <powód>", "Reportujesz osobę która łamie regulamin po czym administracja rozpatrza twoje zgłoszenie.")
     .addField("!rola <nazwa roli>", "Informacje na temat danej roli.")
