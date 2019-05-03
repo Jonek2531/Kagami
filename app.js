@@ -50,6 +50,7 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	if(cmd === `${prefix}pisz-wiecznie`){
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
 		let channel = message.channel
+		message.channel.send("Od teraz będę pisać wiecznie. Aby to wyłączyć, wpisz !zatrzymaj-pisanie")
 		channel.startTyping(999999);
 	}
 	
