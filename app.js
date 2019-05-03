@@ -927,7 +927,7 @@ if (cmd.startsWith(prefix + 'hug')) {
     if (!message.mentions.members.first().user.username === message.isMentioned(message.author)) {
         const sembed = new Discord.RichEmbed()
             .setColor(0xFF0000)
-            .setTitle(`${message.author.username} slapnął/eła ${message.mentions.members.first().user.username}! Co za cwel!`)
+            .setTitle(`${message.author.username} pacnąć/ęła ${message.mentions.members.first().user.username}!`)
             .setImage(slap[slapresult])
         message.channel.send({
             embed: sembed
