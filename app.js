@@ -34,7 +34,7 @@ bot.on("message", async message =>{
 let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
 	  if(cmd === `${prefix}administracja`){
-
+let cos = 
     let admembed = new Discord.RichEmbed()
     .setDescription("**Administracja Serwera GamerStay**")
     .setColor("RANDOM")
@@ -270,8 +270,8 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 		 
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
-		 let gra = user.presence.game;
-		 if(gra === null) gra = "nie gra w żadną grę";
+		 let gra = "w grze" + user.presence.game;
+		 if(gra === null) gra = "aktualnie nie gra w żadną grę";
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
@@ -279,7 +279,7 @@ let user = message.mentions.users.first() || message.author;
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${user.createdAt}`)      
-       .addField("Status", `${user.presence.status}, w grze **${gra}**`)
+       .addField("Status", `${user.presence.status}, **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
 	
             return message.channel.send(embed);
