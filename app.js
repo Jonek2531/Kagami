@@ -271,11 +271,7 @@ let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
 		 let gra = "w grze" + user.presence.game;
 		 let status = user.presence.status;
-		 if(status === "online") user.presence.status = "Dostępny,";
-		 if(status === "idle") user.presence.status = "Zaraz wracam,";
-		 if(status === "dnd") user.presence.status = "Nie przeszkadzać,";
-		 if(status === "offline") user.presence.status = "Niedostępny,";
-		 if(gra === null) gra = "aktualnie nie gra w żadną grę";
+		 if(gra === null) gra = "aktualnie nie jest w grze";
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
