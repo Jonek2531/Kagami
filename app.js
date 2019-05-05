@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const db = require('quick.db')
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const client = new Discord.Client();
@@ -76,6 +77,14 @@ member.addRole(role).catch(console.error)
 // Remove a role!
 member.removeRole(role).catch(console.error)
 		message.channel.send("Pomyślnie zabrano rolę oznaczonemu użytkownikowi");
+	}
+	if(cmd === `${prefix}hajs`){
+	 let bal = db.fetch(`money_${message.guild.id}_${message.author.id}`)
+
+    if (bal === null) bal = 0;
+
+    message.channel.send('You have a balance of `' + bal + '`')
+
 	}
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
