@@ -267,6 +267,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
         });
 	
 	 if(cmd === `${prefix}profil`) {
+		 
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
        let embed = new Discord.RichEmbed()
@@ -278,6 +279,8 @@ let user = message.mentions.users.first() || message.author;
                  .addField("Utworzono dnia", `${user.createdAt}`)      
        .addField("Status", `${user.presence.status}, w grze **${user.presence.game}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
+		 
+		 if(user.presence.game === null) user.presence.game = "Nie gra w żadną grę";
             return message.channel.send(embed);
         }
 
