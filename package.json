@@ -6,8 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
- "author": "TrueXPixels",
+  "author": "Jonek",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+   "author": "TrueXPixels",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TrueXPixels/quick.db/issues"
-  },
+  }
+}
