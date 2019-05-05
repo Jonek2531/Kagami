@@ -288,10 +288,12 @@ let user = message.mentions.users.first() || message.author;
 
    if(cmd === `${prefix}najnowsza-wiadomość`){
 	   let user = message.mentions.users.first() || message.author;
+	   let lastwiad = user.lastMessage
+	   if(lastwiad === null) lastwiad = "Ten użytkownik nie napisał ostatnio żadnej wiadomości!";
 	   let nEmbed = new Discord.RichEmbed()
 	   .setTimestamp(new Date())
 	   .setColor("#123456")
-	   .addField("Najnowsza wiadomość napisana przez użytkownika" , `<@${user.id}>: ${user.lastMessage}`)
+	   .addField("Najnowsza wiadomość napisana przez użytkownika" , `<@${user.id}>: ${lastwiad}`)
 		 return message.channel.send(nEmbed);
 		     }
 	if(cmd === `${prefix}gay`){
