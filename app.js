@@ -34,12 +34,11 @@ bot.on("message", async message =>{
 let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
 	  if(cmd === `${prefix}administracja`){
-let cos = " "
     let admembed = new Discord.RichEmbed()
     .setDescription("**Administracja Serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
-.addField("Obecna ilość osób w administracji: **9**", cos)
+.addField("Obecna ilość osób w administracji: **9**")
     .addField("HeadAdministratorzy", "<@329694416472375298>,\n <@306150715678654464>,\n <@348468240520970260>,\n <@301263420471246848>.")
     .addField("Administratorzy", "Aktualnie brak.")
     .addField("Moderatorzy", "<@336755369667723276>")
