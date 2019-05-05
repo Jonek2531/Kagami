@@ -271,7 +271,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
 		 let gra = user.presence.game;
-		 if(gra === null) gra = "Nie gra w żadną grę";
+		 if(gra === null) gra = "nie gra w żadną grę";
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
@@ -281,10 +281,9 @@ let user = message.mentions.users.first() || message.author;
                  .addField("Utworzono dnia", `${user.createdAt}`)      
        .addField("Status", `${user.presence.status}, w grze **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
-		 
-		 if(gra === null) gra = "Nie gra w żadną grę";
+	
             return message.channel.send(embed);
-		 if(gra === null) gra = "Nie gra w żadną grę";
+	
         }
 
    if(cmd === `${prefix}najnowsza-wiadomość`){
