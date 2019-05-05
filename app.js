@@ -281,7 +281,7 @@ let user = message.mentions.users.first() || message.author;
        .addField("Status", `${user.presence.status}, w grze **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
 		 
-		 if(user.presence.game === null) user.presence.game = "Nie gra w żadną grę";
+		 if(gra === null) gra = "Nie gra w żadną grę";
             return message.channel.send(embed);
         }
 
