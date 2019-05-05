@@ -278,7 +278,7 @@ let user = message.mentions.users.first() || message.author;
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${user.createdAt}`)      
-       .addField("Status", `${user.presence.status}, w grze **${message.gra}**`)
+       .addField("Status", `${user.presence.status}, w grze **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
 		 
 		 if(user.presence.game === null) user.presence.game = "Nie gra w żadną grę";
