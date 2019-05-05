@@ -271,6 +271,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
 		 let gra = user.presence.game;
+		 if(gra === null) gra = "Nie gra w żadną grę";
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
@@ -283,6 +284,7 @@ let user = message.mentions.users.first() || message.author;
 		 
 		 if(gra === null) gra = "Nie gra w żadną grę";
             return message.channel.send(embed);
+		 if(gra === null) gra = "Nie gra w żadną grę";
         }
 
    if(cmd === `${prefix}najnowsza-wiadomość`){
