@@ -441,11 +441,11 @@ if(cmd === `${prefix}kik`){
 
 
   if(cmd === `${prefix}report`){
-
-    message.channel.send("Report został pomyślnie wysłany. / Jeśli coś jeszcze napisałam, to report nie został wysłany.")
+	  
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("Nie ma takiego użytkownika!")
     let reason = args.join(" ").slice(22);
+	  let kanal = message.channel
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Reporty.")
@@ -461,6 +461,7 @@ if(cmd === `${prefix}kik`){
 
       message.delete().catch(O_o=>{});
       reportschannel.send(reportEmbed);
+	  kanal.send("Report został pomyślnie wysłany.")
 
     return;
   }
