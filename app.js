@@ -43,7 +43,7 @@ let embed = new Discord.RichEmbed()
     .setDescription(`**Monthly Reward**`)
     .addField(`Collected`, "liczba")
 
-if(cmd === `${prefix}testprofil`){
+if(cmd === `${prefix}testprofil1`){
 let user = message.mentions.users.first() || message.author;
     const joinDiscord = moment(user.createdAt).format('llll');
     const joinServer = moment(user.joinedAt).format('llll');
@@ -58,7 +58,7 @@ let user = message.mentions.users.first() || message.author;
         .setFooter(`ID: ${user.id}`)
         .setTimestamp();
 
-    message.channel.send({ embed: embed });
+    message.channel.send(embed);
     return;
 }
 message.channel.send(embed);
