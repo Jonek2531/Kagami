@@ -86,6 +86,19 @@ member.removeRole(role).catch(console.error)
     message.channel.send('You have a balance of `' + bal + '`')
 
 	}
+	
+	if (!message.member.hasPermission('ADMINISTRATOR')) {
+        return message.reply('You do not have enough permission to use this command.')
+    }
+
+    if (!args[0]) return message.reply('Please specify an amount to add.')
+    if (isNaN(args[0])) return message.reply('That was not a valid number!')
+
+    let user = message.mentions.users.first() || message.author
+    message.channel.send('Successfully added ' + args[0] + ' to ' + user)
+    db.add(`money_${message.guild.id}_${message.author.id}`, args[0])
+
+}
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
