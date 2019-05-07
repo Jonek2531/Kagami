@@ -97,7 +97,7 @@ member.removeRole(role).catch(console.error)
 
 	}
 	if(cmd === `${prefix}dodaj-hajs`){
-	if (!message.member.hasPermission('ADMINISTRATOR')) {
+	if (!message.member.hasPermission('MANAGE_MESSAGES')) {
         return message.reply('Nie masz uprawnień do używania tej komendy.')
     }
 
