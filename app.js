@@ -106,7 +106,7 @@ member.removeRole(role).catch(console.error)
 
      if(cmd === `${prefix}sklep`){
     let embed = new Discord.RichEmbed()
-    .setTitle(`Sklep ${message.author}!`)
+    .setTitle(`Sklep GamerStay!`)
     .setDescription('**Use +buy <item> to buy!**')
     .addField(`Mądrala`, '`1000 IQ`\nDaje rolę Mądrala.')
     .addField(`Gra na Steam`, '`20000 IQ`\nGra na Steam.') // can add up to 25(I believe)
