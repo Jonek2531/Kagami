@@ -114,7 +114,8 @@ member.removeRole(role).catch(console.error)
     if (bal === null) bal = 0;
 
     message.channel.send('Posiadasz `' + bal + '` IQ')
-
+//lol
+		
 	}
 	if(cmd === `${prefix}dodaj-hajs`){
 	if (!message.member.hasPermission('MANAGE_MESSAGES')) {
@@ -129,35 +130,6 @@ member.removeRole(role).catch(console.error)
     db.add(`money_${message.guild.id}_${message.author.id}`, args[0])
 
 }
-
-
-if(cmd === `${prefix}monthly`){
-
-    let timeout = 2592000000 // 30 days in milliseconds, change if you'd like.
-    let amount = 5000
-    // random amount: Math.floor(Math.random() * 1000) + 1;
-
-
-    let monthly = await db.fetch(`monthly_${message.author.id}`);
-
-    if (monthly !== null && timeout - (Date.now() - monthly) > 0) {
-        let time = ms(timeout - (Date.now() - monthly));
-
-        message.channel.send(`Odebrałeś już swoje miesięczne IQ! Kolejne możesz odebrać za **${time.days} dni ${time.hours} godzin ${time.minutes} minut ${time.seconds} sekund**!`)
-    } else {
-    let embed = new Discord.RichEmbed()
-    .setAuthor(`Monthly`, message.author.displayAvatarURL)
-    .setColor("GREEN")
-    .setDescription(`**Comiesięczny bonus**`)
-    .addField(`Otrzymujesz:`, amount + " IQ")
-
-    message.channel.send(embed)
-    db.add(`money_${message.author.id}`, amount)
-    db.set(`monthly_${message.author.id}`, Date.now())
-        
-    }
-}
-
 
      if(cmd === `${prefix}sklep`){
     let embed = new Discord.RichEmbed()
