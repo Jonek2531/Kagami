@@ -100,22 +100,22 @@ member.removeRole(role).catch(console.error)
 
 }
 
-    exports.run = async (client, message, args, config) => {
+
 
 
 
      if(cmd === `${prefix}sklep`){
     let embed = new Discord.RichEmbed()
-    .setTitle(`${client.user.tag} Store!`)
+    .setTitle(`Sklep ${message.author}!`)
     .setDescription('**Use +buy <item> to buy!**')
-    .addField(`Moderator`, '`700$`\nGives you the moderator role!')
-    .addField(`Admin`, '`1800$`\nGives you the admin role!') // can add up to 25(I believe)
+    .addField(`1000 IQ`, '`700$`\nGives you the moderator role!')
+    .addField(`20000 IQ`, '`1800$`\nGives you the admin role!') // can add up to 25(I believe)
     .setColor("RANDOM") 
 
     message.channel.send(embed)
 
 
-     }
+     
 }
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
