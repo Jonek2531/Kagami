@@ -1,9 +1,9 @@
-const Discord = require("discord.js");
-const db = require('quick.db');
-const moment = require('moment');
-const ms = require('ms');
+const Discord = require("discord.js")
+const db = require('quick.db')
+const moment = require('moment')
+const ms = require('ms')
 const botconfig = require("./botconfig.json");
-const fs = require("fs");
+const fs = require("fs")
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 // k0z4k bot
