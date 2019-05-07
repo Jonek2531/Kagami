@@ -130,7 +130,7 @@ member.removeRole(role).catch(console.error)
 }
 
 exports.run = async (client, message, args, config) => {
-
+if(cmd === `${prefix}monthly`){
 
     let timeout = 2592000000 // 30 days in milliseconds, change if you'd like.
     let amount = 5000
@@ -157,7 +157,7 @@ exports.run = async (client, message, args, config) => {
     }
 
 }
-
+}
 
 
      if(cmd === `${prefix}sklep`){
