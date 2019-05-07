@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
-const db = require('quick.db')
+const db = require('quick.db');
+const moment = require('moment');
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const client = new Discord.Client();
@@ -42,6 +43,24 @@ let embed = new Discord.RichEmbed()
     .setDescription(`**Monthly Reward**`)
     .addField(`Collected`, "liczba")
 
+if(cmd === `${prefix}testprofil`){
+let user = message.mentions.users.first() || message.author;
+    const joinDiscord = moment(user.createdAt).format('llll');
+    const joinServer = moment(user.joinedAt).format('llll');
+    let embed = new Discord.RichEmbed()
+        .setAuthor(user.username + '#' + user.discriminator, user.displayAvatarURL)
+        .setDescription(`${user}`)
+        .setColor(`RANDOM`)
+        .setThumbnail(`${user.displayAvatarURL}`)
+        .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Status:', user.presence.status, true)
+        .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
+        .setFooter(`ID: ${user.id}`)
+        .setTimestamp();
+
+    message.channel.send({ embed: embed });
+    return;
+}
 message.channel.send(embed);
 	}
 	  if(cmd === `${prefix}administracja`){
