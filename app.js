@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const db = require('quick.db');
 const moment = require('moment');
+const ms = require('ms');
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const client = new Discord.Client();
