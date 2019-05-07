@@ -148,7 +148,7 @@ exports.run = async (client, message, args, config) => {
     .setAuthor(`Monthly`, message.author.displayAvatarURL)
     .setColor("GREEN")
     .setDescription(`**Comiesięczny bonus**`)
-    .addField(`Otrzymujesz:`, amount)
+    .addField(`Otrzymujesz:`, amount + " IQ")
 
     message.channel.send(embed)
     db.add(`money_${message.author.id}`, amount)
