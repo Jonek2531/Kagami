@@ -88,10 +88,10 @@ member.removeRole(role).catch(console.error)
 	}
 	if(cmd === `${prefix}dodaj-hajs`){
 	if (!message.member.hasPermission('ADMINISTRATOR')) {
-        return message.reply('You do not have enough permission to use this command.')
+        return message.reply('Nie masz uprawnień do używania tej komendy.')
     }
 
-    if (!args[0]) return message.reply('Please specify an amount to add.')
+    if (!args[0]) return message.reply('podaj liczbę hajsu.')
     if (isNaN(args[0])) return message.reply('That was not a valid number!')
 
     let user = message.mentions.users.first() || message.author
@@ -100,6 +100,23 @@ member.removeRole(role).catch(console.error)
 
 }
 
+    exports.run = async (client, message, args, config) => {
+
+
+
+     if(cmd === `${prefix}sklep`){
+    let embed = new Discord.RichEmbed()
+    .setTitle(`${client.user.tag} Store!`)
+    .setDescription('**Use +buy <item> to buy!**')
+    .addField(`Moderator`, '`700$`\nGives you the moderator role!')
+    .addField(`Admin`, '`1800$`\nGives you the admin role!') // can add up to 25(I believe)
+    .setColor("RANDOM") 
+
+    message.channel.send(embed)
+
+
+     }
+}
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
