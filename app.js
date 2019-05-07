@@ -83,7 +83,7 @@ member.removeRole(role).catch(console.error)
 
     if (bal === null) bal = 0;
 
-    message.channel.send('You have a balance of `' + bal + '`')
+    message.channel.send('Posiadasz `' + bal + '` IQ')
 
 	}
 	if(cmd === `${prefix}dodaj-hajs`){
