@@ -34,6 +34,16 @@ bot.on("message", async message =>{
 	// json files
 let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
+	
+	if(cmd === `${prefix}test`){
+let embed = new Discord.RichEmbed()
+    .setAuthor(`Monthly`, message.author.displayAvatarURL)
+    .setColor("GREEN")
+    .setDescription(`**Monthly Reward**`)
+    .addField(`Collected`, "liczba")
+
+message.channel.send(embed);
+	}
 	  if(cmd === `${prefix}administracja`){
     let admembed = new Discord.RichEmbed()
     .setDescription("**Administracja Serwera GamerStay**")
@@ -100,7 +110,34 @@ member.removeRole(role).catch(console.error)
 
 }
 
+exports.run = async (client, message, args, config) => {
 
+
+    let timeout = 2592000000 // 30 days in milliseconds, change if you'd like.
+    let amount = 5000
+    // random amount: Math.floor(Math.random() * 1000) + 1;
+
+
+    let monthly = await db.fetch(`monthly_${message.author.id}`);
+
+    if (monthly !== null && timeout - (Date.now() - monthly) > 0) {
+        let time = ms(timeout - (Date.now() - monthly));
+
+        message.channel.send(`Odebrałeś już swoje miesięczne IQ! Kolejne możesz odebrać za **${time.days} dni ${time.hours} godzin ${time.minutes} minut ${time.seconds} sekund**!`)
+    } else {
+    let embed = new Discord.RichEmbed()
+    .setAuthor(`Monthly`, message.author.displayAvatarURL)
+    .setColor("GREEN")
+    .setDescription(`**Monthly Reward**`)
+    .addField(`Collected`, amount)
+
+    message.channel.send(embed)
+    db.add(`money_${message.author.id}`, amount)
+    db.set(`monthly_${message.author.id}`, Date.now())
+        
+    }
+
+}
 
 
 
