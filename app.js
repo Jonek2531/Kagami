@@ -144,8 +144,9 @@ exports.run = async (client, message, args, config) => {
      if(cmd === `${prefix}sklep`){
     let embed = new Discord.RichEmbed()
     .setTitle(`Sklep GamerStay!`)
-    .setDescription('**Use +buy <item> to buy!**')
+    .setDescription('**Wpisz !kup <item>, aby coś zakupić.**')
     .addField(`Mądrala`, '`1000 IQ`\nDaje rolę Mądrala.')
+    .addField(`VIP`, '`10000 IQ`\nDaje rolę VIP.')
     .addField(`Gra na Steam`, '`20000 IQ`\nGra na Steam.') // can add up to 25(I believe)
     .setColor("RANDOM") 
 
