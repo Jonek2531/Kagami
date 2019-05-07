@@ -4,7 +4,7 @@ const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
-// tak
+// k0z4k bot
 bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
