@@ -147,8 +147,8 @@ exports.run = async (client, message, args, config) => {
     let embed = new Discord.RichEmbed()
     .setAuthor(`Monthly`, message.author.displayAvatarURL)
     .setColor("GREEN")
-    .setDescription(`**Monthly Reward**`)
-    .addField(`Collected`, amount)
+    .setDescription(`**Comiesięczny bonus**`)
+    .addField(`Otrzymujesz:`, amount)
 
     message.channel.send(embed)
     db.add(`money_${message.author.id}`, amount)
