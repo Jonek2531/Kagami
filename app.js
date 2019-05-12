@@ -62,7 +62,7 @@ let user = message.mentions.users.first() || message.author;
     message.channel.send(embed);
     return;
 }
-
+message.channel.send(embed);
 if (message.content.includes("discord.gg")) {
     message.delete(1);
     message.channel.sendMessage("Nie reklamuj serwerów discord tutaj, od tego są <#449282771714572291>, " + message.author)
