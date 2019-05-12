@@ -523,6 +523,7 @@ if(cmd === `${prefix}kik`){
     .addField("Region serwera", message.guild.region)
     .addField("Liczba użytkowników", message.guild.memberCount)
     .addField("Poziom potwierdzenia konta", message.guild.verificationLevel)
+    .addField("Liczba banów", message.bans.size)
     .setThumbnail(`${message.author.avatarURL}`);
 
 
