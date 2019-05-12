@@ -37,13 +37,6 @@ bot.on("message", async message =>{
 let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
 	
-	if(cmd === `${prefix}test`){
-let embed = new Discord.RichEmbed()
-    .setAuthor(`Monthly`, message.author.displayAvatarURL)
-    .setColor("GREEN")
-    .setDescription(`**Monthly Reward**`)
-    .addField(`Collected`, "liczba")
-
 if (message.content.includes("discord.gg")) {
     message.delete(1);
     message.channel.sendMessage("Nie reklamuj serwerów discord tutaj, od tego są <#449282771714572291>, " + message.author)
