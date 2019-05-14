@@ -213,7 +213,7 @@ dUser.send(`${dMessage}`)
 		let user = message.author;
 const channel = message.guild.channels.find(ch => ch.name === '✦》propozycje');  //finds the channel named suggestions 
 		const gchannel = message.guild.channels.find(ch => ch.name === '✦》główny-chat');
-		gchannel.startTyping(3);
+		
 		
 let proembed = new Discord.RichEmbed()
 .setDescription('**Propozycja od użytkownika:**\n\n' +              args.join(' '))
@@ -228,7 +228,7 @@ let proembed = new Discord.RichEmbed()
             msg.react("❎"); // You can only add two reacts
       ({timeout: 1000});
             })
-		gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] BOIS obczajcie nową propozycję na <#434008645794136064>.")
+		gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] Na <#495654275276472340> pojawiła się nowa propozycja.")
 }     //Closes the if (command === 'suggest'){ 
 	
 	if (cmd ===`${prefix}propozycjatest`){   //if command is suggest
