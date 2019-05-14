@@ -228,7 +228,7 @@ let proembed = new Discord.RichEmbed()
             msg.react("❎"); // You can only add two reacts
       ({timeout: 1000});
             })
-		message.gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] BOIS obczajcie nową propozycję na <#434008645794136064>.")
+		gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] BOIS obczajcie nową propozycję na <#434008645794136064>.")
 }     //Closes the if (command === 'suggest'){ 
 	
 	if (cmd ===`${prefix}propozycjatest`){   //if command is suggest
@@ -250,7 +250,7 @@ let proembed = new Discord.RichEmbed()
             msg.react("❎"); // You can only add two reacts
       ({timeout: 1000});
             })
-		message.gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] BOIS obczajcie nową propozycję na <#434008645794136064>.")
+		gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] BOIS obczajcie nową propozycję na <#495654037757362188>.");
 }     //Closes the if (command === 'suggest'){ 
 			     
 	if(cmd === `${prefix}przypnij`){
