@@ -212,6 +212,7 @@ dUser.send(`${dMessage}`)
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
 		let user = message.author;
 const channel = message.guild.channels.find(ch => ch.name === '✦》propozycje');  //finds the channel named suggestions 
+		const gchannel = message.guild.channels.find(ch => ch.name === '✦》główny-chat');
 		
 let proembed = new Discord.RichEmbed()
 .setDescription('**Propozycja od użytkownika:**\n\n' +              args.join(' '))
@@ -226,6 +227,7 @@ let proembed = new Discord.RichEmbed()
             msg.react("❎"); // You can only add two reacts
       ({timeout: 1000});
             })
+		message.gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] BOIS obczajcie nową propozycję na <#434008645794136064>. 
 }     //Closes the if (command === 'suggest'){ 
 			     
 	if(cmd === `${prefix}przypnij`){
