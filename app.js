@@ -65,6 +65,7 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
 	
 	if(cmd === `${prefix}nadaj-rolę`){
+		if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.")
 	let role = message.guild.roles.find(role => role.name === args[0]);
 // Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
 		if(!role) return message.channel.send("Poprawne użycie: !nadaj-rolę <nazwa roli> <nick>.")
