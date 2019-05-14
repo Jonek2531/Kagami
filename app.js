@@ -75,11 +75,11 @@ let member = message.mentions.members.first();
 
 // Add the role!
 member.addRole(role).catch(console.error)
-		message.channel.send("Pomyślnie dodano rolę oznaczonemu użytkownikowi");
+		message.channel.send("Done.");
 
 // Remove a role!
-member.removeRole(role).catch(console.error)
-		message.channel.send("Pomyślnie zabrano rolę oznaczonemu użytkownikowi");
+//member.removeRole(role).catch(console.error)
+//		message.channel.send("Pomyślnie zabrano rolę oznaczonemu użytkownikowi");
 	}
 	if(cmd === `${prefix}hajs`){
 	 let bal = db.fetch(`money_${message.guild.id}_${message.author.id}`)
