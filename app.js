@@ -153,7 +153,9 @@ member.addRole(role).catch(console.error)
     .addField('URL', emoji.url, true);
     return message.channel.send(embed)
 }
-
+if(cmd === `${prefix}krzyżówka`){
+	message.channel.send("https://cdn.discordapp.com/attachments/424696715422072833/582170157405831178/unknown.png")
+}
 	if(cmd === `${prefix}purge`) {
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
     // This command removes all messages from all users in the channel, up to 100.
