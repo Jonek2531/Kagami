@@ -208,7 +208,7 @@ dUser.send(`${dMessage}`)
     message.channel.send("Możliwe rangi do dodania sobie: \n ?anime,\n ?css,\n ?eventy,\n ?furry,\n ?giveaway,\n ?html,\n ?metalowiec,\n ?nsfw,\n ?programowanie,\n ?python,\n ?rozmowny,\n ?sport,\n ?qotd,\n ?tyralnia.");
   }
 	 if (cmd === `${prefix}weryfikacja`){
-    message.channel.send("**Jak poprawnie się zweryfikować?** \n**Krok 1.**\nPopatrz na ten obrazek: https://cdn.discordapp.com/attachments/527242378336010250/556935546098810890/weryfikacja2.PNG ^^.\n**Krok 2.** Zaznacz pod wiadomością na obrazku **2 RAZY** reakcję <:Dude:518909814248701993>.\n**Krok 3.** Ciesz się dostępem do całej części serwera!");
+    message.channel.send("**Jak poprawnie się zweryfikować?** \n**Krok 1.**\nPopatrz na ten obrazek: https://cdn.discordapp.com/attachments/527242378336010250/556935546098810890/weryfikacja2.PNG ^^.\n**Krok 2.** Zaznacz pod wiadomością na obrazku **2 RAZY** reakcję <:Dude:518909814248701993> pod wiadomością na <#527242048764379182>.\n**Krok 3.** Ciesz się dostępem do całej części serwera!");
 	 }
 		
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
