@@ -136,23 +136,39 @@ member.addRole(role).catch(console.error)
     return message.channel.send(embed)
 }
 	
-	if(cmd === `${prefix}emoji`) {
-    let emoji = message.guild.emojis.get(args[0]) || message.guild.emojis.find(emoji => emoji.name === args[0]);
-    if (!emoji) emoji = message.channel.send("Musisz podać jakąś emotkę! Pamiętaj, aby nie dawać dwukropka.");
+	///if(cmd === `${prefix}emoji`) {
+    ///let emoji = message.guild.emojis.get(args[0]) || message.guild.emojis.find(emoji => emoji.name === args[0]);
+   // if (!emoji) emoji = message.channel.send("Musisz podać jakąś emotkę! Pamiętaj, aby nie dawać dwukropka.");
 
 
-    let embed = new Discord.RichEmbed()
-        .setColor("#873873")
-        .setTitle(`Emoji: <:${emoji.name}:${emoji.id}>`)
-        .addField('Animowana?', emoji.animated, true)
-        .addField('Nazwa emotki', emoji.name, true)
-        .addField('Data stworzenia emotki', emoji.createdAt.toDateString(), true)
-            .addField('Na serwerze', emoji.guild.toString(), true)
-        .addField('ID emoji', emoji.id.toString(), true)
-    .addField('Posiada dwukropki?', emoji.requiresColons, true)
-    .addField('URL', emoji.url, true);
-    return message.channel.send(embed)
-}
+   // let embed = new Discord.RichEmbed()
+    //    .setColor("#873873")
+   //     .setTitle(`Rangi za poziomy`)
+    //    .addField('`Level:` 1', '<&@536509855624855592>', true)
+      //  .addField('Nazwa emotki', emoji.name, true)
+      //  .addField('Data stworzenia emotki', emoji.createdAt.toDateString(), true)
+     //       .addField('Na serwerze', emoji.guild.toString(), true)
+     //   .addField('ID emoji', emoji.id.toString(), true)
+  //  .addField('Posiada dwukropki?', emoji.requiresColons, true)
+   // .addField('URL', emoji.url, true);
+   // return message.channel.send(embed)
+//}
+	if(cmd === `${prefix}lvl`){
+		let lvlembed = new Discord.RichEmbed()
+		        .setTitle(`Rangi za poziomy`)
+        .addField('`Level:` 1', '<@&536509855624855592>', true)
+        .addField('`Level:` 5', '<@&469087376845701136>', true)
+        .addField('`Level:` 10', '<@&469092001707720704>', true)
+            .addField('`Level:` 20', '<@&469099283791085588>', true)
+        .addField('`Level:` 30', '<@&469096441751535618>', true)
+    .addField('`Level:` 40', '<@&469081542468042755>', true)
+    .addField('`Level:` 50', '<@&469096491483660290>', true)
+     .addField('`Level:` 60', '<@&491710552851218463>', true)
+     .addField('`Level:` 70', '<@&542406358591471649>', true);
+		return message.channel.send(lvlembed)
+	}
+		
+	
 if(cmd === `${prefix}krzyżówka`){
 	message.channel.send("https://cdn.discordapp.com/attachments/424696715422072833/582170157405831178/unknown.png")
 }
