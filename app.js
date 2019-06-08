@@ -167,6 +167,13 @@ member.addRole(role).catch(console.error)
      .addField('`Level:` 70', '<@&542406358591471649>', true);
 		return message.channel.send(lvlembed)
 	}
+		if(cmd === `${prefix}werinfo`){
+		let werembed = new Discord.RichEmbed()
+		        .setTitle(`Weryfikacja`)
+        .addField('Witaj na serwerze!', 'Znajdujesz się aktualnie w strefie weryfikacji? Weryfikacja została stworzona po to, aby zabezpieczyć serwer przez potencjalnymi zagrożeniami.')
+		.addField('Jak się zweryfikować?', 'Aby się zweryfikować, zaznacz __dwukrotnie__ reakcję <:Dude:518909814248701993> pod wiadomością wyżej.', true);
+		return message.channel.send(werembed)
+	}
 		
 	
 if(cmd === `${prefix}krzyżówka`){
