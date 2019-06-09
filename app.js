@@ -35,7 +35,13 @@ bot.on("message", async message =>{
 	// json files
 let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
-
+  if (message.content.includes("nakedphotos.club")) {
+	  let banned = message.author
+    message.delete(1);
+    message.channel.sendMessage("Hehe, nei ma tak łatwo, " + message.author)
+	  message.guild.member(banned).ban("sending nudes")	  
+  }
+	
 	  if(cmd === `${prefix}administracja`){
     let admembed = new Discord.RichEmbed()
     .setDescription("**Administracja Serwera GamerStay**")
