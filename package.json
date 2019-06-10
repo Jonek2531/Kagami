@@ -12,43 +12,10 @@
     "discord.js": "^11.4.2",
     "ms": "^2.1.1",
     "quick.db": "^7.0.0-b16",
-    "canvas": "^2.5.0",
+    "canvas": "2.5.0",
     "moment": "^2.20.1"
   },
-  {
-  "name": "canvas",
-  "description": "Canvas graphics API backed by Cairo",
-  "version": "2.5.0",
-  "author": "TJ Holowaychuk <tj@learnboost.com>",
-  "main": "index.js",
-  "browser": "browser.js",
-  "contributors": [
-    "Nathan Rajlich <nathan@tootallnate.net>",
-    "Rod Vagg <r@va.gg>",
-    "Juriy Zaytsev <kangax@gmail.com>"
-  ],
-  "keywords": [
-    "canvas",
-    "graphic",
-    "graphics",
-    "pixman",
-    "cairo",
-    "image",
-    "images",
-    "pdf"
-  ],
-  "homepage": "https://github.com/Automattic/node-canvas",
-  "repository": "git://github.com/Automattic/node-canvas.git",
-  "scripts": {
-    "prebenchmark": "node-gyp build",
-    "benchmark": "node benchmarks/run.js",
-    "pretest": "standard examples/*.js test/server.js test/public/*.js benchmarks/run.js lib/context2d.js util/has_lib.js browser.js index.js && node-gyp build",
-    "test": "mocha test/*.test.js",
-    "pretest-server": "node-gyp build",
-    "test-server": "node test/server.js",
-    "install": "node-pre-gyp install --fallback-to-build",
-    "dtslint": "dtslint types"
-  }
+ 
    "author": "TrueXPixels",
   "license": "MIT",
   "bugs": {
