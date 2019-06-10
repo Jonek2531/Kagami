@@ -1053,7 +1053,16 @@ if (cmd.startsWith(prefix + 'hug')) {
     message.channel.send({
         embed: ghembed
     })
-	
+if(cmd === `${prefix}profli`){
+	message.channel.send("Czy chodziło Ci o **!profil**?")
+}
+		if(cmd === `${prefix}profile`){
+	message.channel.send("Czy chodziło Ci o **!profil**?")
+}
+	if(cmd === `${prefix}profil`){
+	message.channel.send("Czy chodziło Ci o **!profil**?")
+}
+			
 
 }
 })
