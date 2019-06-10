@@ -379,7 +379,7 @@ let user = message.mentions.users.first() || message.author;
                  .addField("Utworzono dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)      
        .addField("Status", `${user.presence.status}, w grze **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
-       .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true);
+       .addField('Roles:', `${user.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "<:no:425632070036094986> No Roles"}`);
 	
             return message.channel.send(embed);
 	
