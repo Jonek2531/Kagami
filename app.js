@@ -40,7 +40,7 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
     message.delete(1);
     message.channel.sendMessage("Hehe, nei ma tak łatwo, " + message.author)
 	  banned.send("Wysyłanie linków na strony pornograficzne jest niedozwolone. Zostałeś automatycznie zbanowany przez bota. Jeśli nie było to celowe, skontaktuj się z Jonek#3313")
-	  message.guild.member(banned).ban("sending nudes")	  
+	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
   }
 	
 	  if(cmd === `${prefix}administracja`){
