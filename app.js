@@ -233,6 +233,12 @@ dUser.send(`${dMessage}`)
         .addField("Your message 1", "your message 2")
     message.channel.send(iEmbed)
 }
+if(cmd === `${prefix}profli`){
+	message.channel.send("Czy chodziło Ci o **!profil**?");
+}
+		if(cmd === `${prefix}profile`){
+	message.channel.send("Czy chodziło Ci o **!profil**?");
+}
 
   if (cmd === `${prefix}rangi`){
     message.channel.send("Możliwe rangi do dodania sobie: \n ?anime,\n ?css,\n ?eventy,\n ?furry,\n ?giveaway,\n ?html,\n ?metalowiec,\n ?nsfw,\n ?programowanie,\n ?python,\n ?rozmowny,\n ?sport,\n ?qotd,\n ?tyralnia.");
@@ -1052,16 +1058,6 @@ if (cmd.startsWith(prefix + 'hug')) {
     message.channel.send({
         embed: ghembed
     })
-if(cmd === `${prefix}profli`){
-	message.channel.send("Czy chodziło Ci o **!profil**?")
-}
-		if(cmd === `${prefix}profile`){
-	message.channel.send("Czy chodziło Ci o **!profil**?")
-}
-	if(cmd === `${prefix}profil`){
-	message.channel.send("Czy chodziło Ci o **!profil**?")
-}
-			
 
 }
 })
