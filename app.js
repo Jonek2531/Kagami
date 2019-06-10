@@ -296,7 +296,14 @@ message.channel.send(pinMessage)
             })
 	}
 		
-		
+	if(cmd === `${prefix}zadanie`){
+		let zadanie = new Discord.RichEmbed()
+		.addField("Zadanie dnia", "Napisz 20 wiadomości na <#434008645794136064>, które nie jest spamem. Jak wykonasz zadanie, zgłoś się do kogoś z administracji w celu odebrania nagrody.")
+		.addField("Nagroda za wykonanie zadania:", "200 kredytów do Tatsumaki.");
+			  message.channel.send(zadanie)
+	}
+	
+	
 	if (cmd === `${prefix}mrr`){
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
     message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
