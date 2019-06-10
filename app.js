@@ -576,8 +576,7 @@ if(cmd === `${prefix}kik`){
     .addField("ID Założyciela serwera", message.guild.owner.id, true)
     .addField("ID serwera", message.guild.id, true)
     .addField("Region serwera", message.guild.region, true)
-    .addField("Liczba użytkowników", message.guild.memberCount, true)
-    .addField("Poziom potwierdzenia konta", message.guild.verificationLevel, true)
+    .addField("Liczba użytkowników", message.guild.memberCount, + " użytkowników", true)
         .addField("Data stworzenia serwera", `${moment.utc(message.guild.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
     .setThumbnail(`${message.author.avatarURL}`);
 
