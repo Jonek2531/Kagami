@@ -376,7 +376,7 @@ let user = message.mentions.users.first() || message.author;
                  .setColor("#4286f4")
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
-                 .addField("Utworzono dnia", moment(user.createdAt).format('MMMM Do YYYY h:mm:ss'))      
+                 .addField("Utworzono dnia", moment.utc(user.createdAt).format('MMMM Do YYYY h:mm:ss'))      
        .addField("Status", `${user.presence.status}, w grze **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
 	
