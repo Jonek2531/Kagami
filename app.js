@@ -378,7 +378,8 @@ let user = message.mentions.users.first() || message.author;
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)      
        .addField("Status", `${user.presence.status}, w grze **${gra}**`)
-                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
+                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
+       .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true);
 	
             return message.channel.send(embed);
 	
