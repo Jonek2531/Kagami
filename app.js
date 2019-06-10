@@ -4,7 +4,6 @@ const moment = require('moment')
 const ms = require('ms')
 const botconfig = require("./botconfig.json");
 const fs = require("fs")
-const Canvas = require('canvas');
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
