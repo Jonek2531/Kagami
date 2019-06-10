@@ -573,15 +573,13 @@ if(cmd === `${prefix}kik`){
     .setDescription("**Informacje serwera**", message.guild.name)
     .setColor("#00e7ff")
     .setTimestamp(new Date())
-    .addField("Data stworzenia serwera", message.guild.createdAt)
-    .addField("Data dołączenia na serwer", message.member.joinedAt)
+    .addField("Data stworzenia serwera", `${moment.utc(message.guild.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
     .addField("Założyciel serwera", message.guild.owner)
-    .addField("ID Założyciela serwera", message.guild.owner.id)
+    .addField("ID Założyciela serwera", message.guild.owner.id, true)
     .addField("ID serwera", message.guild.id)
-    .addField("Region serwera", message.guild.region)
+    .addField("Region serwera", message.guild.region, true)
     .addField("Liczba użytkowników", message.guild.memberCount)
-    .addField("Poziom potwierdzenia konta", message.guild.verificationLevel)
-    .addField("Liczba banów", message.bans.size)
+    .addField("Poziom potwierdzenia konta", message.guild.verificationLevel, true)
     .setThumbnail(`${message.author.avatarURL}`);
 
 
