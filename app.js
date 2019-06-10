@@ -565,7 +565,6 @@ if(cmd === `${prefix}kik`){
     return;
   }
 
-
   if(cmd === `${prefix}serverinfo`){
 
     let serverembed = new Discord.RichEmbed()
@@ -580,7 +579,7 @@ if(cmd === `${prefix}kik`){
     .addField("Liczba użytkowników", message.guild.memberCount, true)
     .addField("Poziom potwierdzenia konta", message.guild.verificationLevel, true)
         .addField("Data stworzenia serwera", `${moment.utc(message.guild.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-    .setThumbnail(`${message.author.avatarURL}`);
+    .setThumbnail(`${message.guild.avatarURL}`);
 
 
     return message.channel.send(serverembed);
