@@ -383,10 +383,10 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 	
 	 if(cmd === `${prefix}profil`) {
 		 const status = {
-        online: "<:online:424890369688469504> Dostępny",
-        idle: "<:idle:424890472855502849> Zaraz wracam",
-        dnd: "<:dnd:424890429524410368> Nie przeszkadzać",
-        offline: "<:offilne:424890400319340546> Niedostępny"
+        online: "<:Dostepny:589178854900367368> Dostępny",
+        idle: "<:Zaraz_wracam:589178854900367368> Zaraz wracam",
+        dnd: "<:Nie_przeszkadzac:589178854900367368> Nie przeszkadzać",
+        offline: "<:Niedostepny_niewidoczny:589178854900367368> Niedostępny"
       }
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
