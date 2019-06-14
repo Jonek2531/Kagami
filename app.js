@@ -391,7 +391,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
 		 let gra = "w grze " + user.presence.game;
-		 if(gra === null) gra = "aktualnie nie jest w grze";
+		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
