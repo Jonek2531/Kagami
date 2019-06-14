@@ -382,7 +382,12 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
         });
 	
 	 if(cmd === `${prefix}profil`) {
-		 
+		 const status = {
+        online: "<:online:424890369688469504> Dostępny",
+        idle: "<:idle:424890472855502849> Zaraz wracam",
+        dnd: "<:dnd:424890429524410368> Nie przeszkadzać",
+        offline: "<:offilne:424890400319340546> Niedostępny"
+      }
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
 		 let gra = user.presence.game;
@@ -394,7 +399,7 @@ let user = message.mentions.users.first() || message.author;
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)      
-       .addField("Status", `${user.presence.status}, w grze **${gra}**`)
+       .addField("Status", `${status[user.presence.status]}, w grze **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
 	
             return message.channel.send(embed);
