@@ -383,10 +383,10 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 	
 	 if(cmd === `${prefix}profil`) {
 		 const status = {
-        online: "<:Dostepny:589178854900367368> Dostępny",
-        idle: "<:Zaraz_wracam:589178854900367368> Zaraz wracam",
-        dnd: "<:Nie_przeszkadzac:589178854900367368> Nie przeszkadzać",
-        offline: "<:Niedostepny_niewidoczny:589178854900367368> Niedostępny"
+        online: "<:Dostepny:589178591716311040> Dostępny",
+        idle: "<:Zaraz_wracam:589178609235918878> Zaraz wracam",
+        dnd: "<:Nie_przeszadzac:589178624452591620> Nie przeszkadzać",
+        offline: "<:Niedostepny_niewidoczny:589178578407784466> Niedostępny"
       }
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
@@ -399,7 +399,7 @@ let user = message.mentions.users.first() || message.author;
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
                  .addField("Utworzono dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)      
-       .addField("Status", `${status [user.presence.status]}, w grze **${gra}**`)
+       .addField("Status", `${status[user.presence.status]}, w grze **${gra}**`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`);
 	
             return message.channel.send(embed);
