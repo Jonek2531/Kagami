@@ -394,11 +394,6 @@ let user = message.mentions.users.first() || message.author;
 		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
 		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
 		 if (message.content.includes("Wednesday")) "Wednesday" = "Środa";
-	  let banned = message.author
-    message.delete(1);
-    message.channel.sendMessage("Hehe, nei ma tak łatwo, " + message.author)
-	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
-  }
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
