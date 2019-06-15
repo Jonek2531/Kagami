@@ -421,10 +421,10 @@ let user = message.mentions.users.first() || message.author;
 	if(cmd === `${prefix}gay`){
 // lll
 	    let gay = Math.round(Math.random() * 100);
-
+let gej = message.mentions.users.first() || message.author;
     let gayembed = new Discord.RichEmbed()
         .setColor("#f442d4")
-        .setTitle(`:gay_pride_flag: **${message.author.username} jest w ${gay}% gejem!** :gay_pride_flag:`);
+        .setTitle(`:gay_pride_flag: **${message.gej.username} jest w ${gay}% gejem!** :gay_pride_flag:`);
     return message.channel.send(gayembed);
 };
 	
