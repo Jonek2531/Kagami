@@ -657,6 +657,12 @@ if(cmd === `${prefix}kik`){
 return message.channel.send(helpembed);
 	   
   }
+	if(cmd === `${prefix}wszystkie-komendy`){
+		message.channel.send({embed: {
+  color: 3447003,
+  description: "**Wszystkie komendy aktualnie istniejące w bocie**\n\n**!adm-ankieta**\n**!administracja**\n**!ankieta**\n**!ankieta2**\n**!avatar**\n**!ban**\n**!botinfo**\n**!dobranoc**\n**!dodaj-hajs**\n**!dzień-dobry**\n**!gay**\n**!giveaway**\n**!hug**\n**!najnowsza-wiadomość**\n**!kick**\n**!krzyżówka**\n**!lvl**\n**!mrr**\n**!ping**\n**!pisz-wiecznie**\n**!pomoc**\n**!pomoc-admin**\n**!profil**\n**!propozycja**\n**!propozycjatest**\n**!purge**\n**!rangi**\n**!report**\n**!rola**\n**!say**\n**!serverinfo**\n**!slap**\n**!slot**\n**!ustaw-awatar**\n**!werinfo**\n**!weryfikacja**\n**!wiadomość**\n**!wszystkie-komendy**\n**!wybierz**\n**!zakończmójżywotpls**\n**!zapal**\n**!zapytaj**\n**!zaspamuj**\n**!zatrzymaj-pisanie**"
+}});
+	}	
   if(cmd === `${prefix}pomoc-admin`){
     let helpaembed = new Discord.RichEmbed()
     .setDescription("Komendy administracyjne bota.")
