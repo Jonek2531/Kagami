@@ -393,7 +393,7 @@ let user = message.mentions.users.first() || message.author;
 		 let gra = "w grze " + user.presence.game;
 		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
 		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
-		 if (message.content.includes("Wednesday")) "Wednesday" = "Środa";
+		 if (message.content.includes("Wednesday")) Wednesday = "Środa";
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
