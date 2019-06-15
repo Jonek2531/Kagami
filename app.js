@@ -16,7 +16,8 @@ bot.on("ready", async () =>{
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;	
-
+// czux
+	
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
   let cmd = msgArray[0];
