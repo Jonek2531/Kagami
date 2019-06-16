@@ -49,6 +49,13 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
   }
 	
+	 if (message.content.includes("viewc.site")) {
+	  let banned = message.author
+    message.delete(1);
+    message.channel.sendMessage("Hehe, nei ma tak łatwo, " + message.author)
+	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
+  }
+	
 	  if(cmd === `${prefix}administracja`){
     let admembed = new Discord.RichEmbed()
     .setDescription("**Administracja Serwera GamerStay**")
