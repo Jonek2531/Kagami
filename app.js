@@ -38,24 +38,21 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
-	  let banchannel = message.guild.channels.find(ch => ch.name === 'logi');
     message.delete(1);
     message.channel.sendMessage("W tej chwili został zbanowany użytkownik, za wysyłanie linków do nieodpowiednich stron. Nazwa --> " + message.author)
-	  message.guild(banchannel).member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
+	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
   }
 	 if (message.content.includes("privatepage.vip")) {
 	  let banned = message.author
-	  let banchannel = message.guild.channels.find(ch => ch.name === 'logi');
     message.delete(1);
     message.channel.sendMessage("W tej chwili został zbanowany użytkownik, za wysyłanie linków do nieodpowiednich stron. Ping --> " + message.author)
-	  message.guild(banchannel).member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
+	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
   }
 	  if (message.content.includes("viewc.site")) {
 	  let banned = message.author
-	  let banchannel = message.guild.channels.find(ch => ch.name === 'logi');
     message.delete(1);
     message.channel.sendMessage("W tej chwili został zbanowany użytkownik, za wysyłanie linków do nieodpowiednich stron. Nazwa --> " + message.author)
-	  message.guild(banchannel).member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
+	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
 	  }
 	
 	  if(cmd === `${prefix}administracja`){
