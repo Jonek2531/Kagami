@@ -38,23 +38,25 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
+	  let banchannel = message.channel
     message.delete(1);
-    message.channel.sendMessage("Hehe, nei ma tak łatwo, " + message.author)
-	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
+    message.channel.sendMessage("W tej chwili został zbanowany użytkownik, za wysyłanie linków do nieodpowiednich stron. Nazwa --> " + message.author + message.author.nickname)
+	  banchannel.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
   }
-	  if (message.content.includes("privatepage.vip")) {
+	 if (message.content.includes("privatepage.vip")) {
 	  let banned = message.author
+	  let banchannel = message.channel
     message.delete(1);
-    message.channel.sendMessage("Hehe, nei ma tak łatwo, " + message.author)
-	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
+    message.channel.sendMessage("W tej chwili został zbanowany użytkownik, za wysyłanie linków do nieodpowiednich stron. Nazwa --> " + message.author + message.author.nickname)
+	  banchannel.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
   }
-	
-	 if (message.content.includes("viewc.site")) {
+	  if (message.content.includes("viewc.site")) {
 	  let banned = message.author
+	  let banchannel = message.channel
     message.delete(1);
-    message.channel.sendMessage("Hehe, nei ma tak łatwo, " + message.author)
-	  message.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
-  }
+    message.channel.sendMessage("W tej chwili został zbanowany użytkownik, za wysyłanie linków do nieodpowiednich stron. Nazwa --> " + message.author + message.author.nickname)
+	  banchannel.guild.member(banned).ban("sending nudes - użytkownik automatycznie zbanowany przez bota")	  
+	  }
 	
 	  if(cmd === `${prefix}administracja`){
     let admembed = new Discord.RichEmbed()
