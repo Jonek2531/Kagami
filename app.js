@@ -320,10 +320,10 @@ message.channel.send(pinMessage)
 	}
 	
 	
-	if (cmd === `${prefix}mrr`){
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
-    message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
-  }
+//	if (cmd === `${prefix}mrr`){
+//if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej k0z4k komendy.");
+ //   message.channel.send("Imperator <@287999995230027787> sprawił, że <@351722490487373834> jest i będzie szczęśliwa!");
+ // }
 
   if(cmd === `${prefix}avatar`) {
     let user = message.mentions.users.first() || message.author;
