@@ -223,6 +223,7 @@ let dMessage = args.join(" ").slice(22);
 if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
 
 dUser.send(`${dMessage}`)
+}
 	
 	if(cmd === `${prefix}ustaw-awatar`) {
     let messageArray = message.content.split(" ");
