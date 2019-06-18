@@ -672,7 +672,7 @@ return message.channel.send(helpembed);
 	if(cmd === `${prefix}socialmedia`){
 		message.channel.send({embed: {
   color: 3447003,
-  description: "**Strony Naszego Serwera:**\n<:YouTube:590544003464953916> **Kanał na YouTube: https://www.youtube.com/channel/UC9uGc9N8aCP_Ske1xieo86g**\n<:DISBOARD:590545850850082846> **Strona na Disborard.org: https://disboard.org/server/422172655081488384**\n<:Steam:590546694748372993> **Grupa na Steamie: \nhttps://steamcommunity.com/groups/GamerStayPL**\n<:Strona_internetowa:590549286689964032> **Strona internetowa: \nhttps://gamerstay.weebly.com**\n <:PayPal:590547565842530344> **Donate: \nhttps://www.paypal.me/gamerstaypl**\n👕 **Koszulki: \nhttp://gamerstay.cupsell.com/**"
+  description: "**Strony Naszego Serwera:**\n\n<:YouTube:590544003464953916> **Kanał na YouTube: \nhttps://www.youtube.com/channel/UC9uGc9N8aCP_Ske1xieo86g**\n\n<:DISBOARD:590545850850082846> **Strona na Disborard.org: \nhttps://disboard.org/server/422172655081488384**\n\n<:Steam:590546694748372993> **Grupa na Steamie: \nhttps://steamcommunity.com/groups/GamerStayPL**\n\n<:Strona_internetowa:590549286689964032> **Strona internetowa: \nhttps://gamerstay.weebly.com**\n\n<:PayPal:590547565842530344> **Donate: \nhttps://www.paypal.me/gamerstaypl**\n\n👕 **Koszulki: \nhttp://gamerstay.cupsell.com/**"
 }});
 	}	
 	
