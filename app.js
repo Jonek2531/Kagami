@@ -60,11 +60,11 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
     .setDescription("**Administracja Serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
-.addField("Obecna ilość osób w administracji: **5**")
+.setTitle("Obecna ilość osób w administracji: **6**")
     .addField("HeadAdministratorzy", "<@329694416472375298>,\n <@306150715678654464>,\n <@348468240520970260>,\n <@301263420471246848>.")
     .addField("Administratorzy", "<@336755369667723276>")
     .addField("Moderatorzy", "Aktualnie brak.")
-    .addField("Helperzy", "Aktualnie brak.")
+    .addField("Helperzy", "<@292609169297637378>")
     .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
