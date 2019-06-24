@@ -7,7 +7,7 @@ const fs = require("fs")
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
-
+//l
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("!pomoc", {type: "WATCHING"});
