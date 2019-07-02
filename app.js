@@ -10,7 +10,7 @@ bot.commands = new Discord.Collection()
 //l
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`${guild.members.filter(member => !member.user.bot).size} kociaków ❤️, {type: "WATCHING"}`);
+  bot.user.setActivity("!pomoc", {type: "WATCHING"}`);
 })
 
 bot.on("message", async message =>{
