@@ -9,7 +9,7 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
 //l
 bot.on("ready", async () =>{
-  console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
+  console.log(`${bot.user.username} is online! It's running on ${guild.members.filter(member => !member.user.bot).size} servers!`);
   bot.user.setActivity("!pomoc", {type: "WATCHING"});
 })
 
