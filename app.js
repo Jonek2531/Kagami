@@ -250,6 +250,7 @@ if(cmd === `${prefix}profli`){
 		if(cmd === `${prefix}profile`){
 	message.channel.send("Czy chodziło Ci o **!profil**?");
 }
+	
 
   if (cmd === `${prefix}rangi`){
     message.channel.send("Możliwe rangi do dodania sobie: \n ?anime,\n ?css,\n ?eventy,\n ?furry,\n ?giveaway,\n ?html,\n ?metalowiec,\n ?nsfw,\n ?programowanie,\n ?python,\n ?rozmowny,\n ?sport,\n ?qotd,\n ?tyralnia.");
@@ -261,7 +262,7 @@ if(cmd === `${prefix}profli`){
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
 		let user = message.author;
 const channel = message.guild.channels.find(ch => ch.name === '✦》propozycje');  //finds the channel named suggestions 
-		const gchannel = message.guild.channels.find(ch => ch.name === '✦》główny-chat');
+		const gchannel = message.guild.channels.find(`name`, "✦》główny_chat");
 		
 		
 let proembed = new Discord.RichEmbed()
@@ -277,7 +278,7 @@ let proembed = new Discord.RichEmbed()
             msg.react("❎"); // You can only add two reacts
       ({timeout: 1000});
             })
-		gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] Na <#434407891483492383> pojawiła się nowa propozycja.")
+		gchannel.send("[AUTOMATYCZNA WIADOMOŚĆ] Na <#434407891483492383> pojawiła się nowa propozycja.");
 }     //Closes the if (command === 'suggest'){ 
 	
 	if (cmd ===`${prefix}propozycjatest`){   //if command is suggest
