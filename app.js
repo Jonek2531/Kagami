@@ -91,14 +91,14 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 
     var msg2 = "[github](https://github.com/MonsterMannen/DiscordBotNodeJs)";
 
-    var embed = new Discord.RichEmbed()
+    var embedstats = new Discord.RichEmbed()
         .setColor(9955331)
         .addField("Bot Stats", msg, false)
         .addBlankField(false)
         .addField("Creator", "Monster#1337", false)
         .addField("Source", msg2, false);
 
-    message.channel.send(embed);
+    message.channel.send(embedstats);
 	}
 	
 	if(cmd === `${prefix}nadaj-rolę`){
