@@ -118,6 +118,23 @@ member.addRole(role).catch(console.error)
     db.add(`money_${message.guild.id}_${message.author.id}`, args[0])
 
 }
+	if(cmd === `${prefix}hajstop`){
+	let money = db.startsWith(`money_${message.guild.id}`, { sort: '.data'})
+    let content = "";
+
+    for (let i = 0; i < money.length; i++) {
+        let user = bot.users.get(money[i].ID.split('_')[2]).username
+
+        content += `${i+1}. ${user} ~ ${money[i].data}$\n`
+    }
+
+    const embed = new Discord.RichEmbed()
+    .setAuthor(`${message.guild.name} - Leaderboard!`, message.guild.iconURL)
+    .setDescription(content)
+    .setColor(0x51267)
+
+    message.channel.send(embed)
+	}
 
      if(cmd === `${prefix}sklep`){
     let embed = new Discord.RichEmbed()
