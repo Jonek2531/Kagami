@@ -93,7 +93,7 @@ bot.on("message", async message =>{
     }
     fs.writeFile("./database.json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
-      });
+      })
 	if(cmd === `${prefix}pisz-wiecznie`){
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
 		let channel = message.channel
