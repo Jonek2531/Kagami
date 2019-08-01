@@ -76,8 +76,8 @@ bot.on("message", async message =>{
         userInfo.xp = 0
         message.reply("Congratulations, you level up")
     }
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
+    const argss = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const cmd = argss.shift().toLowerCase();
     if(cmd === "info") {
         let userInfo = db[message.author.id];
         let member = message.mentions.members.first();
