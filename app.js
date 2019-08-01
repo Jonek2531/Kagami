@@ -23,7 +23,7 @@ bot.on("message", async message =>{
   let args = msgArray.slice(1);
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot, message, args);
+  if(commandfile) commandfile.run(bot, client, message, args);
 
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
