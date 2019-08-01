@@ -64,36 +64,7 @@ bot.on("message", async message =>{
     .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
-	let db = JSON.parse(fs.readFileSync("./database.json", "utf8"));
-	if (!db[message.author.id]) db[message.author.id] = {
-        xp: 0,
-        level: 0
-      };
-    db[message.author.id].xp++;
-    let userInfo = db[message.author.id];
-    if(userInfo.xp > 100) {
-        userInfo.level++
-        userInfo.xp = 0
-        message.reply("Congratulations, you level up")
-    }
-    if(cmd === `${prefix}info`) {
-        let userInfo = db[message.author.id];
-        let member = message.mentions.members.first();
-        let embed = new Discord.RichEmbed()
-        .setColor(0x4286f4)
-        .addField("Level", userInfo.level)
-        .addField("XP", userInfo.xp+"/100");
-        if(!member) return message.channel.sendEmbed(embed)
-        let memberInfo = db[member.id]
-        let embed2 = new Discord.RichEmbed()
-        .setColor(0x4286f4)
-        .addField("Level", memberInfo.level)
-        .addField("XP", memberInfo.xp+"/100")
-        message.channel.sendEmbed(embed2)
-    }
-    fs.writeFile("./database.json", JSON.stringify(db), (x) => {
-        if (x) console.error(x)
-      })
+	
 	if(cmd === `${prefix}pisz-wiecznie`){
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
 		let channel = message.channel
