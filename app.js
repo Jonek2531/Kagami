@@ -360,14 +360,14 @@ message.channel.send(pinMessage)
 	
  
     // Create Embed
-    let embed = new Discord.RichEmbed()
+    let embedan = new Discord.RichEmbed()
         .setColor("#ffffff") //To change color do .setcolor("#fffff")
         .setFooter('Aby zagłosować wystarczy wybrać odpowiednią reakcję.')
         .setDescription(args.join(' '))
 	.setTitle(`Ankieta od użytkownika ${message.author.username}`);
         
     if(cmd === `${prefix}ankieta`)
-	    message.channel.send(embed)
+	    message.channel.send(embedan)
         .then(function (msg) {
             msg.react("❎");
             msg.react("✅"); // You can only add two reacts
