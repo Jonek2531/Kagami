@@ -1,4 +1,4 @@
-const Discord = require("discord.js")
+ const Discord = require("discord.js")
 const db = require('quick.db')
 const moment = require('moment')
 const ms = require('ms')
@@ -10,7 +10,7 @@ bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("!pomoc (=^-ω-^=)", {type: "WATCHING"});
+  bot.user.setActivity("League of Legends", {type: "WATCHING"});
 })
 
 bot.on("message", async message =>{
