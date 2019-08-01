@@ -30,10 +30,7 @@ bot.on("message", async message =>{
       var interval = setInterval (function () {
         message.channel.send("=== ŚCIANA SPAMU ===")
       }, 1 * 1); 
-    }
-	
-	// json files
-let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
+	}
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
@@ -80,28 +77,6 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 		channel.stopTyping(true);
 	}
 	
-
-			if(cmd === `${prefix}stats`){
-    var msg = `commands: ${client.commands.size}`;
-    msg += `\nguilds: ${client.guilds.array().size}`;
-    msg += `\nchannels: ${client.channels.array().size}`;
-    msg += `\nusers: ${client.users.array().size}`;
-    msg += `\nemojis: ${client.emojis.array().size}`;
-    msg += `\n\nping: ${client.ping.toFixed(0)}ms`;
-    msg += `\nuptime: ${~~(client.uptime/1000)}s`;   // TODO fix format
-
-    var msg2 = "[github](https://github.com/MonsterMannen/DiscordBotNodeJs)";
-
-    var embed = new Discord.RichEmbed()
-        .setColor(9955331)
-        .addField("Bot Stats", msg, false)
-        .addBlankField(false)
-        .addField("Creator", "Monster#1337", false)
-        .addField("Source", msg2, false);
-
-    message.channel.send(embed);
-			
-			}
 	
 	if(cmd === `${prefix}nadaj-rolę`){
 		if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.")
@@ -120,6 +95,7 @@ member.addRole(role).catch(console.error)
 //member.removeRole(role).catch(console.error)
 //		message.channel.send("Pomyślnie zabrano rolę oznaczonemu użytkownikowi");
 	}
+	let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	if(cmd === `${prefix}hajs`){
 	 let bal = db.fetch(`money_${message.guild.id}_${message.author.id}`)
 
