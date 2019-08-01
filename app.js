@@ -80,7 +80,7 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 		channel.stopTyping(true);
 	}
 	
-		exports.execute = (client, message, args) => {
+
 			if(cmd === `${prefix}stats`){
     var msg = `commands: ${client.commands.length}`;
     msg += `\nguilds: ${client.guilds.array().length}`;
@@ -100,8 +100,8 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
         .addField("Source", msg2, false);
 
     message.channel.send(embed);
+			
 			}
-			};
 	
 	if(cmd === `${prefix}nadaj-rolę`){
 		if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.")
