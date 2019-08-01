@@ -13,6 +13,7 @@
     "ms": "^2.1.1",
     "quick.db": "^7.0.0-b16",
     "moment": "^2.20.1"
+    "fs": "0.0.1-security"
   },
  
    "author": "TrueXPixels",
