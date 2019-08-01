@@ -10,7 +10,7 @@ bot.commands = new Discord.Collection()
 
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("League of Legends", {type: "WATCHING"});
+  bot.user.setActivity("League of Legends", {type: "PLAYING"});
 })
 
 bot.on("message", async message =>{
