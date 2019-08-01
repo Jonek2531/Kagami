@@ -82,11 +82,11 @@ let userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf8'));
 	
 
 			if(cmd === `${prefix}stats`){
-    var msg = `commands: ${client.commands.length}`;
-    msg += `\nguilds: ${client.guilds.array().length}`;
-    msg += `\nchannels: ${client.channels.array().length}`;
-    msg += `\nusers: ${client.users.array().length}`;
-    msg += `\nemojis: ${client.emojis.array().length}`;
+    var msg = `commands: ${client.commands.size}`;
+    msg += `\nguilds: ${client.guilds.array().size}`;
+    msg += `\nchannels: ${client.channels.array().size}`;
+    msg += `\nusers: ${client.users.array().size}`;
+    msg += `\nemojis: ${client.emojis.array().size}`;
     msg += `\n\nping: ${client.ping.toFixed(0)}ms`;
     msg += `\nuptime: ${~~(client.uptime/1000)}s`;   // TODO fix format
 
