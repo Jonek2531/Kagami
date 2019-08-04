@@ -25,8 +25,8 @@ bot.on("message", async message =>{
   bot.user.setActivity("League of Legends", {type: "PLAYING"});
 	let onlinevc = bot.channels.get("607685501708664995");
 	let gamerstay = bot.guilds.get('422172655081488384');
-	var onlineCount = "Online jest " + gamerstay.members.filter(m => m.presence.status === 'online').size + " osób"
-	onlinevc.setName(onlineCount);
+	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
+	onlinevc.setName(onlineCount + "jest teraz online!");
 })
 	
 	if (message.content === "!zaspamuj") { 
