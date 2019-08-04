@@ -18,7 +18,7 @@ bot.on("message", async message =>{
   let args = msgArray.slice(1);
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot, client, message, args);
+  if(commandfile) commandfile.run(bot, message, args);
 
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
