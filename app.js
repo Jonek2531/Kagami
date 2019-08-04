@@ -22,7 +22,7 @@ bot.on("message", async message =>{
 
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("League of Legends", {type: "PLAYING"});
+  bot.user.setActivity("Doki Doki Literature Club", {type: "PLAYING"});
 	let onlinevc = bot.channels.get("607685501708664995");
 	let gamerstay = bot.guilds.get('422172655081488384');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
