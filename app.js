@@ -23,10 +23,7 @@ bot.on("message", async message =>{
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
   bot.user.setActivity("Doki Doki Literature Club", {type: "PLAYING"});
-	let onlinevc = bot.channels.get("607685501708664995");
-	let gamerstay = bot.guilds.get('422172655081488384');
-	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
-	onlinevc.setName(onlineCount + "jest teraz online!");
+	
 })
 	
 	if (message.content === "!zaspamuj") { 
@@ -35,7 +32,12 @@ bot.on("message", async message =>{
         message.channel.send("=== ŚCIANA SPAMU ===")
       }, 1 * 1); 
 	}
-	
+	if(cmd === `${prefix}uaktualnij-vc-online`){
+		let onlinevc = bot.channels.get("607685501708664995");
+	let gamerstay = bot.guilds.get('422172655081488384');
+	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
+	onlinevc.setName(onlineCount + "jest teraz online!");
+	}
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
