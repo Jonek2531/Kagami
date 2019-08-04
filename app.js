@@ -8,6 +8,15 @@ const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
 
+	bot.on("ready", async () =>{
+  console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("Doki Doki Literature Club", {type: "PLAYING"});
+	let onlinevc = bot.channels.get("607685501708664995");
+	let gamerstay = bot.guilds.get('422172655081488384');
+	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
+	onlinevc.setName(onlineCount + "jest teraz online!");
+})
+
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;	
@@ -19,12 +28,6 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
-
-	bot.on("ready", async () =>{
-  console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Doki Doki Literature Club", {type: "PLAYING"});
-	
-})
 	
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
