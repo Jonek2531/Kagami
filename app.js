@@ -14,7 +14,7 @@ bot.commands = new Discord.Collection()
 	let onlinevc = bot.channels.get("607685501708664995");
 	let gamerstay = bot.guilds.get('422172655081488384');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
-	onlinevc.setName(onlineCount + "jest teraz online!");
+	onlinevc.setName(onlineCount + " osób jest teraz online!");
 })
 
 bot.on("message", async message =>{
