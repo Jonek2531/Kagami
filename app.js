@@ -43,13 +43,13 @@ bot.on("message", async message =>{
 		message.channel.send("Zrobione.");
 	}
 	if (cmd === `${prefix}dołącz`) {
-    // Only try to join the sender's voice channel if they are in one themselves
-    if (message.member.voice.channel) {
-      const connection = await message.member.voice.channel.join();
-    } else {
-      message.reply('Ty najpierw wbij na kanał, ok?');
-    }
+   let channel = client.channels.get('471275046695075851');
+
+  channel.join()
+  .then(connection => console.log('Connected'))
+  .catch(console.error);
   }
+		       	      
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
     message.delete(1);
