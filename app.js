@@ -39,9 +39,16 @@ bot.on("message", async message =>{
 		let onlinevc = bot.channels.get("607685501708664995");
 	let gamerstay = bot.guilds.get('422172655081488384');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
-	onlinevc.setName(onlineCount + "jest teraz online!");
+	onlinevc.setName(onlineCount + " osób jest teraz online!");
 	}
-	
+	if (cmd === `${prefix}dołącz`) {
+    // Only try to join the sender's voice channel if they are in one themselves
+    if (message.member.voice.channel) {
+      const connection = await message.member.voice.channel.join();
+    } else {
+      message.reply('Ty najpierw wbij na kanał, ok?');
+    }
+  }
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
     message.delete(1);
