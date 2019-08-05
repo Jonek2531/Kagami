@@ -40,6 +40,7 @@ bot.on("message", async message =>{
 	let gamerstay = bot.guilds.get('422172655081488384');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
 	onlinevc.setName(onlineCount + " osób jest teraz online!");
+		message.channel.send("Zrobione.");
 	}
 	if (cmd === `${prefix}dołącz`) {
     // Only try to join the sender's voice channel if they are in one themselves
