@@ -272,7 +272,7 @@ if(cmd === `${prefix}profli`){
     message.channel.send("Możliwe rangi do dodania sobie: \n ?anime,\n ?css,\n ?eventy,\n ?furry,\n ?giveaway,\n ?html,\n ?metalowiec,\n ?nsfw,\n ?programowanie,\n ?python,\n ?rozmowny,\n ?sport,\n ?qotd,\n ?tyralnia.");
   }
 	 if (cmd === `${prefix}weryfikacja`){
-    message.channel.send("**Jak poprawnie się zweryfikować?** \n**Krok 1.**\nPod wiadomością na <#527242048764379182> zaznacz dwukrotnie reakcję <:Dude:518909814248701993>.\n**Krok 3.** Ciesz się dostępem do całej części serwera!");
+    message.channel.send("**Komenda tymczasowo niedostępna**. Nie mniej jednak, aby się zweryfikować zaznacz __dwukrotnie reakcję na <#527242048764379182>.");
 	 }
 		
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
