@@ -16,7 +16,7 @@ bot.commands = new Discord.Collection()
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
 	onlinevc.setName(onlineCount + " osób jest teraz online!");
 })
-// lol
+
 bot.on("message", async message =>{
   if(message.author.bot) return;
 	  if(message.channel.type === "dm") return;	
