@@ -75,7 +75,7 @@ bot.on("message", async message =>{
     .setColor("RANDOM")
     .setTimestamp(new Date())
 .setTitle("Obecna ilość osób w administracji: **8**")
-    .addField("HeadAdministratorzy", "<@329694416472375298>,\n <@306150715678654464>,\n <@287999995230027787>,\n <@301263420471246848>,\n <@351722490487373834>, <@336576701414899735>.")
+    .addField("HeadAdministratorzy", "<@329694416472375298>,\n <@306150715678654464>,\n <@287999995230027787>,\n <@301263420471246848>,\n <@351722490487373834>,\n <@336576701414899735>.")
     .addField("Administratorzy", "Aktualnie brak.")
     .addField("Moderatorzy", "Aktualnie brak.")
     .addField("Stażyści", "<@292609169297637378>,\n <@518440476471459860>.")
