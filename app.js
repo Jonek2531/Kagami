@@ -198,7 +198,7 @@ member.addRole(role).catch(console.error)
         .addField('`Poziom:` 30', '<@&469096441751535618>\nPrzyznaje dostęp kanału premium.\nOddzielony na liście osób online.', true)
     .addField('`Poziom:` 40', '<@&469081542468042755>\nOddzielony na liście osób online.', true)
     .addField('`Poziom:` 50', '<@&469096491483660290>\nOddzielony na liście osób online.', true)
-     .addField('`Poziom:` 60', '<@&491710552851218463>\nOddzielony na liście osób online.>', true)
+     .addField('`Poziom:` 60', '<@&491710552851218463>\nOddzielony na liście osób online.', true)
      .addField('`Poziom:` 70', '<@&542406358591471649>\nOddzielony na liście osób online.', true);
 		return message.channel.send(lvlembed)
 	}
