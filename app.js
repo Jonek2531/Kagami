@@ -192,14 +192,14 @@ member.addRole(role).catch(console.error)
 		        .setTitle(`Rangi za poziomy`)
 		.setColor(3447003)
         .addField('`Poziom:` 1', '<@&536509855624855592>', true)
-        .addField('`Poziom:` 5', '<@&469087376845701136>\nPrzyznaje dostęp do konkursów premium.', true)
-        .addField('`Poziom:` 10', '<@&469092001707720704>\nOddzielony na liście osób online.', true)
-            .addField('`Poziom:` 20', '<@&469099283791085588>\nOddzielony na liście osób online.', true)
-        .addField('`Poziom:` 30', '<@&469096441751535618>\nPrzyznaje dostęp kanału premium.\nOddzielony na liście osób online.', true)
-    .addField('`Poziom:` 40', '<@&469081542468042755>\nOddzielony na liście osób online.', true)
-    .addField('`Poziom:` 50', '<@&469096491483660290>\nOddzielony na liście osób online.', true)
-     .addField('`Poziom:` 60', '<@&491710552851218463>\nOddzielony na liście osób online.', true)
-     .addField('`Poziom:` 70', '<@&542406358591471649>\nOddzielony na liście osób online.', true);
+        .addField('`Poziom:` 5', '<@&469087376845701136>\n- Przyznaje dostęp do konkursów premium.\n- Dostęp do kanału do zareklamowania się.', true)
+        .addField('`Poziom:` 10', '<@&469092001707720704>\n- Oddzielony na liście osób online.', true)
+            .addField('`Poziom:` 20', '<@&469099283791085588>\n- Oddzielony na liście osób online.', true)
+        .addField('`Poziom:` 30', '<@&469096441751535618>\n- Przyznaje dostęp kanału premium.\n- Oddzielony na liście osób online.', true)
+    .addField('`Poziom:` 40', '<@&469081542468042755>\n- Oddzielony na liście osób online.', true)
+    .addField('`Poziom:` 50', '<@&469096491483660290>\n- Oddzielony na liście osób online.', true)
+     .addField('`Poziom:` 60', '<@&491710552851218463>\n- Oddzielony na liście osób online.', true)
+     .addField('`Poziom:` 70', '<@&542406358591471649>\n- Oddzielony na liście osób online.', true);
 		return message.channel.send(lvlembed)
 	}
 		if(cmd === `${prefix}werinfo`){
