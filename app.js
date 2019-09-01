@@ -40,7 +40,6 @@ bot.on("message", async message =>{
 	let Guild = bot.guilds.get('422172655081488384');
 	let ping = Guild.members.random();
 	let channel = message.channel;
-	message.channel.send(`Wylosowany został ${ping}!`);
 			
 			if (talkedRecently.has(message.author.id)) {
             message.channel.send("Wiemy że to jest potężna komenda, ale by ograniczyć pingi, komendę możesz pomownie użyć po 1 minucie od jej użycia - " + message.author);
@@ -54,6 +53,7 @@ bot.on("message", async message =>{
           // Removes the user from the set after a minute
           talkedRecently.delete(message.author.id);
         }, 60000);
+	    	message.channel.send(`Wylosowany został ${ping}!`);
     }
 }
 	
