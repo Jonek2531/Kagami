@@ -35,7 +35,13 @@ bot.on("message", async message =>{
 	  message.channel.send('Je*ać Dianę ;/')
 	}
 	 // KOMENDA FRANCISŁAW #1	
-		
+		if(cmd === `${prefix}dzban`){
+	let Guild = bot.guilds.get('422172655081488384');
+	let ping = Guild.members.random();
+	let channel = message.channel;
+	message.channel.send(`Wylosowany został ${ping}!`);
+}
+	
 	// KOMENDY PODSTAWOWE BOTA
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
@@ -495,13 +501,7 @@ let gej = message.mentions.users.first() || message.author;
   message.channel.send(ballembed)
 
   }
-if(cmd === `${prefix}dzban`){
-	let Guild = bot.guilds.get('422172655081488384');
-	let ping = Guild.members.random();
-	let channel = message.channel;
-	message.channel.send(`Dzbanem jest ${ping}`);
-}
-	
+
 	
 	 if(cmd === `${prefix}say`) {
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
