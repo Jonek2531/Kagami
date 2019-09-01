@@ -29,6 +29,14 @@ bot.on("message", async message =>{
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
 	
+	// STREFA KUPIONYCH KOMEND
+	 // KOMENDA DEVILSENPAI #1
+	if(cmd === `${prefix}jd`){
+	  message.channel.send('Je*ać Dianę ;/')
+	}
+	 // KOMENDA FRANCISŁAW #1	
+		
+	// KOMENDY PODSTAWOWE BOTA
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
       var interval = setInterval (function () {
@@ -487,7 +495,12 @@ let gej = message.mentions.users.first() || message.author;
   message.channel.send(ballembed)
 
   }
-
+if(cmd === `${prefix}dzban`){
+	let Guild = bot.guilds.get('422172655081488384');
+	let ping = Guild.members.random();
+	let channel = message.channel;
+	message.channel.send(`Dzbanem jest ${ping}`);
+}
 	
 	
 	 if(cmd === `${prefix}say`) {
