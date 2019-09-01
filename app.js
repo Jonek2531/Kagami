@@ -5,6 +5,7 @@ const ms = require('ms')
 const botconfig = require("./botconfig.json");
 const fs = require("fs")
 const client = new Discord.Client();
+const talkedRecently = new Set();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
 
@@ -40,6 +41,20 @@ bot.on("message", async message =>{
 	let ping = Guild.members.random();
 	let channel = message.channel;
 	message.channel.send(`Wylosowany został ${ping}!`);
+			
+			if (talkedRecently.has(message.author.id)) {
+            message.channel.send("Wiemy że to jest potężna komenda, ale by ograniczyć pingi, komendę możesz pomownie użyć po 1 minucie od jej użycia - " + message.author);
+    } else {
+
+           // the user can type the command ... your command code goes here :)
+
+        // Adds the user to the set so that they can't talk for a minute
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 60000);
+    }
 }
 	
 	// KOMENDY PODSTAWOWE BOTA
