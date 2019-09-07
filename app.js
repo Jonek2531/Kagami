@@ -78,7 +78,15 @@ bot.on("message", async message =>{
   .then(connection => console.log('Connected'))
   .catch(console.error);
   }
-		       	      
+	
+	   if(cmd === `${prefix}administracja-obrazek`) {
+        message.channel.send({
+            files: [
+                "Storage/Administracja.png"
+            ]
+        });
+    }
+	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
     message.delete(1);
