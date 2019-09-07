@@ -263,8 +263,8 @@ member.addRole(role).catch(console.error)
 		let komembed = new Discord.RichEmbed()
 		        .setTitle(`Podstawowe komendy autorskiego bota`)
 		.setColor(3447003)
-        .addField('`!pomoc`', 'Zbiór najważniejszych komend.', true)
-        .addField('`!wszystkie-komendy`', 'Zbiór wszystkich komend', true)
+        .addField('`!pomoc`', 'Zbiór najważniejszych komend.')
+        .addField('`!wszystkie-komendy`', 'Zbiór wszystkich komend')
 		return message.channel.send(komembed)
 	}
 		if(cmd === `${prefix}werinfo`){
