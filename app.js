@@ -108,7 +108,6 @@ bot.on("message", async message =>{
     .addField("Administratorzy", "Aktualnie brak.")
     .addField("Moderatorzy", "Aktualnie brak.")
     .addField("Stażyści", "<@292609169297637378>.")
-    .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
 	
