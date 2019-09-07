@@ -103,11 +103,12 @@ bot.on("message", async message =>{
     .setDescription("**Administracja Serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
-.setTitle("Obecna ilość osób w administracji: **8**")
-    .addField("HeadAdministratorzy", "<@329694416472375298>,\n <@306150715678654464>,\n <@287999995230027787>,\n <@301263420471246848>,\n <@351722490487373834>,\n <@336576701414899735>.")
+    .setColor(3447003)
+.setTitle("Administracja serwera GamerStay")
+    .addField("HeadAdministratorzy", "<@329694416472375298>, <@306150715678654464>, <@287999995230027787>, <@301263420471246848>, <@336576701414899735>.")
     .addField("Administratorzy", "Aktualnie brak.")
     .addField("Moderatorzy", "Aktualnie brak.")
-    .addField("Stażyści", "<@292609169297637378>,\n <@518440476471459860>.")
+    .addField("Stażyści", "<@292609169297637378>.")
     .addField("Chcesz dołączyć do Administracji GamerStay?", "Napisz podanie na <#469943798038790146> <:laf:470890277431934978>")
     return message.channel.send(admembed);
   }
