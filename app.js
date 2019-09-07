@@ -100,7 +100,6 @@ bot.on("message", async message =>{
 	
 	  if(cmd === `${prefix}administracja`){
     let admembed = new Discord.RichEmbed()
-    .setDescription("**Administracja Serwera GamerStay**")
     .setColor("RANDOM")
     .setTimestamp(new Date())
     .setColor(3447003)
