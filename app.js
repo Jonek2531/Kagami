@@ -110,7 +110,7 @@ bot.on("message", async message =>{
 	if(cmd === `${prefix}pozostałość-obrazek`) {
         message.channel.send({
             files: [
-                "Storage/Pozostałe informacje.png"
+                "Storage/Pozostale informacje.png"
             ]
         });
     }
