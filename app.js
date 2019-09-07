@@ -267,6 +267,13 @@ member.addRole(role).catch(console.error)
         .addField('`!wszystkie-komendy`', 'Zbiór wszystkich komend')
 		return message.channel.send(komembed)
 	}
+	if(cmd === `${prefix}pozostałość`){
+		message.channel.send({embed: {
+			title: "Pozostałe informacje",
+  color: 3447003,
+  description: "Właścicielem serwera jest <@329694416472375298> (Jonek#3313),\nWszelkie sugestie należy zgłaszać wpisując `!propozycja <treść sugestii>`,\nSerwer został utworzony 10 marca 2018 roku."
+}});
+	}
 		if(cmd === `${prefix}werinfo`){
 		let werembed = new Discord.RichEmbed()
 		        .setTitle(`Weryfikacja`)
