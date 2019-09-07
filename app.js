@@ -107,6 +107,13 @@ bot.on("message", async message =>{
             ]
         });
     }
+	if(cmd === `${prefix}pozostałość-obrazek`) {
+        message.channel.send({
+            files: [
+                "Storage/Pozostałe informacje.png"
+            ]
+        });
+    }
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
@@ -264,7 +271,7 @@ member.addRole(role).catch(console.error)
 		        .setTitle(`Podstawowe komendy autorskiego bota`)
 		.setColor(3447003)
         .addField('`!pomoc`', 'Zbiór najważniejszych komend.')
-        .addField('`!wszystkie-komendy`', 'Zbiór wszystkich komend')
+        .addField('`!wszystkie-komendy`', 'Zbiór wszystkich komend.')
 		return message.channel.send(komembed)
 	}
 	if(cmd === `${prefix}pozostałość`){
