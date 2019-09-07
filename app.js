@@ -86,6 +86,20 @@ bot.on("message", async message =>{
             ]
         });
     }
+	if(cmd === `${prefix}socialmedia-obrazek`) {
+        message.channel.send({
+            files: [
+                "Storage/Social Media.png"
+            ]
+        });
+    }
+	if(cmd === `${prefix}lvl-obrazek`) {
+        message.channel.send({
+            files: [
+                "Storage/Rangi.png"
+            ]
+        });
+    }
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
