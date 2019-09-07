@@ -100,6 +100,13 @@ bot.on("message", async message =>{
             ]
         });
     }
+	if(cmd === `${prefix}komendy-obrazek`) {
+        message.channel.send({
+            files: [
+                "Storage/Komendy.png"
+            ]
+        });
+    }
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
@@ -251,6 +258,14 @@ member.addRole(role).catch(console.error)
      .addField('`Poziom:` 60', '<@&491710552851218463>\n- Oddzielony na liście osób online.\n- 9000 Jonków.', true)
      .addField('`Poziom:` 70', '<@&542406358591471649>\n- Oddzielony na liście osób online.\n- 12000 Jonków.', true);
 		return message.channel.send(lvlembed)
+	}
+	if(cmd === `${prefix}komendy-info`){
+		let komembed = new Discord.RichEmbed()
+		        .setTitle(`Podstawowe komendy autorskiego bota`)
+		.setColor(3447003)
+        .addField('`!pomoc`', 'Zbiór najważniejszych komend.', true)
+        .addField('`!wszystkie-komendy`', 'Zbiór wszystkich komend', true)
+		return message.channel.send(komembed)
 	}
 		if(cmd === `${prefix}werinfo`){
 		let werembed = new Discord.RichEmbed()
