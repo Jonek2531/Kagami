@@ -500,7 +500,7 @@ let user = message.mentions.users.first() || message.author;
 		 let gra = "w grze " + user.presence.game;
 		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
 		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
-		 if (message.content.includes("Wednesday")) "Wednesday" = "Środa";
+		 if(`${user.username}#${user.discriminator} (ID: ${user.id})` === "Jonek#3313 (ID: 329694416472375298)") `${user.username}#${user.discriminator} (ID: ${user.id})` = "<:wlasciciel:621450170755710977> Jonek#3313 (ID: 329694416472375298)";
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
