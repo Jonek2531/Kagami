@@ -500,13 +500,13 @@ let user = message.mentions.users.first() || message.author;
 		 let gra = "w grze " + user.presence.game;
 		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
 		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
-		 if(`${user.username}#${user.discriminator} (ID: ${user.id})` === "Jonek#3313 (ID: 329694416472375298)") `${user.username}#${user.discriminator} (ID: ${user.id})` = "<:wlasciciel:621450170755710977> Jonek#3313 (ID: 329694416472375298)";
+		 let nazwa = `${user.username}#${user.discriminator} (ID: ${user.id})`
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
                  .setTimestamp(new Date())
                  .setColor("#4286f4")
                  .setThumbnail(`${user.avatarURL}`)
-                 .addField("Nazwa Użytkownika", `${user.username}#${user.discriminator} (ID: ${user.id})` , inline = true)
+                 .addField("Nazwa Użytkownika", `${nazwa}` , inline = true)
                  .addField("Utworzono dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)      
        .addField("Status", `${status[user.presence.status]}, ${gra}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
