@@ -32,7 +32,7 @@ bot.on("message", async message =>{
 	  if(message.channel.type === "dm"){
 		  let wiado = bot.channels.get("621435687409025043");
 		  message.wiado.send(message.author.username + "napisał do autorskiego bota na pw: " + message.content);
-	
+	  }
 	// STREFA KUPIONYCH KOMEND
 	 // KOMENDA DEVILSENPAI #1
 	if(cmd === `${prefix}jd`){
