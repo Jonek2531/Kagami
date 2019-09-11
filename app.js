@@ -19,8 +19,6 @@ bot.commands = new Discord.Collection()
 })
 
 bot.on("message", async message =>{
-  if(message.author.bot) return;
-	  if(message.channel.type === "dm") return;	
 
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
@@ -29,6 +27,11 @@ bot.on("message", async message =>{
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
+	
+	if(message.author.bot) return;
+	  if(message.channel.type === "dm"){
+		  let wiado = bot.channels.get("621435687409025043");
+		  message.wiado.send(message.author.username + "napisał do autorskiego bota na pw: " + message.content);
 	
 	// STREFA KUPIONYCH KOMEND
 	 // KOMENDA DEVILSENPAI #1
