@@ -323,6 +323,7 @@ let dMessage = args.join(" ").slice(22);
 if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
 
 dUser.send(`${dMessage}`)
+	message.channel.send("Pomyślnie wysłano wiadomość");
 }
 	
 	if(cmd === `${prefix}ustaw-awatar`) {
