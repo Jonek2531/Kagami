@@ -362,8 +362,8 @@ if(cmd === `${prefix}profli`){
 		
 	if (cmd ===`${prefix}propozycja`){   //if command is suggest
 		let user = message.author;
-const channel = message.guild.channels.find(ch => ch.name === '✦》propozycje');  //finds the channel named suggestions 
-		const gchannel = message.guild.channels.find(`name`, "✦》główny_chat");
+const channel = message.guild.channels.find(ch => ch.name === '🗽┃propozycje');  //finds the channel named suggestions 
+		const gchannel = message.guild.channels.find(`name`, "🥞┃główny_chat");
 		
 		
 let proembed = new Discord.RichEmbed()
