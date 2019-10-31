@@ -34,7 +34,7 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do autorskiego bota na pw: " + message.content);
 		 wiado.send(cos);
 	  }
-	// STREFA KUPIONYCH KOMEND
+	// STREFA KUPIONYCH KOMEND'
 	 // KOMENDA DEVILSENPAI #1
 	if(cmd === `${prefix}jd`){
 	  message.channel.send('Je*ać Dianę ;/')
