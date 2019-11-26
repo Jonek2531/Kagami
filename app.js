@@ -238,6 +238,10 @@ member.addRole(role).catch(console.error)
     return message.channel.send(embed)
 }
 	
+	
+	if(cmd === `${prefix}fuckredka`){
+	  message.channel.send('Kredka to chuj, bo kredka to menel')
+	}
 	///if(cmd === `${prefix}emoji`) {
     ///let emoji = message.guild.emojis.get(args[0]) || message.guild.emojis.find(emoji => emoji.name === args[0]);
    // if (!emoji) emoji = message.channel.send("Musisz podać jakąś emotkę! Pamiętaj, aby nie dawać dwukropka.");
