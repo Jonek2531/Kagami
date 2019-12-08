@@ -247,7 +247,7 @@ let channel = message.channel;
             .addField('Możliwa do wzmianki', role.mentionable.toString(), true)
         .addField('Pozycja w rolach (od dołu)', role.position.toString(), true)
      .addField('Pozycja kanału', channel.position, true)
-     .addField('cooldown', channel.rate_limit_per_user., true)
+     .addField('cooldown', channel.rate_limit_per_user, true)
         .addField('ID roli', role.id, true)
     .addField('Permisje roli', role.permissions, true);
     return message.channel.send(embed)
