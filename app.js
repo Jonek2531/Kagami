@@ -74,7 +74,7 @@ const channel = message.channel
 	const cooldown = channel.rate_limit_per_user(2);
 		channel.setName(cooldown);
 	}
-	rate_limit_per_user
+
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
       var interval = setInterval (function () {
@@ -236,7 +236,7 @@ member.addRole(role).catch(console.error)
 	if(cmd === `${prefix}rola`) {
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
     if (!role) role = message.member.highestRole;
-
+let channel = message.channel;
 
     let embed = new Discord.RichEmbed()
         .setColor(role.hexColor)
@@ -246,6 +246,8 @@ member.addRole(role).catch(console.error)
         .addField('Data stworzenia roli', role.createdAt.toDateString(), true)
             .addField('Możliwa do wzmianki', role.mentionable.toString(), true)
         .addField('Pozycja w rolach (od dołu)', role.position .toString(), true)
+     .addField('Pozycja kanału', channel.position .toString(), true)
+     .addField('cooldown', channel.rate_limit_per_user .toString(), true)
         .addField('ID roli', role.id, true)
     .addField('Permisje roli', role.permissions, true);
     return message.channel.send(embed)
