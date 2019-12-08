@@ -63,7 +63,7 @@ bot.on("message", async message =>{
 	
 	// KOMENDY PODSTAWOWE BOTA
 	
-	if(cmd === `${prefix}spacja}`){
+	if(cmd === `${prefix}spacja`){
 const channel = message.guild.channels.find(ch => ch.name === 'dupa123');
 	channel.setName("lubie placki 1 2 3");
 	}
