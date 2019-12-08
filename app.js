@@ -63,18 +63,13 @@ bot.on("message", async message =>{
 	
 	// KOMENDY PODSTAWOWE BOTA
 	
-	if(cmd === `${prefix}spacja`){
+	if(cmd === `${prefix}nazwa-kanału`){
 const channel = message.channel
 	const sayMessage = args.join(" ");
 		channel.setName(sayMessage);
 	}
 	
-	if(cmd === `${prefix}cooldown`){
-const channel = message.channel
-	const cooldown = channel.rate_limit_per_user(2);
-		channel.setName(cooldown);
-	}
-
+	
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
       var interval = setInterval (function () {
@@ -246,8 +241,6 @@ let channel = message.channel;
         .addField('Data stworzenia roli', role.createdAt.toDateString(), true)
             .addField('Możliwa do wzmianki', role.mentionable.toString(), true)
         .addField('Pozycja w rolach (od dołu)', role.position.toString(), true)
-     .addField('Pozycja kanału', channel.position, true)
-     .addField('cooldown', channel.rate_limit_per_user, true)
         .addField('ID roli', role.id, true)
     .addField('Permisje roli', role.permissions, true);
     return message.channel.send(embed)
