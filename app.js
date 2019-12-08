@@ -68,6 +68,13 @@ const channel = message.channel
 	const sayMessage = args.join(" ");
 		channel.setName(sayMessage);
 	}
+	
+	if(cmd === `${prefix}cooldown`){
+const channel = message.channel
+	const cooldown = channel.rate_limit_per_user(2);
+		channel.setName(cooldown);
+	}
+	rate_limit_per_user
 	if (message.content === "!zaspamuj") { 
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
       var interval = setInterval (function () {
