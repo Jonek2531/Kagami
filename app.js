@@ -597,7 +597,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
     message.channel.send(sayMessage);
   }
 
-if(cmd === `${prefix}kik`){
+if(cmd === `${prefix}kick`){
 
    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
    if(!kUser) return message.channel.send("Nie ma takiego użytkownika!");
