@@ -657,36 +657,10 @@ if(cmd === `${prefix}kick`){
     return;
   }
 
-
-  if(cmd === `${prefix}zglos`){
-
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("Nie ma takiego użytkownika!")
-    let reason = args.join(" ").slice(22);
-
-    let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Reporty")
-    .setColor("#00e7ff")
-    .addField("Zgłoszony użytkownik", `${rUser}, ID użytkownika: ${rUser.id}`)
-    .addField("Zgłoszony przez", `${message.author}. ID zgłaszającego: ${message.author.id}`)
-    .addField("Godzina wysłania", message.createdAt)
-    .addField("Na kanale", message.channel)
-    .addField("Powód", reason);
-
-    let reportschannel = message.guild.channels.find(`name`, "reporty");
-    if(!reportschannel) return message.channel.send("Nie ma kanału od reportów");
-
-      message.delete().catch(O_o=>{});
-      reportschannel.send(reportEmbed);
-
-    return;
-  }
-
-
   if(cmd === `${prefix}report`){
 	  
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("Nie ma takiego użytkownika!")
+    if(!rUser) return message.channel.send("Nie ma takiego użytkownika bądź nikogo nie oznaczyłeś/aś.\n\n*Poprawne użycie: !report @nick powód*")
     let reason = args.join(" ").slice(22);
 	  let kanal = message.channel
 
