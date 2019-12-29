@@ -662,6 +662,7 @@ if(cmd === `${prefix}kick`){
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("Nie ma takiego użytkownika bądź nikogo nie oznaczyłeś/aś.\n\n*Poprawne użycie: !report @nick powód*")
     let reason = args.join(" ").slice(22);
+	  if(!reason) return message.channel.send("Musisz podać powód reporta.\n\n*Poprawne użycie: !report @nick powód*")
 	  let kanal = message.channel
 
     let reportEmbed = new Discord.RichEmbed()
