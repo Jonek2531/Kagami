@@ -663,6 +663,7 @@ if(cmd === `${prefix}kick`){
     if(!rUser) return message.channel.send("Nie ma takiego użytkownika bądź nikogo nie oznaczyłeś/aś.\n\n*Poprawne użycie: !report @nick powód*")
     let reason = args.join(" ").slice(22);
 	  if(!reason) return message.channel.send("Musisz podać powód reporta.\n\n*Poprawne użycie: !report @nick powód*")
+	  if(message.author) return message.channel.send("Nie możesz wysłać reporta na samego siebie.\n\nPoprawne użycie: !report (@nick osoby __oskarżonej__) powód*")
 	  let kanal = message.channel
 
     let reportEmbed = new Discord.RichEmbed()
@@ -675,7 +676,7 @@ if(cmd === `${prefix}kick`){
     .addField("Powód:", reason)
 
     let reportschannel = message.guild.channels.find(`name`, "reporty");
-    if(!reportschannel) return message.channel.send("Nie ma kanału od reportów.");
+    if(!reportschannel) return message.channel.send("Kanał od reportów musi się nazywać `#reporty`.");
 
       message.delete().catch(O_o=>{});
       reportschannel.send(reportEmbed);
