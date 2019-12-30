@@ -670,7 +670,7 @@ if(cmd === `${prefix}kick`){
     .setColor("#00e7ff")
     .addField("Zgłoszony użytkownik:", `${rUser} (ID: ${rUser.id})`)
     .addField("Zgłoszony przez:", `${message.author} (ID: ${message.author.id})`)
-    .addField("Godzina wysłania:", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')} (na kanale ${message.channel}`)
+    .addField("Godzina wysłania:", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')} (na kanale ${message.channel})`)
     .addField("Powód:", reason)
 
     let reportschannel = message.guild.channels.find(`name`, "reporty");
