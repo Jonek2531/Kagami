@@ -663,7 +663,6 @@ if(cmd === `${prefix}kick`){
     if(!rUser) return message.channel.send("Nie ma takiego użytkownika bądź nikogo nie oznaczyłeś/aś.\n\n*Poprawne użycie: !report @nick powód*")
     let reason = args.join(" ").slice(22);
 	  if(!reason) return message.channel.send("Musisz podać powód reporta.\n\n*Poprawne użycie: !report @nick powód*")
-	  if(message.guild.member(message.mentions.users.first(message.author)) return message.channel.send("Nie możesz wysłać reporta na samego siebie.\n\n*Poprawne użycie: !report (@nick osoby __oskarżonej__) powód*")
 	  let kanal = message.channel
 
     let reportEmbed = new Discord.RichEmbed()
@@ -671,7 +670,7 @@ if(cmd === `${prefix}kick`){
     .setColor("#00e7ff")
     .addField("Zgłoszony użytkownik:", `${rUser}, ID użytkownika: ${rUser.id}.`)
     .addField("Zgłoszony przez:", `${message.author}, ID zgłaszającego: ${message.author.id}.`)
-    .addField("Godzina wysłania:", message.createdAt)
+    .addField("Godzina wysłania:", `${moment.utc(message.guild.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
     .addField("Na kanale:", message.channel)
     .addField("Powód:", reason)
 
