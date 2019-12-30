@@ -666,11 +666,11 @@ if(cmd === `${prefix}kick`){
 	  let kanal = message.channel
 
     let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Reporty.")
+    .setDescription("Nowe zgłoszenie.")
     .setColor("#00e7ff")
     .addField("Zgłoszony użytkownik:", `${rUser}, ID użytkownika: ${rUser.id}.`)
     .addField("Zgłoszony przez:", `${message.author}, ID zgłaszającego: ${message.author.id}.`)
-    .addField("Godzina wysłania:", `${moment.utc(message.guild.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+    .addField("Godzina wysłania:", `${moment.utc(message.message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
     .addField("Na kanale:", message.channel)
     .addField("Powód:", reason)
 
