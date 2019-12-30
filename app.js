@@ -663,7 +663,7 @@ if(cmd === `${prefix}kick`){
     if(!rUser) return message.channel.send("Nie ma takiego użytkownika bądź nikogo nie oznaczyłeś/aś.\n\n*Poprawne użycie: !report @nick powód*")
     let reason = args.join(" ").slice(22);
 	  if(!reason) return message.channel.send("Musisz podać powód reporta.\n\n*Poprawne użycie: !report @nick powód*")
-	  if(message.author) return message.channel.send("Nie możesz wysłać reporta na samego siebie.\n\nPoprawne użycie: !report (@nick osoby __oskarżonej__) powód*")
+	  if(message.author) return message.channel.send("Nie możesz wysłać reporta na samego siebie.\n\n*Poprawne użycie: !report (@nick osoby __oskarżonej__) powód*")
 	  let kanal = message.channel
 
     let reportEmbed = new Discord.RichEmbed()
