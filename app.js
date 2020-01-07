@@ -159,12 +159,10 @@ const channel = message.channel
     return message.channel.send(admembed);
   }
 	if(cmd === `${prefix}pozycja`){
-	const xddd = guild.roles.get("426153727628410882");
-	let xddd = 1
+	const xddd = guild.roles.get("426153727628410882"); = 1
 	
-	const xdd = guild.roles.get("434396994182578176");
-	let xdd = 2
-	
+	const xdd = guild.roles.get("434396994182578176"); = 2
+		
 	If(1 < 2)
 		return message.channel.send("Jesteś w administracji")
 		else return message.channel.send("Nie jesteś w administracji")
