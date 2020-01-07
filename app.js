@@ -510,11 +510,11 @@ message.channel.send(pinMessage)
       }
 let user = message.mentions.users.first() || message.author;
 		 let channel = message.mentions.users.first() || message.author;
-		 let gra = "w grze " + user.presence.game;
-		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
-		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
-		 if(gra === "w grze Custom Status") gra = "posiada *status własny*";
-		 if(gra === "aktualnie nie jest w grze" && status.offline) gra = null
+		 let gra = ", w grze " + user.presence.game;
+		 if(gra === ", w grze Spotify") gra = "słucha muzyki na Spotify";
+		 if(gra === ", w grze " + null) gra = "aktualnie nie jest w grze";
+		 if(gra === ", w grze Custom Status") gra = "posiada *status własny*";
+		 if(gra === ", aktualnie nie jest w grze" && status.offline) gra = ""
 		 let nazwa = `${user.username}#${user.discriminator} (ID: ${user.id})`
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
@@ -523,7 +523,7 @@ let user = message.mentions.users.first() || message.author;
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Nazwa Użytkownika", `${nazwa}` , inline = true)
                  .addField("Utworzono dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)      
-       .addField("Status", `${status[user.presence.status]}, ${gra}`)
+       .addField("Status", `${status[user.presence.status]} ${gra}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
        .setFooter(`${user.username}#${user.discriminator}`);
 	
