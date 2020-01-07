@@ -513,7 +513,7 @@ let user = message.mentions.users.first() || message.author;
 		 let gra = "w grze " + user.presence.game;
 		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
 		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
-		 if(gra === "w grze Custom Status") gra = "posiada Customowy Status przez co nie mogę wykryć w jaką grę gra";
+		 if(gra === "w grze Custom Status") gra = "posiada Customowy Status";
 		 let nazwa = `${user.username}#${user.discriminator} (ID: ${user.id})`
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
