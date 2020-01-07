@@ -158,6 +158,16 @@ const channel = message.channel
     .addField("Stażyści", "<@292609169297637378>.")
     return message.channel.send(admembed);
   }
+	const xddd = guild.roles.get("426153727628410882");
+	let xddd = 1
+	
+	const xdd = guild.roles.get("434396994182578176");
+	let xdd = 2
+	
+	If(1 < 2){
+		return message.channel.send("Jesteś w administracji")
+		else
+			return message.channel.send("Nie jesteś w administracji")
 	
 	if(cmd === `${prefix}pisz-wiecznie`){
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
