@@ -514,7 +514,7 @@ let user = message.mentions.users.first() || message.author;
 		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
 		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
 		 if(gra === "w grze Custom Status") gra = "posiada *status własny*";
-		 if(gra === "aktualnie nie jest w grze" && status.offline) gra = "być może śpi..."
+		 if(gra === "aktualnie nie jest w grze" && user.presence.status.offline) gra = "być może śpi..."
 		 let nazwa = `${user.username}#${user.discriminator} (ID: ${user.id})`
        let embed = new Discord.RichEmbed()
                  .setTitle("Profil")
@@ -522,7 +522,7 @@ let user = message.mentions.users.first() || message.author;
                  .setColor("#4286f4")
                  .setThumbnail(`${user.avatarURL}`)
                  .addField("Dane użytkownika", `${nazwa}` , inline = true)
-                 .addField("Utworzono konto dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+                 .addField("Data utworzenia konta", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
        .addField("Status", `${status[user.presence.status]}, ${gra}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
        .setFooter(`${user.username}#${user.discriminator}`);
