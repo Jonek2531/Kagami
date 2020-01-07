@@ -521,9 +521,8 @@ let user = message.mentions.users.first() || message.author;
                  .setTimestamp(new Date())
                  .setColor("#4286f4")
                  .setThumbnail(`${user.avatarURL}`)
-                 .addField("Nazwa Użytkownika", `${nazwa}` , inline = true)
-                 .addField("Utworzono dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
-       .addField("Dołączono dnia", `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+                 .addField("Dane użytkownika", `${nazwa}` , inline = true)
+                 .addField("Utworzono konto dnia", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
        .addField("Status", `${status[user.presence.status]}, ${gra}`)
                         .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
        .setFooter(`${user.username}#${user.discriminator}`);
