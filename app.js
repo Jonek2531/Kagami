@@ -1,4 +1,6 @@
- const Discord = require("discord.js")
+// Wszelkie treści poniżej należą do Jonek#3313. Kopiowanie zabronione ©
+
+const Discord = require("discord.js")
 const db = require('quick.db')
 const moment = require('moment')
 const ms = require('ms')
@@ -11,7 +13,7 @@ bot.commands = new Discord.Collection()
 
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Wpisz !pomoc po więcej informacji! Miłego dzionka :3 ~Jonek", {type: "PLAYING"});
+  bot.user.setActivity("Wpisz !pomoc po więcej informacji! 😋", {type: "PLAYING"});
 	let onlinevc = bot.channels.get("607685501708664995");
 	let gamerstay = bot.guilds.get('422172655081488384');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
