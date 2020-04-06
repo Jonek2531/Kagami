@@ -128,6 +128,10 @@ const channel = message.channel
             ]
         });
     }
+	let csgo = user.username
+	let csssgo = message.guild.channels.find(ch => ch.name === 'pingigigigigi');
+	let cssgo = "SIeam, ogólnie zbanowałam ziomka z nickiem `CSGOMAGIC GIVEAWAY` i oznaczam <@&434396994182578176>, aby ruszyli d00py o ogarnęli, bo jeśli jest to rajd, to ja wszystkich nie zdołam zbanować (będziecie dostawać tyle pingów, ile osób osobiście wywaliłam)";
+	if(csgo === "CSGOMAGIC GIVEAWAY") message.guild.ban(csgo); message.csssgo.send(cssgo);
 	
   if (message.content.includes("nakedphotos.club")) {
 	  let banned = message.author
