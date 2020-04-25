@@ -15,7 +15,7 @@ bot.commands = new Discord.Collection()
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Wpisz !pomoc po więcej informacji! 😋", {type: "PLAYING"});
 	let onlinevc = bot.channels.get("607685501708664995");
-	let gamerstay = bot.guilds.get('422172655081488384');
+	let gamerstay = bot.guilds.get('701390743767351316');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
 	onlinevc.setName(onlineCount + " osób jest teraz online!");
 })
