@@ -46,18 +46,6 @@ bot.on("message", async message =>{
 	let Guild = bot.guilds.get('422172655081488384');
 	let ping = Guild.members.random();
 	let channel = message.channel;
-			
-			
-            
- 
-
-           // the user can type the command ... your command code goes here :)
-
-        // Adds the user to the set so that they can't talk for a minute
-        
-        
-          
-          
        
 	    	message.channel.send(`Wylosowany został ${ping}!`);
     
@@ -81,7 +69,7 @@ const channel = message.channel
 	if(cmd === `${prefix}uaktualnij-vc-online`){
 		let onlinevc = bot.channels.get("607685501708664995");
 	let gamerstay = bot.guilds.get('422172655081488384');
-	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size
+	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size
 	onlinevc.setName(onlineCount + " osób jest teraz online!");
 		message.channel.send("Zrobione.");
 	}
