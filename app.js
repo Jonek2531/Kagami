@@ -72,7 +72,6 @@ const channel = message.channel
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size
 	onlinevc.setName("Liczba aktywnych cynamoniusiów: " + onlineCount);
 		message.channel.send("Zrobione.");
-		else message.channel.
 	}
 	if (cmd === `${prefix}dołącz`) {
    let channel = client.channels.get('471275046695075851');
