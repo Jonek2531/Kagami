@@ -67,11 +67,12 @@ const channel = message.channel
       }, 1 * 1); 
 	}
 	if(cmd === `${prefix}uaktualnij-vc-online`){
-		let onlinevc = bot.channels.get("607685501708664995");
-	let gamerstay = bot.guilds.get('422172655081488384');
+		let onlinevc = bot.channels.get("703564715913379891");
+	let gamerstay = bot.guilds.get('701390743767351316');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size
-	onlinevc.setName(onlineCount + " osób jest teraz online!");
+	onlinevc.setName("Liczba aktywnych cynamoniusiów: " + onlineCount);
 		message.channel.send("Zrobione.");
+		else message.channel.
 	}
 	if (cmd === `${prefix}dołącz`) {
    let channel = client.channels.get('471275046695075851');
