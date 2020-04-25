@@ -70,7 +70,7 @@ const channel = message.channel
 		let onlinevc = bot.channels.get("703564715913379891");
 	let gamerstay = bot.guilds.get('701390743767351316');
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size
-	onlinevc.setName("Liczba aktywnych cynamoniusiów: " + onlineCount);
+	onlinevc.setName("Aktywni: " + onlineCount);
 		message.channel.send("Zrobione.");
 	}
 	if (cmd === `${prefix}dołącz`) {
