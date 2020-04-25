@@ -141,7 +141,7 @@ const channel = message.channel
     .setTimestamp(new Date())
     .setColor(3447003)
 .setTitle("Administracja serwera **Płatki Cynamonowe**")
-    .addField("<:wlasciciel:621450170755710977> CEO MINIS", "<@329694416472375298> oraz <@444121299573407746>.")
+    .addField("<:wlasciciel:621450170755710977> CEO MINIS <:wlasciciel:621450170755710977>", "<@329694416472375298> oraz <@444121299573407746>.")
     return message.channel.send(admembed);
   }
 	if(cmd === `${prefix}pisz-wiecznie`){
