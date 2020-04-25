@@ -12,7 +12,7 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
 
 	bot.on("ready", async () =>{
-  console.log(`${bot.user.username} is online! It's running on ${bot.guilds.size} servers!`);
+  console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Wpisz !pomoc po więcej informacji! 😋", {type: "PLAYING"});
 	let onlinevc = bot.channels.get("607685501708664995");
 	let gamerstay = bot.guilds.get('422172655081488384');
@@ -140,11 +140,8 @@ const channel = message.channel
     .setColor("RANDOM")
     .setTimestamp(new Date())
     .setColor(3447003)
-.setTitle("Administracja serwera GamerStay")
-    .addField("HeadAdministratorzy", "<@329694416472375298>, <@306150715678654464>, <@287999995230027787>, <@301263420471246848>, <@336576701414899735>.")
-    .addField("Administratorzy", "Aktualnie brak.")
-    .addField("Moderatorzy", "Aktualnie brak.")
-    .addField("Stażyści", "<@292609169297637378>.")
+.setTitle("Administracja serwera **Płatki Cynamonowe**")
+    .addField("<:wlasciciel:621450170755710977> CEO MINIS", "<@329694416472375298> oraz <@444121299573407746>.")
     return message.channel.send(admembed);
   }
 	if(cmd === `${prefix}pisz-wiecznie`){
