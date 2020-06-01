@@ -10,7 +10,7 @@ const client = new Discord.Client();
 const talkedRecently = new Set();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
-process.setMaxListeners(1);
+process.setMaxListeners(0);
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Breach moim życiem!!!", {type: "PLAYING"});
