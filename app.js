@@ -49,5 +49,6 @@ if(!logChannel) return;
 logChannel.send(LoggingEmbed);
 });
 
+})
 
 bot.login(process.env.BOT_TOKEN)
