@@ -1,19 +1,13 @@
 // Wszelkie treści poniżej należą do Jonek#3313. Kopiowanie zabronione ©
 
 const Discord = require("discord.js")
-const db = require('quick.db')
-const moment = require('moment')
-const ms = require('ms')
-const botconfig = require("./botconfig.json");
-const fs = require("fs")
 const client = new Discord.Client();
-const talkedRecently = new Set();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
-process.setMaxListeners(0);
+
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
-  bot.user.setActivity("Breach moim życiem!!!", {type: "PLAYING"});
+  bot.user.setActivity("Breach moim życiem!!!", {type: "LISTENING"});
 })
 
 bot.on("message", async message =>{
