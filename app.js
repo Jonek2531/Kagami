@@ -36,6 +36,22 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do autorskiego bota na pw: " + message.content);
 		 wiado.send(cos);
 	  }
+	
+ bot.on("messageDelete". async message ->{
+  let LoggingEmbed = new Discord.RichEmbed()
+.setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
+.setColor("#d65cff")
+.setThumbnail(message.avatarURL)
+.addField("Usunięta wiadomość autorstwa: ", message.author.tag, ", na kanale ", message.channel)
+.addField("O godzinie: ", message.createdAt)
+.setFooter("Ojojoj");
+let logChannel = message.guild.channels.find(c => c.name === "logi_discord")
+if(!logChannel) return;
+
+logChannel.send(LoggingEmbed);
+});
+
+	
 	// STREFA KUPIONYCH KOMEND'
 	 // KOMENDA DEVILSENPAI #1
 	if(cmd === `${prefix}jd`){
