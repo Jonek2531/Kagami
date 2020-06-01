@@ -37,7 +37,7 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
- bot.on("messageDelete". async message ->{
+ bot.on("messageDelete", async message =>{
   let LoggingEmbed = new Discord.RichEmbed()
 .setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
 .setColor("#d65cff")
