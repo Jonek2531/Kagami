@@ -42,7 +42,8 @@ bot.on("message", async message =>{
 .setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
 .setColor("#d65cff")
 .setThumbnail(message.avatarURL)
-.addField("Usunięta wiadomość autorstwa: ", message.author.tag, ", na kanale ", message.channel)
+.addField("Usunięta wiadomość autorstwa: ", message.author.tag)
+.addField("Na kanale: ", message.channel)
 .addField("O godzinie: ", message.createdAt)
 .setFooter("Ojojoj");
 let logChannel = message.guild.channels.find(c => c.name === "logi_discord")
