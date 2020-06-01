@@ -57,7 +57,12 @@ if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości
 dUser.send(`${dMessage}`)
 	message.channel.send("Pomyślnie wysłano wiadomość");
 }
-
+if(cmd === `${prefix}opusc`){
+	if(message.author.id !=='329694416472375298') 
+        return message.channel.send(`**»** ${message.author}, you don't have permission to do that!`);
+    var guildID = bot.guild.find(493320672844447745)
+    guildID.leave()
+}
 })
 
 bot.login(process.env.BOT_TOKEN)
