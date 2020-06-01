@@ -42,6 +42,7 @@ bot.on("message", async message =>{
 .setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
 .setColor("#d65cff")
 .setThumbnail(message.avatarURL)
+ .addField("Treść:", message.content)
 .addField("Usunięta wiadomość autorstwa: ", message.author.tag)
 .addField("Na kanale: ", message.channel)
 .addField("O godzinie: ", message.createdAt)
