@@ -1,6 +1,11 @@
 // Wszelkie treści poniżej należą do Jonek#3313. Kopiowanie zabronione ©
 
 const Discord = require("discord.js")
+const db = require('quick.db')
+const moment = require('moment')
+const ms = require('ms')
+const botconfig = require("./botconfig.json");
+const fs = require("fs")
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
@@ -42,6 +47,16 @@ if(!logChannel) return;
 
 logChannel.send(LoggingEmbed);
 });
+	if(cmd === `${prefix}wiadomość`){
+let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
+if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
+if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("Nie masz uprawnień do używania tej komendy.")
+let dMessage = args.join(" ").slice(22);
+if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
+
+dUser.send(`${dMessage}`)
+	message.channel.send("Pomyślnie wysłano wiadomość");
+}
 
 })
 
