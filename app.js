@@ -34,7 +34,7 @@ bot.on("message", async message =>{
 	
 bot.on("messageDelete", async message =>{
 let logChannel = message.guild.channels.find(c => c.name === "logi_discord")
-message.logChannel.send(`Wiadomość wysłana przez użytkownika ${message.author} została usunięta. Jej treść: ${message.content}.`);
+logChannel.send(`Wiadomość wysłana przez użytkownika ${message.author} została usunięta. Jej treść: ${message.content}.`)
 
 });
 	if(cmd === `${prefix}wiadomość`){
