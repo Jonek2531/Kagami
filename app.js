@@ -20,7 +20,7 @@ bot.on("message", async message =>{
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
   let cmd = msgArray[1];
-  let args = msgArray.slice(0);
+  let args = msgArray.slice(1);
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot, message, args);
