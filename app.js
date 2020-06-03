@@ -28,25 +28,15 @@ bot.on("message", async message =>{
 	if(message.author.bot) return;
 	  if(message.channel.type === "dm"){
 		  let wiado = bot.channels.get("717037109592195232");
-		  let cos = (message.author.username + " napisał do autorskiego bota na pw: " + message.content);
+		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
 	
-// bot.on("messageDelete", async message =>{
-//  let LoggingEmbed = new Discord.RichEmbed()
-//.setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
-//.setColor("#d65cff")
-//.setThumbnail(message.avatarURL)
-//.addField("Treść:", message.content)
-//.addField("Usunięta wiadomość autorstwa: ", message.author.tag)
-//.addField("Na kanale: ", message.channel)
-//.addField("O godzinie: ", message.createdAt)
-//.setFooter("Ojojoj");
-//let logChannel = message.guild.channels.find(c => c.name === "logi_discord")
-//if(!logChannel) return;
+bot.on("messageDelete", async message =>{
+let logChannel = message.guild.channels.find(c => c.name === "logi_discord")
+message.logChannel.send(`Wiadomość wysłana przez użytkownika ${message.author} została usunięta. Jej treść: ${message.content}.`);
 
-//logChannel.send(LoggingEmbed);
-//});
+});
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
