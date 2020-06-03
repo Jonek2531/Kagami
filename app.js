@@ -19,7 +19,7 @@ bot.on("message", async message =>{
 
   let prefix = botconfig.prefix;
   let msgArray = message.content.split(" ");
-  let cmd = msgArray[1];
+  let cmd = msgArray[0];
   let args = msgArray.slice(1);
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
@@ -34,9 +34,9 @@ bot.on("message", async message =>{
 	
 bot.on("messageDelete", async message =>{
 let logChannel = message.guild.channels.find(c => c.name === "logi_discord")
-logChannel.send(`Wiadomość wysłana przez użytkownika ${message.author} została usunięta. Jej treść: ${message.content}.`)
-
-});
+logChannel.send(`Wiadomość wysłana przez użytkownika \`${message.author}\` została usunięta. Jej treść: ${message.content}.`)
+})
+	
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
