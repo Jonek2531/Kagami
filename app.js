@@ -45,8 +45,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
     
     // So we get our messages, and delete them. Simple enough, right?
     const fetched = message.channel.fetchMessages({limit: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Nie mogę wykonać polecenia, ponieważ: ${error}`));
+    message.channel.bulkDelete(fetched);
   }	
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
