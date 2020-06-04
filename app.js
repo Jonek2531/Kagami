@@ -31,12 +31,18 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
-	
-bot.on("messageDelete", async message =>{
-let logChannel = message.guild.channels.find(c => c.name === "logi_discord")
-while logChannel.send(`Wiadomość wysłana przez użytkownika \`${message.author}\` została usunięta. Jej treść: ${message.content}.`)
-})
-	
+	if(cmd === `${prefix}purge`) {
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
+		
+    const deleteCount = parseInt(args[0], 10);
+
+    if(!deleteCount || deleteCount < 2 || deleteCount > 50)
+      return message.reply("Proszę podać liczbę od 2 do 50.");
+
+    const fetched = message.channel.fetchMessages({limit: deleteCount});
+    message.channel.bulkDelete(fetched)
+      .catch(error => message.reply(`Nie mogę wykonać polecenia, ponieważ: ${error}`));
+  }	
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
