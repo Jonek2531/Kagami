@@ -32,20 +32,22 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
-	if(cmd === `${prefix}purge`){
-const args = message.content.split(' ').slice(1); // All arguments behind the command name with the prefix
-const amount = args.join(' '); // Amount of messages which should be deleted
-
-if (!amount) return message.reply('You haven\'t given an amount of messages which should be deleted!'); // Checks if the `amount` parameter is given
-if (isNaN(amount)) return message.reply('The amount parameter isn`t a number!'); // Checks if the `amount` parameter is a number. If not, the command throws an error
-
-if (amount > 100) return message.reply('You can`t delete more than 100 messages at once!'); // Checks if the `amount` integer is bigger than 100
-if (amount < 1) return message.reply('You have to delete at least 1 message!'); // Checks if the `amount` integer is smaller than 1
-
-await message.channel.messages.fetch({ limit: amount }).then(messages => { // Fetches the messages
-    message.channel.bulkDelete(messages // Bulk deletes all messages that have been fetched and are not older than 14 days (due to the Discord API)
-)});
-	}	
+	if(cmd === `${prefix}purge`) {
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
+    // This command removes all messages from all users in the channel, up to 100.
+    
+    // get the delete count, as an actual number.
+    const deleteCount = parseInt(args[0], 10);
+    
+    // Ooooh nice, combined conditions. <3
+    if(!deleteCount || deleteCount < 2 || deleteCount > 50)
+      return message.reply("Proszę podać liczbę od 2 do 50.");
+    
+    // So we get our messages, and delete them. Simple enough, right?
+    const fetched = message.channel.fetchMessages({limit: deleteCount});
+    message.channel.bulkDelete(fetched)
+      .catch(error => message.reply(`Nie mogę wykonać polecenia, ponieważ: ${error}`));
+  }	
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
