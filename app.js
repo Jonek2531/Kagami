@@ -32,21 +32,12 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
-	if(cmd === `${prefix}purge`) {
+	if(cmd === `${prefix}say`) {
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
-    // This command removes all messages from all users in the channel, up to 100.
-    
-    // get the delete count, as an actual number.
-    const deleteCount = parseInt(args[0], 10);
-    
-    // Ooooh nice, combined conditions. <3
-    if(!deleteCount || deleteCount < 2 || deleteCount > 50)
-      return message.reply("Proszę podać liczbę od 2 do 50.");
-    
-    // So we get our messages, and delete them. Simple enough, right?
-    const fetched = message.channel.fetchMessages({limit: deleteCount});
-    message.channel.bulkDelete(fetched);
-  }	
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{}); 
+    message.channel.send(sayMessage);
+  }
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
