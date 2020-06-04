@@ -31,38 +31,21 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
-	if(cmd === `${prefix}purge`) {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
-		
-    const deleteCount = parseInt(args[0], 10);
-
-    if(!deleteCount || deleteCount < 2 || deleteCount > 50)
-      return message.reply("Proszę podać liczbę od 2 do 50.");
-
-    const fetched = message.channel.fetchMessages({limit: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Nie mogę wykonać polecenia, ponieważ: ${error}`));
-  }	
-	 if(cmd === "purge2") {
-        let messagecount = parseInt(args[1]) || 1;
-
-        var deletedMessages = -1;
-
-        message.channel.fetchMessages({limit: Math.min(messagecount + 1, 100)}).then(messages => {
-            messages.forEach(m => {
-                if (m.author.id == bot.user.id) {
-                    m.delete().catch(console.error);
-                    deletedMessages++;
-                }
-            });
-        }).then(() => {
-                if (deletedMessages === -1) deletedMessages = 0;
-                message.channel.send(`:white_check_mark: Purged \`${deletedMessages}\` messages.`)
-                    .then(m => m.delete(2000));
-        }).catch(console.error);
-    }
 	
-	
+	if(cmd === `${prefix}purge`){
+const args = message.content.split(' ').slice(1); // All arguments behind the command name with the prefix
+const amount = args.join(' '); // Amount of messages which should be deleted
+
+if (!amount) return message.reply('You haven\'t given an amount of messages which should be deleted!'); // Checks if the `amount` parameter is given
+if (isNaN(amount)) return message.reply('The amount parameter isn`t a number!'); // Checks if the `amount` parameter is a number. If not, the command throws an error
+
+if (amount > 100) return message.reply('You can`t delete more than 100 messages at once!'); // Checks if the `amount` integer is bigger than 100
+if (amount < 1) return message.reply('You have to delete at least 1 message!'); // Checks if the `amount` integer is smaller than 1
+
+await msg.channel.messages.fetch({ limit: amount }).then(messages => { // Fetches the messages
+    msg.channel.bulkDelete(messages // Bulk deletes all messages that have been fetched and are not older than 14 days (due to the Discord API)
+)});
+	}	
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
