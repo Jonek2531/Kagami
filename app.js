@@ -43,6 +43,26 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Nie mogę wykonać polecenia, ponieważ: ${error}`));
   }	
+	 if(cmd === "purge2") {
+        let messagecount = parseInt(args[1]) || 1;
+
+        var deletedMessages = -1;
+
+        message.channel.fetchMessages({limit: Math.min(messagecount + 1, 100)}).then(messages => {
+            messages.forEach(m => {
+                if (m.author.id == bot.user.id) {
+                    m.delete().catch(console.error);
+                    deletedMessages++;
+                }
+            });
+        }).then(() => {
+                if (deletedMessages === -1) deletedMessages = 0;
+                message.channel.send(`:white_check_mark: Purged \`${deletedMessages}\` messages.`)
+                    .then(m => m.delete(2000));
+        }).catch(console.error);
+    }
+	
+	
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
