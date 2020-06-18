@@ -74,7 +74,7 @@ if(sayMessage.length < 1) return message.reply('Usage: ulx csay {message} - Send
 	}
 	
 	let user = message.author
-	if(message.user.roles.has('723265073241391126')){
+	if(message.user.roles.has(723265073241391126)){
 let channel = message.channel
  message.delete().catch(O_o=>{}); 
 		let gimped = [
