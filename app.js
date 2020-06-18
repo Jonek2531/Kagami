@@ -74,10 +74,12 @@ dUser.send(`${dMessage}`)
 }
 	
 	if(cmd === `${prefix}gimp`){
-		let gimpedrole = message.guild.roles.find("name", "Gimped");
-		let user = message.mentions.users.first();
-		user.addRole(gimpedrole).catch(console.error)
-		message.channel.send(`${message.author} gimped ${user}`);
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
+	let role = message.guild.roles.find("name", "Gimped");
+		if(!role) return message.channel.send("Usage: ulx gimp <players> - Gimps target(s) so they are unable to chat normally. (say: !gimp) (opposite: ulx ungimp)")
+let member = message.mentions.members.first();
+member.addRole(role).catch(console.error)
+		message.channel.send(`${message.author} gimped ${member}`);
 	}
 	if(cmd === `${prefix}ungimp`){
 		let gimpedrole = message.guild.roles.find(role => role.name === "Gimped");
