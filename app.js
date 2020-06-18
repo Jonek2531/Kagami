@@ -75,13 +75,13 @@ dUser.send(`${dMessage}`)
 	
 	if(cmd === `${prefix}gimp`){
 		let gimpedrole = message.guild.roles.find(role => role.name === "Gimped");
-		let user = message.mentions.users.first() || message.author
+		let user = message.mentions.users.first();
 		user.addRole(gimpedrole)
 		message.channel.send(`${message.author} gimped ${user}`);
 	}
 	if(cmd === `${prefix}ungimp`){
 		let gimpedrole = message.guild.roles.find(role => role.name === "Gimped");
-		let user = message.mentions.users.first()
+		let user = message.mentions.users.first();
 		user.removeRole(gimpedrole)
 		message.channel.send(`${message.author} ungimped ${user}`);
 	}
