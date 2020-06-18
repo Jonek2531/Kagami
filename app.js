@@ -74,7 +74,7 @@ dUser.send(`${dMessage}`)
 }
 	
 	if(cmd === `${prefix}gimp`){
-		let gimpedrole = message.guild.roles.find(role => role.name === "Gimped");
+		let gimpedrole = message.guild.roles.find("name", "Gimped");
 		let user = message.mentions.users.first();
 		user.addRole(gimpedrole).catch(console.error)
 		message.channel.send(`${message.author} gimped ${user}`);
