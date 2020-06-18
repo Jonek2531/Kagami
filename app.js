@@ -62,6 +62,38 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 if(sayMessage.length < 1) return message.reply('Usage: ulx csay {message} - Send a message to everyone in the middle of their screen. (say: @@@)')
     message.channel.send(`**${sayMessage}**`);
   }
+	if(cmd === `${prefix}gimp`){
+		let user = message.mentions.users.first()
+		user.addRole("Gimped");
+	}
+	if(cmd === `${prefix}ungimp`){
+		let user = message.mentions.users.first()
+		user.removeRole("Gimped");
+	}
+	
+	let user = message.author
+	if(message.user.roles.has('723265073241391126')){
+let channel = message.channel
+ message.delete().catch(O_o=>{}); 
+		let gimped = [
+	"SCP-049 'leczy' w zombie...",
+	"SCP-049-2 to przydupas SCP-049...",
+	"SCP-066 - można powiedzieć, że to coś powoduje tak jakby 'trzęsienie ziemi'...",
+	"SCP-082 jest grubszy niż Personel Klasy D-1...",
+	"SCP-096 jest strasznie nieśmiały...",
+	"SCP-106 robi cz@rne plamy...",
+	"SCP-173 lubi skręcać karki...",
+	"SCP-372 bardzo lubi przyczepiać się o ściany...",
+	"SCP-457 jest hot, bo się naoglądał... (wtf)...",
+	"SCP-527 to zdrajca drugiej generacji...",
+	"SCP-939 właściwie to jest ślepy...",
+        "SCP-999 to zdrajca pierwszej generacji...",
+	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
+			]
+			let gimpedresult = Math.floor((Math.random() * gimped.length));
+	channel.send(`${message.author}: ${gimpedresult}`)
+	}
+	
 	if(cmd === `${prefix}respond`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
