@@ -43,7 +43,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, {user.author}.`);
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
-    message.channel.send(`**{sayMessage}**`);
+    message.channel.send(`**${sayMessage}**`);
   }
 	if(cmd === `${prefix}wiadomość`){
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
