@@ -43,7 +43,7 @@ if(sayMessage.length < 1) return message.reply('Usage: ulx sasay {message} - Sen
 		let sasay = message.guild.channels.find(`name`, "administracja-breach");
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
-if(sayMessage.length < 1) return message.reply('Usage: ulx asay {message} - Send a message to currently connected admins. (say: @)')
+if(sayMessage.length < 1) return message.reply('Usage: ulx sasay {message} - Send a message to currently connected superadmins. (say: $)')
     sasay.send(`**${message.author} to superadmins:** ${sayMessage}`);
   }
 	
