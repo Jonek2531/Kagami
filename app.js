@@ -107,8 +107,7 @@ let channel = message.channel
 	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
-	let member = message.author
-       if(member.roles.has(723265073241391126)) {
+       if(message.member.roles.has(723265073241391126)) {
 	       channel.send(`${message.author}: gimped[gimpedresults]`)
 }
 	
