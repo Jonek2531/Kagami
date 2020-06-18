@@ -90,7 +90,6 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
 
-let channel = message.channel
 		let gimped = [
 	"SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
@@ -108,7 +107,7 @@ let channel = message.channel
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
        if(message.member.roles.has(723265073241391126)) {
-	       channel.send(`${message.author}: gimped[gimpedresults]`)
+	       message.channel.send(`${message.author}: test aktualnie`)
 }
 	
 if(cmd === `${prefix}opusc`){
