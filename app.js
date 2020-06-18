@@ -89,8 +89,7 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-	
-	let user = message.author
+
 let channel = message.channel
 		let gimped = [
 	"SCP-049 'leczy' w zombie...",
@@ -108,6 +107,7 @@ let channel = message.channel
 	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
+	let member = message.author
        if(message.member.roles.has(723265073241391126)) {
 	       channel.send(`${message.author}: gimped[gimpedresults]`)
 }
