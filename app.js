@@ -32,8 +32,8 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
-	if(cmd === `${prefix}say`) {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nie masz uprawnień do używania tej komendy.");
+	if(cmd === `@@`) {
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, {user.author}.`);
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
     message.channel.send(sayMessage);
