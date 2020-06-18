@@ -36,6 +36,13 @@ bot.on("message", async message =>{
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
+if(sayMessage.length < 1) return message.reply('Usage: ulx sasay {message} - Send a message to currently connected superadmins. (say: $)')
+    asay.send(`**${message.author} to admins:** ${sayMessage}`);
+  }
+	if(cmd === `$`) {
+		let asay = message.guild.channels.find(`name`, "administracja-breach");
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{}); 
 if(sayMessage.length < 1) return message.reply('Usage: ulx asay {message} - Send a message to currently connected admins. (say: @)')
     asay.send(`**${message.author} to admins:** ${sayMessage}`);
   }
