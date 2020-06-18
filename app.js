@@ -36,7 +36,7 @@ bot.on("message", async message =>{
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
-    message.asay.send(`**{user.author} to admins:** ${sayMessage}`);
+    asay.send(`**{user.author} to admins:** ${sayMessage}`);
   }
 	
 	if(cmd === `@@`) {
