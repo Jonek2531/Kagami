@@ -36,18 +36,18 @@ bot.on("message", async message =>{
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
-    asay.send(`**${user.author} to admins:** ${sayMessage}`);
+    asay.send(`**${message.author} to admins:** ${sayMessage}`);
   }
 	
 	if(cmd === `@@`) {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${user.author}.`);
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
     message.channel.send(sayMessage);
   }
 	
 	if(cmd === `@@@`) {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${user.author}.`);
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
     message.channel.send(`**${sayMessage}**`);
