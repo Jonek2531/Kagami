@@ -43,6 +43,7 @@ bot.on("message", async message =>{
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
+		if(sayMessage.length < 1) return message.reply('Usage: ulx tsay {message} - Send a message to everyone in the chat box. (say: @@)')
     message.channel.send(sayMessage);
   }
 	
@@ -50,8 +51,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
-		if(sayMessage.length < 1) return message.reply('Usage: ulx tsay {message} - Send a message to everyone in the chat box. (say: @@)')
-
+if(sayMessage.length < 1) return message.reply('Usage: ulx csay {message} - Send a message to everyone in the middle of their screen. (say: @@@)')
     message.channel.send(`**${sayMessage}**`);
   }
 	if(cmd === `${prefix}respond`){
