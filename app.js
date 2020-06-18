@@ -32,6 +32,13 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
+	if(cmd === `@`) {
+		let asay = message.guild.channels.find(`name`, "administracja-breach");
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{}); 
+    message.asay.send(**`{user.author} to admins:** sayMessage)`;
+  }
+	
 	if(cmd === `@@`) {
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, {user.author}.`);
     const sayMessage = args.join(" ");
