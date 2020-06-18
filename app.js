@@ -63,12 +63,14 @@ if(sayMessage.length < 1) return message.reply('Usage: ulx csay {message} - Send
     message.channel.send(`**${sayMessage}**`);
   }
 	if(cmd === `${prefix}gimp`){
-		let user = message.mentions.users.first()
-		user.addRole("Gimped");
+		let user = message.mentions.users.first() || message.author
+		user.addRole("Gimped")
+		message.channel.send(`${message.author} gimped ${user}`);
 	}
 	if(cmd === `${prefix}ungimp`){
-		let user = message.mentions.users.first()
+		let user = message.mentions.users.first() || message.author
 		user.removeRole("Gimped");
+		message.channel.send(`${message.author} ungimped ${user}`);
 	}
 	
 	let user = message.author
