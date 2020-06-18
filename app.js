@@ -32,8 +32,6 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
-	let "^" = message.author
-	
 	if(cmd === `@`) {
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
     const sayMessage = args.join(" ");
@@ -109,7 +107,7 @@ dUser.send(`${dMessage}`)
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
        if(message.member.roles.has(723265073241391126)) {
-	       message.channel.send(`${message.author}: test aktualnie`)
+	       message.channel.send(gimpedresult)
 }
 	
 if(cmd === `${prefix}opusc`){
