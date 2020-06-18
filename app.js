@@ -32,7 +32,7 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
-	let ^ = message.author
+	let "^" = message.author
 	
 	if(cmd === `@`) {
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
