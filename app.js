@@ -91,8 +91,8 @@ dUser.send(`${dMessage}`)
 	}
 let gimpedrole = message.guild.roles.find("name", "Gimped");
 	if(message.member.roles.has(gimpedrole)) {
-		
-	if (message.content.includes(`args.join(" ")`)) {
+let cos = args.join(" ")
+	if(message.content.includes(cos)) {
 	       message.channel.send("Hmm");
 
 	        let gimped = [
