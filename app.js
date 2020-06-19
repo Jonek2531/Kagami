@@ -92,7 +92,7 @@ dUser.send(`${dMessage}`)
 
 	if(message.member.roles.has(723265073241391126)) {
 		
-	if (message.content.includes(args.join(" "))) {
+	if (message.content.includes(`args.join(\" \")`)) {
 	       message.channel.send("Hmm")
 
 	        let gimped = [
