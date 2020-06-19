@@ -72,6 +72,23 @@ if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości
 dUser.send(`${dMessage}`)
 	message.channel.send("Pomyślnie wysłano wiadomość");
 }
+	if(cmd === `${prefix}mute`){
+	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
+	let role = message.guild.roles.find("name", "toxic");
+        let member = message.mentions.members.first();
+        if(!member) return message.channel.send("TBA")
+        member.addRole(role).catch(console.error)
+		message.channel.send(`${message.author} muted ${member}`);
+	}
+	if(cmd === `${prefix}unmute`){
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
+	let role = message.guild.roles.find("name", "toxic");
+        let member = message.mentions.members.first();
+	if(!member) return message.channel.send("TBA")
+        member.removeRole(role).catch(console.error)
+		message.channel.send(`${message.author} unmuted ${member}`);
+	}
+	
 	
 	if(cmd === `${prefix}gimp`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
