@@ -116,7 +116,7 @@ dUser.send(`${dMessage}`)
       if(cmd === `${prefix}gag`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
         let member = message.mentions.members.first();
-        if(!member) return message.channel.send("Usage: ulx gimp <players> - Gimps target(s) so they are unable to chat normally. (say: !gimp) (opposite: ulx ungimp)")
+        if(!member) return message.channel.send("Usage: ulx gag <players> - Gag target(s), disables microphone. (say: !gag) (opposite: ulx ungag)")
       await member.setMute(true);
 		message.channel.send(`${message.author} gagged ${member}`);
 }
@@ -124,7 +124,7 @@ dUser.send(`${dMessage}`)
 	if(cmd === `${prefix}ungag`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
         let member = message.mentions.members.first();
-        if(!member) return message.channel.send("Usage: ulx gimp <players> - Gimps target(s) so they are unable to chat normally. (say: !gimp) (opposite: ulx ungimp)")
+        if(!member) return message.channel.send("Usage: ulx ungag <players> - Gag target(s), disables microphone. (say: !gag) (opposite: ulx ungag)")
      await member.setMute(true);
 		message.channel.send(`${message.author} ungagged ${member}`);
 }
