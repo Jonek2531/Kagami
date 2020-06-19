@@ -92,6 +92,9 @@ dUser.send(`${dMessage}`)
 
 	if(cmd === args.join(" ")){
 	if(message.member.roles.has(723265073241391126)) {
+		
+	       message.channel.send("Hmm")
+
 	        let gimped = [
         "SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
@@ -108,9 +111,6 @@ dUser.send(`${dMessage}`)
 	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
-      
-	       message.channel.send(gimpedresult)
-
 }
 }
 
