@@ -90,8 +90,9 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
 
-	
 	if(message.member.roles.has(723265073241391126)) {
+    return message.content.toLowerCase() == message.content.toLowerCase() && // check if the content is the same (sort of)
+           message.author == message.author; // check if the author is the same
 	        let gimped = [
         "SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
@@ -110,7 +111,9 @@ dUser.send(`${dMessage}`)
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
       
 	       message.channel.send(gimpedresult)
+
 }
+
 	
 if(cmd === `${prefix}opusc`){
 	if(message.author.id !=='329694416472375298') 
