@@ -90,7 +90,7 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
 
-	if(cmd === args.join(" ")){
+	if(cmd === `args.join(" ")`){
 	if(message.member.roles.has(723265073241391126)) {
 		
 	       message.channel.send("Hmm")
