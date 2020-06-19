@@ -125,7 +125,7 @@ dUser.send(`${dMessage}`)
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
         let member = message.mentions.members.first();
         if(!member) return message.channel.send("Usage: ulx gimp <players> - Gimps target(s) so they are unable to chat normally. (say: !gimp) (opposite: ulx ungimp)")
-     await member.setMute(true);
+     await member.removeMute(true);
 		message.channel.send(`${message.author} ungagged ${member}`);
 }
 
