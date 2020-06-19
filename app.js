@@ -90,8 +90,8 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
 
+	if(cmd === args.join(" ")){
 	if(message.member.roles.has(723265073241391126)) {
-		if(message.author.roles.has(723265073241391126)) {
 	        let gimped = [
         "SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
@@ -112,7 +112,8 @@ dUser.send(`${dMessage}`)
 	       message.channel.send(gimpedresult)
 
 }
-	}
+}
+
 	
 if(cmd === `${prefix}opusc`){
 	if(message.author.id !=='329694416472375298') 
