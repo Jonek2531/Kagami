@@ -115,7 +115,7 @@ dUser.send(`${dMessage}`)
 //}
 if(cmd === `${prefix}gag`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
-  let gagged = message.metions.members.first();
+  let gagged = message.metions.users.first();
 	gagged.setMute
 	message.channel.send(`${message.author} gagged ${gagged}`);
 }
