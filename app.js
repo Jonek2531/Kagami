@@ -113,11 +113,12 @@ dUser.send(`${dMessage}`)
 		//	let gimpedresult = Math.floor((Math.random() * gimped.length));
 //}
 //}
-if(cmd === `${prefix}gag`){
+      if(cmd === `${prefix}gag`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
-  let gagged = message.metions.users.first();
-	gagged.setMute
-	message.channel.send(`${message.author} gagged ${gagged}`);
+        let member = message.mentions.members.first();
+        if(!member) return message.channel.send("Usage: ulx gimp <players> - Gimps target(s) so they are unable to chat normally. (say: !gimp) (opposite: ulx ungimp)")
+        member.setMute
+		message.channel.send(`${message.author} gimped ${member}`);
 }
 
 	
