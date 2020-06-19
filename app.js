@@ -89,11 +89,11 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-
-	if(message.member.roles.has(723265073241391126)) {
+let gimpedrole = message.guild.roles.find("name", "Gimped");
+	if(message.member.roles.has(gimpedrole)) {
 		
-	if (message.content.includes(`args.join(\" \")`)) {
-	       message.channel.send("Hmm")
+	if (message.content.includes(`args.join(" ")`)) {
+	       message.channel.send("Hmm");
 
 	        let gimped = [
         "SCP-049 'leczy' w zombie...",
