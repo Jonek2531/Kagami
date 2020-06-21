@@ -62,15 +62,16 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 if(sayMessage.length < 1) return message.reply('Usage: ulx csay {message} - Send a message to everyone in the middle of their screen. (say: @@@)')
     message.channel.send(`**${sayMessage}**`);
   }
-	if(cmd === `${prefix}respond`){
+	if(cmd === `#`){
+		let via = message.guild.channels.find(`name`, "administracja-breach");
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if (!dUser) return message.channel.send("Nie ma takiego użytkownika!")
-if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("Nie masz uprawnień do używania tej komendy.")
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(`You do not have access to this command, ${message.author}.`)
 let dMessage = args.join(" ").slice(22);
-if(dMessage.length < 1) return message.reply('Musisz napisać coś w wiadomości!')
+if(dMessage.length < 1) return message.reply('Usage: ulx respond <player> {message} - send anymous admin message')
 
 dUser.send(`${dMessage}`)
-	message.channel.send("Pomyślnie wysłano wiadomość");
+	via.send(`${message.author} via admin respond to ${dUser}: ${dMessage}.`);
 }
 	if(cmd === `${prefix}mute`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
