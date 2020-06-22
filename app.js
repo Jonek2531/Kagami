@@ -127,7 +127,7 @@ if(message.member.roles.has(gimpedrole));
 	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
-		message.channel.send(`${message.member} mówi:` + gimped[gimpedresult])
+		message.channel.send(`${message.member} pisze: ` + gimped[gimpedresult])
 }
 
       if(cmd === `${prefix}gag`){
