@@ -107,10 +107,11 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-	
-	let gimpedrole = message.guild.roles.find(r => r.name === "Gimped");
+	let member = message.author
+	let gimpedrole = member.roles.cache.has('723265073241391126');
 	let cos = "."
-if(message.member.roles.has(gimpedrole)) return if(message.content.includes(cos)){
+if(message.member.roles.has(gimpedrole))
+	if(message.content.includes(cos)){
 	 let gimped = [
         "SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
