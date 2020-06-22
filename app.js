@@ -152,6 +152,8 @@ let cos = args.join(" ")
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
 		let strip = message.mentions.members.first();
 		if(!strip) return message.channel.send("TBA")
+		let uzytkownik = message.guild.roles.find("name", "Gimped");
+if(message.member.roles.has(uzytkownik)) return;
 		strip.removeRoles(strip.roles);
 		message.channel.send(`${message.author} stripped weapons from ${strip}`);
 	}
