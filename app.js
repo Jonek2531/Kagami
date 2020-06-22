@@ -106,7 +106,7 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-	bot.on("message"){
+	bot.on("message" =>{
 	let gimpedd = message.member.roles.find(r => r.name === "Gimped");
 	let gimpedrole = message.member.roles.has(gimpedd);
 	 let gimped = [
@@ -131,7 +131,7 @@ dUser.send(`${dMessage}`)
 			
 	message.channel.send(`${message.member} pisze: ` + gimped[gimpedresult])
 
-}
+	})
       if(cmd === `${prefix}gag`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
         let member = message.mentions.members.first();
