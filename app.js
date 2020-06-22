@@ -109,11 +109,10 @@ dUser.send(`${dMessage}`)
 	}
 	
 	let gimpedrole = message.guild.roles.find(r => r.name === "Gimped");
-if(message.member.roles.has(gimpedrole)) {
 	let cos = "."
-	if(message.content.includes(cos)){
+if(message.member.roles.has(gimpedrole)) return if(message.content.includes(cos)){
 	 let gimped = [
-       "SCP-049 'leczy' w zombie...",
+        "SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
 	"SCP-066 - można powiedzieć, że to coś powoduje tak jakby 'trzęsienie ziemi'...",
 	"SCP-082 jest grubszy niż Personel Klasy D-1...",
@@ -129,7 +128,7 @@ if(message.member.roles.has(gimpedrole)) {
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
 		message.channel.send(`${message.member} pisze: ` + gimped[gimpedresult])
-}
+
 }
       if(cmd === `${prefix}gag`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
