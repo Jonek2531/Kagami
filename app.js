@@ -90,7 +90,6 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} unmuted ${member}`);
 	}
 	
-	
 	if(cmd === `${prefix}gimp`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
 	let role = message.guild.roles.find("name", "Gimped");
@@ -108,7 +107,8 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
 	let member = message.author
-	let gimpedrole = member.roles.has('723265073241391126');
+	let gimpedd = message.guild.roles.get("723265073241391126");
+	let gimpedrole = message.member.roles.has(gimpedd);
 	let cos = "."
 if(gimpedrole){
 	if(message.content.includes(cos));
