@@ -110,8 +110,7 @@ dUser.send(`${dMessage}`)
 	let cos = "."
 	if(message.content.includes(cos)){
 let gimpedrole = message.guild.roles.find(r => r.name === "Gimped");
-if(message.member.roles.has(gimpedrole)) 
-
+if(message.member.roles.has(gimpedrole));
 	 let gimped = [
        "SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
