@@ -107,7 +107,7 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
 	
-if(cmd === args.join(" ")){
+if(message.author.send === "."){
 	let gimpedd = message.member.roles.find(r => r.name === "Gimped");
 	let gimpedrole = message.member.roles.has(gimpedd);
 	 let gimped = [
