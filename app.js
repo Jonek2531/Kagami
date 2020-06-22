@@ -27,7 +27,7 @@ bot.on("message", async message =>{
 	
 	if(message.author.bot) return;
 	  if(message.channel.type === "dm"){
-		  let wiado = bot.channels.get("717037109592195232");
+		  let wiado = bot.channels.get("723243651567976459");
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
