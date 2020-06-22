@@ -107,12 +107,12 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-	let cos = args.join(" ")
+	let cos = "."
 	if(message.content.includes(cos)){
 let gimpedrole = message.guild.roles.find(r => r.name === "Gimped");
 if(message.member.roles.has(gimpedrole)) 
 
-	       let gimped = [
+	 let gimped = [
        "SCP-049 'leczy' w zombie...",
 	"SCP-049-2 to przydupas SCP-049...",
 	"SCP-066 - można powiedzieć, że to coś powoduje tak jakby 'trzęsienie ziemi'...",
@@ -128,7 +128,7 @@ if(message.member.roles.has(gimpedrole))
 	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
-		message.channel.send(gimpedresult)
+		message.channel.send(gimped[gimpedresult])
 }
 
       if(cmd === `${prefix}gag`){
