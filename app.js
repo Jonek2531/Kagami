@@ -150,9 +150,9 @@ dUser.send(`${dMessage}`)
 	if(cmd === `${prefix}kick`){
 
    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-   if(!kUser) return message.channel.send("Nie ma takiego użytkownika!");
+   if(!kUser) return message.channel.send("Usage: ulx kick <player> [{reason}] - Kicks target. (say: !kick)");
    let kReason = args.join(" ").slice(22);
-   if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić tej osoby, ponieważ nie masz uprawnień!");
+   if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Command ulx kick, argument #1: you cannot target this person or these persons");
    if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
 
    let kickEmbed = new Discord.RichEmbed()
@@ -165,7 +165,7 @@ dUser.send(`${dMessage}`)
    .addField("Powód", kReason);
 
    let kickChannel = message.guild.channels.find(`name`, "logger");
-   if(!kickChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
+   if(!kickChannel) return message.channel.send("Nie mogę znaleźć danego kanału.");
 
    message.guild.member(kUser).kick(kReason);
 
