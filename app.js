@@ -110,8 +110,8 @@ dUser.send(`${dMessage}`)
 let gimpedrole = message.guild.roles.find(r => r.name === "Gimped");
 if(message.member.roles.has(gimpedrole)) {
 let cos = "."
-	if(message.content.includes(cos)) {
-	      message.channel.send("Hmm");
+	if(message.content.includes(cos));
+	      message.channel.send("Hmm")
 
 	       let gimped = [
        "SCP-049 'leczy' w zombie...",
@@ -131,7 +131,7 @@ let cos = "."
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
 		message.channel.send(gimpedresult)
 }
-}
+
       if(cmd === `${prefix}gag`){
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
         let member = message.mentions.members.first();
