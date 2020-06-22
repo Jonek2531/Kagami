@@ -107,7 +107,7 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-let gimpedrole = message.guild.roles.find("name", "Gimped").console.log("Znaleziono rolę Gimped");
+let gimpedrole = message.guild.roles.find("name", "Gimped");
 if(message.member.roles.has(gimpedrole)) {
 let cos = args.join(" ")
 	if(message.content.includes(cos)) {
