@@ -106,8 +106,7 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-	
-if(message.author.send === "."){
+	bot.on("message"){
 	let gimpedd = message.member.roles.find(r => r.name === "Gimped");
 	let gimpedrole = message.member.roles.has(gimpedd);
 	 let gimped = [
