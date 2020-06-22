@@ -146,6 +146,14 @@ dUser.send(`${dMessage}`)
      await member.setMute(true);
 		message.channel.send(`${message.author} ungagged ${member}`);
 }
+	
+	if(cmd === `${prefix}strip`){
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
+		let strip = message.mentions.members.first();
+		if(!strip) return message.channel.send("TBA")
+		strip.removeRoles(strip.roles);
+		message.channel.send(`${message.author} stripped weapons from ${strip}`);
+	}
 
 	if(cmd === `${prefix}kick`){
 
