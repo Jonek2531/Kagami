@@ -123,11 +123,11 @@ if(message.member.roles.has(gimpedrole));
 	"SCP-457 jest hot, bo się naoglądał... (wtf)...",
 	"SCP-527 to zdrajca drugiej generacji...",
 	"SCP-939 właściwie to jest ślepy...",
-      "SCP-999 to zdrajca pierwszej generacji...",
+        "SCP-999 to zdrajca pierwszej generacji...",
 	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
 			]
 			let gimpedresult = Math.floor((Math.random() * gimped.length));
-		message.channel.send(gimped[gimpedresult])
+		message.channel.send(`${message.member}: gimped[gimpedresult])
 }
 
       if(cmd === `${prefix}gag`){
