@@ -106,7 +106,6 @@ dUser.send(`${dMessage}`)
         member.removeRole(role).catch(console.error)
 		message.channel.send(`${message.author} ungimped ${member}`);
 	}
-	let member = message.author
 	let gimpedd = message.guild.roles.get("723265073241391126");
 	let gimpedrole = message.member.roles.has(gimpedd);
 	let cos = "."
