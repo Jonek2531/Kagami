@@ -147,6 +147,35 @@ dUser.send(`${dMessage}`)
 		message.channel.send(`${message.author} ungagged ${member}`);
 }
 
+	if(cmd === `${prefix}kick`){
+
+   let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+   if(!kUser) return message.channel.send("Nie ma takiego użytkownika!");
+   let kReason = args.join(" ").slice(22);
+   if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Nie możesz wyrzucić tej osoby, ponieważ nie masz uprawnień!");
+   if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send(`You do not have access to this command, ${message.author}.`);
+
+   let kickEmbed = new Discord.RichEmbed()
+   .setDescription("Kick")
+   .setColor("#00e7ff")
+   .addField("Wyrzucony użytkownik", `${kUser}, ID użytkownika ${kUser.id}`)
+   .addField("Wyrzucony przez", `<@${message.author.id}>, ID użytkownika: ${message.author.id}`)
+   .addField("Na kanale", message.channel)
+   .addField("O godzinie", message.createdAt)
+   .addField("Powód", kReason);
+
+   let kickChannel = message.guild.channels.find(`name`, "logger");
+   if(!kickChannel) return message.channel.send("Nie mogę znaleść danego kanału.");
+
+   message.guild.member(kUser).kick(kReason);
+
+   kickChannel.send(kickEmbed);
+
+   return;
+	
+ message.channel.send(`${message.author} kicked ${kUser} (${kReason})`)
+ }
+  
 	
 if(cmd === `${prefix}opusc`){
 	if(message.author.id !=='329694416472375298') 
