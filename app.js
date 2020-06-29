@@ -43,7 +43,7 @@ bot.on("message", async message =>{
 let logChannel = message.guild.channels.find(c => c.name === "logger")
 if(!logChannel) return;
 
-logChannel.send(LoggingEmbed);
+logChannel.send(LoggingEmbed) return;
 });
 	
 	if(cmd === `@`) {
