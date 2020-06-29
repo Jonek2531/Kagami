@@ -9,14 +9,14 @@ const fs = require("fs")
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
-moment.locale();
+moment.locale(pl);
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Breach moim życiem!!!", {type: "LISTENING"});
 })
 bot.on("messageDelete", async message =>{
   let LoggingEmbed = new Discord.RichEmbed()
-.setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
+.setTitle("BREAKING NEWS! Wiadomość została usunięta!")
 .setColor("#d65cff")
 .setThumbnail(message.avatarURL)
 .addField("Treść:", message.content)
