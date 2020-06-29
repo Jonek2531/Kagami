@@ -9,7 +9,7 @@ const fs = require("fs")
 const client = new Discord.Client();
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
-
+moment.locale();
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Breach moim życiem!!!", {type: "LISTENING"});
