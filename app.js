@@ -31,15 +31,15 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
-	 bot.on("messageDelete", async message =>{
+	 bot.on("messageDelete", async dmessage =>{
   let LoggingEmbed = new Discord.RichEmbed()
 .setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
 .setColor("#d65cff")
-.setThumbnail(message.avatarURL)
-.addField("Usunięta wiadomość autorstwa: ", message.author.tag, ", na kanale ", message.channel)
-.addField("O godzinie: ", message.createdAt)
+.setThumbnail(dmessage.avatarURL)
+.addField("Usunięta wiadomość autorstwa: ", dmessage.author.tag, ", na kanale ", dmessage.channel)
+.addField("O godzinie: ", dmessage.createdAt)
 .setFooter("Ojojoj");
-let logChannel = message.guild.channels.find(c => c.name === "logger")
+let logChannel = dmessage.guild.channels.find(c => c.name === "logger")
 if(!logChannel) return;
 
 logChannel.send(LoggingEmbed);
