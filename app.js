@@ -22,7 +22,7 @@ bot.on("messageDelete", async message =>{
 .addField("Treść:", message.content)
 .addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
 .addField("O godzinie: ", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
-.setFooter("Ojojoj");
+.setFooter("Ojojoj", message.author.avatarURL );
 let logChannel = message.guild.channels.find(c => c.name === "logger")
 if(!logChannel) return;
 
