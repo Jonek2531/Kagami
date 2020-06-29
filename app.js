@@ -31,6 +31,20 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
+	 bot.on("messageDelete", async message =>{
+  let LoggingEmbed = new Discord.RichEmbed()
+.setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
+.setColor("#d65cff")
+.setThumbnail(message.avatarURL)
+.addField("Usunięta wiadomość autorstwa: ", message.author.tag, ", na kanale ", message.channel)
+.addField("O godzinie: ", message.createdAt)
+.setFooter("Ojojoj");
+let logChannel = message.guild.channels.find(c => c.name === "logger")
+if(!logChannel) return;
+
+logChannel.send(LoggingEmbed);
+});
+	
 	
 	if(cmd === `@`) {
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
@@ -62,6 +76,8 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 if(sayMessage.length < 1) return message.reply('Usage: ulx csay {message} - Send a message to everyone in the middle of their screen. (say: @@@)')
     message.channel.send(`**${sayMessage}**`);
   }
+	
+	
 	if(cmd === `#`){
 		let via = message.guild.channels.find(`name`, "administracja-breach");
 let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
