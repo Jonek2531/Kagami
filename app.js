@@ -14,7 +14,20 @@ bot.commands = new Discord.Collection()
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Breach moim życiem!!!", {type: "LISTENING"});
 })
+bot.on("messageDelete", async message =>{
+  let LoggingEmbed = new Discord.RichEmbed()
+.setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
+.setColor("#d65cff")
+.setThumbnail(message.avatarURL)
+.addField("Treść:", message.content)
+.addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
+.addField("O godzinie: ", message.createdAt)
+.setFooter("Ojojoj");
+let logChannel = message.guild.channels.find(c => c.name === "logger")
+if(!logChannel) return;
 
+logChannel.send(LoggingEmbed);
+});
 bot.on("message", async message =>{
 
   let prefix = botconfig.prefix;
@@ -31,20 +44,7 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
-		 bot.on("messageDelete", async message =>{
-  let LoggingEmbed = new Discord.RichEmbed()
-.setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
-.setColor("#d65cff")
-.setThumbnail(message.avatarURL)
-.addField("Treść:", message.content)
-.addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
-.addField("O godzinie: ", message.createdAt)
-.setFooter("Ojojoj");
-let logChannel = message.guild.channels.find(c => c.name === "logger")
-if(!logChannel) return;
-
-logChannel.send(LoggingEmbed);
-});
+		
 	
 	if(cmd === `@`) {
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
