@@ -21,7 +21,7 @@ bot.on("messageDelete", async message =>{
 .setThumbnail(message.avatarURL)
 .addField("Treść:", message.content)
 .addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
-.addField("O godzinie: ", message.createdAt)
+.addField("O godzinie: ", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
 .setFooter("Ojojoj");
 let logChannel = message.guild.channels.find(c => c.name === "logger")
 if(!logChannel) return;
