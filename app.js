@@ -63,15 +63,15 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
 if(sayMessage.length < 1) return message.reply('Usage: ulx csay {message} - Send a message to everyone in the middle of their screen. (say: @@@)')
     message.channel.send(`**${sayMessage}**`);
   }
-		 bot.on("messageDelete", async dmessage =>{
+	 bot.on("messageDelete", async message =>{
   let LoggingEmbed = new Discord.RichEmbed()
 .setTitle("BREAKING NEWS! Ktoś usunął wiadomość!")
 .setColor("#d65cff")
-.setThumbnail(dmessage.avatarURL)
-.addField("Usunięta wiadomość autorstwa: ", dmessage.author.tag, ", na kanale ", dmessage.channel)
-.addField("O godzinie: ", dmessage.createdAt)
+.setThumbnail(message.avatarURL)
+.addField("Usunięta wiadomość autorstwa: " + message.author.tag + ", na kanale " + message.channel)
+.addField("O godzinie: ", message.createdAt)
 .setFooter("Ojojoj");
-let logChannel = dmessage.guild.channels.find(c => c.name === "logger")
+let logChannel = message.guild.channels.find(c => c.name === "logger")
 if(!logChannel) return;
 
 logChannel.send(LoggingEmbed);
