@@ -18,7 +18,7 @@ bot.on("messageDelete", async message =>{
   let LoggingEmbed = new Discord.RichEmbed()
 .setTitle("BREAKING NEWS! Wiadomość została usunięta!")
 .setColor("#d65cff")
-.setThumbnail(message.avatarURL)
+.setThumbnail(message.author.avatarURL)
 .addField("Treść:", message.content)
 .addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
 .addField("O godzinie: ", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
