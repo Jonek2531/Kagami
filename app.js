@@ -46,22 +46,6 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
-		
-	client.on('messageUpdate', (oldMessage, newMessage) => {
-  let LoggingEmbed = new Discord.RichEmbed()
-.setTitle("BREAKING NEWS! Wiadomość została zedytowana!")
-.setColor("#32a864")
-.setThumbnail(message.author.avatarURL)
-.addField("Stara zawartość wiadomości:", oldMessage.content)
-  .addField("Zawartość bo edicie:", newMessage.content)
-.addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
-.addField("O godzinie: ", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
-.setFooter("Ojojoj");
-let logChannel = message.guild.channels.find(c => c.name === "logger")
-if(!logChannel) return;
-
-logChannel.send(LoggingEmbed);
-});
 	
 	if(cmd === `@`) {
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
