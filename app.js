@@ -28,6 +28,22 @@ if(!logChannel) return;
 
 logChannel.send(LoggingEmbed);
 });
+
+bot.on("messageUpdate", async message =>{
+  let LoggingEmbed = new Discord.RichEmbed()
+.setTitle("BREAKING NEWS! Wiadomość została zedytowana!")
+.setColor("#32a864")
+.setThumbnail(message.author.avatarURL)
+.addField("Treść:", message.content)
+.addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
+.addField("O godzinie: ", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+.setFooter("Ojojoj");
+let logChannel = message.guild.channels.find(c => c.name === "logger")
+if(!logChannel) return;
+
+logChannel.send(LoggingEmbed);
+});
+
 bot.on("message", async message =>{
 
   let prefix = botconfig.prefix;
