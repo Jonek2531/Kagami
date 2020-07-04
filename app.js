@@ -28,29 +28,6 @@ if(!logChannel) return;
 
 logChannel.send(LoggingEmbed);
 });
-bot.on("message", async message =>{
-	let gimpedd = message.member.roles.find(r => r.name === "Gimped");
-	let gimpedrole = message.member.roles.has(gimpedd);
-	if(!gimpedrole) return
-	 let gimped = [
-       "SCP-049 'leczy' w zombie...",
-	"SCP-049-2 to przydupas SCP-049...",
-	"SCP-066 - można powiedzieć, że to coś powoduje tak jakby 'trzęsienie ziemi'...",
-	"SCP-082 jest grubszy niż Personel Klasy D-1...",
-	"SCP-096 jest strasznie nieśmiały...",
-	"SCP-106 robi cz@rne plamy...",
-	"SCP-173 lubi skręcać karki...",
-	"SCP-372 bardzo lubi przyczepiać się o ściany...",
-	"SCP-457 jest hot, bo się naoglądał... (wtf)...",
-	"SCP-527 to zdrajca drugiej generacji...",
-	"SCP-939 właściwie to jest ślepy...",
-        "SCP-999 to zdrajca pierwszej generacji...",
-	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
-			]
-	let gimpedresult = Math.floor((Math.random() * gimped.length));	
-	if(gimpedrole);
-	message.channel.send(`${message.member} pisze: ` + gimped[gimpedresult])
-	});
 
 bot.on("message", async message =>{
 
