@@ -47,7 +47,8 @@ bot.on("message", async message =>{
         "SCP-999 to zdrajca pierwszej generacji...",
 	"SCP-1048a strasznie krzyczy, nieprawdaż?...",
 			]
-	let gimpedresult = Math.floor((Math.random() * gimped.length));		
+	let gimpedresult = Math.floor((Math.random() * gimped.length));	
+	if(gimpedrole);
 	message.channel.send(`${message.member} pisze: ` + gimped[gimpedresult])
 	});
 
