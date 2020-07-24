@@ -30,7 +30,7 @@ logChannel.send(LoggingEmbed);
 });
 
 bot.on("message", async message =>{
-let gimpedd = message.member.roles.find(r => r.name === "Gimped");
+let gimpedd = "Gimped"
 	let gimpedrole = message.member.roles.has(gimpedd);
 	if(!gimpedrole) return
 	 let gimped = [
@@ -42,7 +42,7 @@ let gimpedd = message.member.roles.find(r => r.name === "Gimped");
 	"SCP-106 robi cz@rne plamy...",
 	"SCP-173 lubi skręcać karki...",
 	"SCP-372 bardzo lubi przyczepiać się o ściany...",
-	"SCP-457 jest hot, bo się naoglądał... (wtf)...",
+	"SCP-457 jest hot...",
 	"SCP-527 to zdrajca drugiej generacji...",
 	"SCP-939 właściwie to jest ślepy...",
         "SCP-999 to zdrajca pierwszej generacji...",
