@@ -47,6 +47,14 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
+	if(cmd === `${prefix}vip`){
+if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`Musisz posiadać uprawnienia Administratora, by użyć tej komendy, ${message.author}.`);
+let member = message.mentions.members.first();
+if(!member) return message.channel.send("Musisz @oznaczyć osobę, która ma dostać Vipa.");
+		let role = message.guild.roles.find("name", "Vip");
+        member.addRole(role).catch(console.error)
+		message.channel.send(`${message.author} nadał użytkownikowi ${member} rangę Vip na okres 30 dni.`);
+}
 	if(cmd === `@`) {
 		let asay = message.guild.channels.find(`name`, "administracja-breach");
     const sayMessage = args.join(" ");
