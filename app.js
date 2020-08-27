@@ -18,6 +18,13 @@ bot.commands = new Discord.Collection()
 	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size + gamerstay.members.filter(m => m.presence.status === 'offline').size
 	onlinevc.setName("Członkowie: " + onlineCount);
 })
+bot.on('guildMemberAdd', member => {
+   let onlinevc = bot.channels.get("748512266336469102");
+	let gamerstay = bot.guilds.get('712286891902500874');
+	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size + gamerstay.members.filter(m => m.presence.status === 'offline').size
+	onlinevc.setName("Członkowie: " + onlineCount);
+});
+
 bot.on("messageDelete", async message =>{
   let LoggingEmbed = new Discord.RichEmbed()
 .setTitle("BREAKING NEWS! Wiadomość została usunięta!")
