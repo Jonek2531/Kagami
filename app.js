@@ -60,7 +60,9 @@ bot.on("message", async message =>{
 		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
 		 wiado.send(cos);
 	  }
-	
+	if(cmd === `${prefix}testwiadomościpowitalnej`){
+	message.channel.send("Witaj `member.user.username`!\n**●** Na samym początku zapoznaj się z <#747054073487818782>, ponieważ znajdują się tam zasady, które należy przestrzegać grając na serwerze.\n**●** Gdy zapoznasz się z regulaminem, obczaj sobie te kanały: <#747055160173264896> oraz <#747444965549932564>, gdyż mogą one się przyczynić do lepszej znajomości chociażby mapy albo zasad działania klas.\n**●** Na <#712799728886218823> i <#713384317249650791> możesz znaleźć ostatnio zaimplementowane aktualizacje oraz co one zawierają.\n**●** Jesteś zainteresowany kupnem VIPa? Zapraszamy na kanał <#739248187922972732>.\n**●** Zostałaś/eś oprowadzona/y przez podstawowe kanały serwera. Zachęcamy do zapoznania się z pozostałymi kanałami, aktywnym udzielaniu się na serwerze, zakładania własnych sugestii dotyczących trybu, zgłaszania wszelkich wykrytych błędów oraz miłego spędzania czasu na naszym discordzie. <:3_:714210125149241407>");
+	}
 	if(cmd === `${prefix}profil`) {
 		 const status = {
         online: "<:Dostepny:589178591716311040> Dostępny",
