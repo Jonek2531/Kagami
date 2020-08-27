@@ -51,6 +51,36 @@ bot.on("message", async message =>{
 		 wiado.send(cos);
 	  }
 	
+	if(cmd === `${prefix}profil`) {
+		 const status = {
+        online: "<:Dostepny:589178591716311040> Dostępny",
+        idle: "<:Zaraz_wracam:589178609235918878> Zaraz wracam",
+        dnd: "<:Nie_przeszadzac:589178624452591620> Nie przeszkadzać",
+        offline: "<:Niedostepny_niewidoczny:589178578407784466> Niedostępny"
+      }
+let user = message.mentions.users.first() || message.author;
+		 let channel = message.mentions.users.first() || message.author;
+		 let gra = "w grze " + user.presence.game;
+		 if(gra === "w grze Spotify") gra = "słucha muzyki na Spotify";
+		 if(gra === "w grze " + null) gra = "aktualnie nie jest w grze";
+		 if(gra === "w grze Custom Status") gra = "posiada *status własny*";
+		 let nazwa = `${user.username}#${user.discriminator} (ID: ${user.id})`
+       let embed = new Discord.RichEmbed()
+                 .setTitle("Profil")
+                 .setTimestamp(new Date())
+                 .setColor("#4286f4")
+                 .setThumbnail(`${user.avatarURL}`)
+                 .addField("Dane użytkownika", `${nazwa}` , inline = true)
+                 .addField("Data utworzenia konta", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+       .addField("Status", `${status[user.presence.status]}, ${gra}`)
+                        .addField("Najnowsza wiadomość", `${user.lastMessage} (ID: ${channel.lastMessageID})`)
+       .setFooter(`${user.username}#${user.discriminator}`);
+	
+            return message.channel.send(embed);
+	
+        }
+
+	
 	if(cmd === `${prefix}vip`){
 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`Musisz posiadać uprawnienia Administratora, by użyć tej komendy, ${message.author}.`);
 let member = message.mentions.members.first();
