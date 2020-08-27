@@ -68,6 +68,10 @@ bot.on("message", async message =>{
 	if(cmd === `${prefix}testwiadomościpowitalnej`){
 	message.channel.send("Witaj `member.user.username`!\n**●** Na samym początku zapoznaj się z <#747054073487818782>, ponieważ znajdują się tam zasady, które należy przestrzegać grając na serwerze.\n**●** Następnie przeczytaj <#712299665827299386>, aby wiedzieć jak funkcjonuje nasz serwer na discordzie.\n**●** Gdy zapoznasz się z obydwona regulaminami, obczaj sobie te kanały: <#747055160173264896> oraz <#747444965549932564>, gdyż mogą one się przyczynić do lepszej znajomości chociażby mapy albo zasad działania klas.\n**●** Jesteś zainteresowany kupnem VIPa? Zapraszamy na kanał <#739248187922972732>.\n**●** Zostałaś/eś oprowadzona/y przez podstawowe kanały serwera. Zachęcamy do zapoznania się z pozostałymi kanałami, aktywnym udzielaniu się na serwerze, zakładania własnych sugestii dotyczących trybu, zgłaszania wszelkich wykrytych błędów oraz miłego spędzania czasu na naszym discordzie. <:3_:714210125149241407>");
 	}
+	
+	if(cmd === `${prefix}testwiadomościpożegnalnej`){
+			message.channel.send("`member.user.username` postanowił/a nas opuścić.");
+	}
 	if(cmd === `${prefix}profil`) {
 		 const status = {
         online: "<:Dostepny:589178591716311040> Dostępny",
