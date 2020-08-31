@@ -157,7 +157,7 @@ function parse(str) {
 
     return str.replace(/%s/g, () => args[i++]);
 }
-if(cmd === `${prefix}update`){
+
 async function update_server_info(server, info) {
     console.log('Updating channels info');
     //must add extra check here
@@ -205,7 +205,7 @@ var job = new CronJob('* * * * *', function() {
 
 }, null, true, 'Europe/Warsaw');
 	
-}
+
 	
 	
 	
