@@ -9,7 +9,6 @@ const fs = require("fs")
 const client = new Discord.Client();
 const CronJob = require('cron').CronJob;
 const query = require("source-server-query");
-const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
 let rawdata = fs.readFileSync('config.json');
