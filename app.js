@@ -23,7 +23,50 @@ let rawdata = fs.readFileSync('config.json');
 let config = JSON.parse(rawdata);
 var change_json = false;
 
-//=======================================//
+bot.on('guildMemberAdd', member => {
+ let lobby = bot.channels.get("712286891902500877");
+	member.guild.channels.get('712286891902500877').send("Witaj <@" + member.user.id + ">!\n**●** Na samym początku zapoznaj się z <#747054073487818782>, ponieważ znajdują się tam zasady, które należy przestrzegać grając na serwerze.\n**●** Następnie przeczytaj <#712299665827299386>, aby wiedzieć jak funkcjonuje nasz serwer na discordzie.\n**●** Gdy zapoznasz się z obydwoma regulaminami, obczaj sobie te kanały: <#747055160173264896> oraz <#747444965549932564>, gdyż mogą one się przyczynić do lepszej znajomości chociażby mapy albo zasad działania klas.\n**●** Jesteś zainteresowany kupnem VIPa? Zapraszamy na kanał <#739248187922972732>.\n**●** Zostałaś/eś oprowadzona/y przez podstawowe kanały serwera. Zachęcamy do zapoznania się z pozostałymi kanałami, aktywnym udzielaniu się na serwerze, zakładania własnych sugestii dotyczących trybu, zgłaszania wszelkich wykrytych błędów oraz miłego spędzania czasu na naszym discordzie. <:SCP173:748613466629341358>");
+member.addRole('712294398360027177');
+});
+
+bot.on('guildMemberRemove', member => {
+ let lobby = bot.channels.get("712286891902500877");
+	member.guild.channels.get('712286891902500877').send(member.user.username + " (ID: " + member.user.id + ") postanowił/a nas opuścić.");
+});
+bot.on("messageDelete", async message =>{
+  let LoggingEmbed = new Discord.RichEmbed()
+.setTitle("BREAKING NEWS! Wiadomość została usunięta!")
+.setColor("#d65cff")
+.setThumbnail(message.author.avatarURL)
+.addField("Treść:", message.content)
+.addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
+.addField("O godzinie: ", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+.setFooter("Ojojoj");
+let logChannel = message.guild.channels.find(c => c.name === "logger")
+if(!logChannel) return;
+
+logChannel.send(LoggingEmbed);
+});
+
+
+bot.on("message", async message =>{
+
+  let prefix = botconfig.prefix;
+  let msgArray = message.content.split(" ");
+  let cmd = msgArray[0];
+  let args = msgArray.slice(1);
+
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot, message, args);
+	
+	if(message.author.bot) return;
+	  if(message.channel.type === "dm"){
+		  let wiado = bot.channels.get("723243651567976459");
+		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
+		 wiado.send(cos);
+	  }
+	
+	//=======================================//
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     var guild = client.guilds.cache.get(config.discord_server_id);
@@ -114,7 +157,7 @@ function parse(str) {
 
     return str.replace(/%s/g, () => args[i++]);
 }
-
+if(cmd === `${prefix}update`){
 async function update_server_info(server, info) {
     console.log('Updating channels info');
     //must add extra check here
@@ -161,48 +204,11 @@ var job = new CronJob('* * * * *', function() {
     
 
 }, null, true, 'Europe/Warsaw');
-bot.on('guildMemberAdd', member => {
- let lobby = bot.channels.get("712286891902500877");
-	member.guild.channels.get('712286891902500877').send("Witaj <@" + member.user.id + ">!\n**●** Na samym początku zapoznaj się z <#747054073487818782>, ponieważ znajdują się tam zasady, które należy przestrzegać grając na serwerze.\n**●** Następnie przeczytaj <#712299665827299386>, aby wiedzieć jak funkcjonuje nasz serwer na discordzie.\n**●** Gdy zapoznasz się z obydwoma regulaminami, obczaj sobie te kanały: <#747055160173264896> oraz <#747444965549932564>, gdyż mogą one się przyczynić do lepszej znajomości chociażby mapy albo zasad działania klas.\n**●** Jesteś zainteresowany kupnem VIPa? Zapraszamy na kanał <#739248187922972732>.\n**●** Zostałaś/eś oprowadzona/y przez podstawowe kanały serwera. Zachęcamy do zapoznania się z pozostałymi kanałami, aktywnym udzielaniu się na serwerze, zakładania własnych sugestii dotyczących trybu, zgłaszania wszelkich wykrytych błędów oraz miłego spędzania czasu na naszym discordzie. <:SCP173:748613466629341358>");
-member.addRole('712294398360027177');
-});
-
-bot.on('guildMemberRemove', member => {
- let lobby = bot.channels.get("712286891902500877");
-	member.guild.channels.get('712286891902500877').send(member.user.username + " (ID: " + member.user.id + ") postanowił/a nas opuścić.");
-});
-bot.on("messageDelete", async message =>{
-  let LoggingEmbed = new Discord.RichEmbed()
-.setTitle("BREAKING NEWS! Wiadomość została usunięta!")
-.setColor("#d65cff")
-.setThumbnail(message.author.avatarURL)
-.addField("Treść:", message.content)
-.addField("Usunięta wiadomość autorstwa:", message.author.tag + ", na kanale " + message.channel)
-.addField("O godzinie: ", `${moment.utc(message.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
-.setFooter("Ojojoj");
-let logChannel = message.guild.channels.find(c => c.name === "logger")
-if(!logChannel) return;
-
-logChannel.send(LoggingEmbed);
-});
-
-
-bot.on("message", async message =>{
-
-  let prefix = botconfig.prefix;
-  let msgArray = message.content.split(" ");
-  let cmd = msgArray[0];
-  let args = msgArray.slice(1);
-
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot, message, args);
 	
-	if(message.author.bot) return;
-	  if(message.channel.type === "dm"){
-		  let wiado = bot.channels.get("723243651567976459");
-		  let cos = (message.author.username + " napisał do mnie w prywatnej wiadomości: " + message.content);
-		 wiado.send(cos);
-	  }
+}
+	
+	
+	
 	if(cmd === `${prefix}testwiadomościpowitalnej`){
 	message.channel.send("Witaj `member.user.username`!\n**●** Na samym początku zapoznaj się z <#747054073487818782>, ponieważ znajdują się tam zasady, które należy przestrzegać grając na serwerze.\n**●** Następnie przeczytaj <#712299665827299386>, aby wiedzieć jak funkcjonuje nasz serwer na discordzie.\n**●** Gdy zapoznasz się z obydwona regulaminami, obczaj sobie te kanały: <#747055160173264896> oraz <#747444965549932564>, gdyż mogą one się przyczynić do lepszej znajomości chociażby mapy albo zasad działania klas.\n**●** Jesteś zainteresowany kupnem VIPa? Zapraszamy na kanał <#739248187922972732>.\n**●** Zostałaś/eś oprowadzona/y przez podstawowe kanały serwera. Zachęcamy do zapoznania się z pozostałymi kanałami, aktywnym udzielaniu się na serwerze, zakładania własnych sugestii dotyczących trybu, zgłaszania wszelkich wykrytych błędów oraz miłego spędzania czasu na naszym discordzie. <:SCP173:748613466629341358>");
 	}
