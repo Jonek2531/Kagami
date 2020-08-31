@@ -68,7 +68,6 @@ bot.on("message", async message =>{
 	
 	//=======================================//
 client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
     var guild = client.guilds.cache.get(config.discord_server_id);
     if (!guild) return console.log('Unable to find guild. Check config.json');
 
