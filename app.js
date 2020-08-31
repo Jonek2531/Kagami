@@ -13,17 +13,8 @@ bot.commands = new Discord.Collection()
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Breach moim życiem!!!", {type: "WATCHING"});
-			let onlinevc = bot.channels.get("748512266336469102");
-	let gamerstay = bot.guilds.get('712286891902500874');
-	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size + gamerstay.members.filter(m => m.presence.status === 'offline').size
-	onlinevc.setName("Członkowie: " + onlineCount);
 })
-bot.on('guildMemberAdd', member => {
-   let onlinevc = bot.channels.get("748512266336469102");
-	let gamerstay = bot.guilds.get('712286891902500874');
-	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size + gamerstay.members.filter(m => m.presence.status === 'offline').size
-	onlinevc.setName("Członkowie: " + onlineCount);
-});
+
 bot.on('guildMemberAdd', member => {
  let lobby = bot.channels.get("712286891902500877");
 	member.guild.channels.get('712286891902500877').send("Witaj <@" + member.user.id + ">!\n**●** Na samym początku zapoznaj się z <#747054073487818782>, ponieważ znajdują się tam zasady, które należy przestrzegać grając na serwerze.\n**●** Następnie przeczytaj <#712299665827299386>, aby wiedzieć jak funkcjonuje nasz serwer na discordzie.\n**●** Gdy zapoznasz się z obydwoma regulaminami, obczaj sobie te kanały: <#747055160173264896> oraz <#747444965549932564>, gdyż mogą one się przyczynić do lepszej znajomości chociażby mapy albo zasad działania klas.\n**●** Jesteś zainteresowany kupnem VIPa? Zapraszamy na kanał <#739248187922972732>.\n**●** Zostałaś/eś oprowadzona/y przez podstawowe kanały serwera. Zachęcamy do zapoznania się z pozostałymi kanałami, aktywnym udzielaniu się na serwerze, zakładania własnych sugestii dotyczących trybu, zgłaszania wszelkich wykrytych błędów oraz miłego spędzania czasu na naszym discordzie. <:SCP173:748613466629341358>");
