@@ -7,8 +7,6 @@ const ms = require('ms')
 const botconfig = require("./botconfig.json");
 const fs = require("fs")
 const client = new Discord.Client();
-const CronJob = require('cron').CronJob;
-const query = require("source-server-query");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
 
