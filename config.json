@@ -13,10 +13,10 @@
     {
       "ip": "84.200.229.44:27020",
       "port": 27015,
-      "channel_name": "749932352557416499",
-      "channel_map": "749932296907259986",
-      "channel_gamemode": "749932453619302420",
-      "channel_players": "749932249146982420"
+      "channel_name": "",
+      "channel_map": "",
+      "channel_gamemode": "",
+      "channel_players": ""
     }
   ]
 }
