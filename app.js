@@ -19,10 +19,6 @@ var change_json = false;
 	bot.on("ready", async () =>{
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Breach moim życiem!!!", {type: "WATCHING"});
-			let onlinevc = bot.channels.get("748512266336469102");
-	let gamerstay = bot.guilds.get('712286891902500874');
-	var onlineCount = gamerstay.members.filter(m => m.presence.status === 'online').size + gamerstay.members.filter(m => m.presence.status === 'idle').size + gamerstay.members.filter(m => m.presence.status === 'dnd').size + gamerstay.members.filter(m => m.presence.status === 'offline').size
-	onlinevc.setName("Członkowie: " + onlineCount);
 })
 bot.on('guildMemberAdd', member => {
    let onlinevc = bot.channels.get("748512266336469102");
