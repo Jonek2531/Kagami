@@ -11,8 +11,8 @@
   "discord_server_id": "712286891902500874",
   "servers": [
     {
-      "ip": "84.200.229.44:27020",
-      "port": 27015,
+      "ip": "84.200.229.44",
+      "port": 27020,
       "channel_name": "",
       "channel_map": "",
       "channel_gamemode": "",
