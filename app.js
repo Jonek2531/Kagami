@@ -29,10 +29,6 @@ bot.on('guildMemberAdd', member => {
 member.addRole('712294398360027177');
 });
 
-bot.on('guildMemberRemove', member => {
- let lobby = bot.channels.get("712286891902500877");
-	member.guild.channels.get('712286891902500877').send(member.user.username + " (ID: " + member.user.id + ") postanowił/a nas opuścić.");
-});
 bot.on("messageDelete", async message =>{
   let LoggingEmbed = new Discord.RichEmbed()
 .setTitle("BREAKING NEWS! Wiadomość została usunięta!")
