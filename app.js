@@ -14,9 +14,6 @@ bot.commands = new Discord.Collection()
   console.log(`${bot.user.username} jest online! Aktualnie jest na ${bot.guilds.size} serwerach.`);
   bot.user.setActivity("Breach moim życiem!!!", {type: "WATCHING"});
 })
-const CronJob = require('cron').CronJob;
-const query = require("source-server-query");
-//var config = require("./config.json");
 
 bot.on('guildMemberAdd', member => {
  let lobby = bot.channels.get("712286891902500877");
