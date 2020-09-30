@@ -243,7 +243,27 @@ let user = message.mentions.users.first() || message.author;
             return message.channel.send(embed);
 	
         }
-
+	if (cmd ===`${prefix}propozycja`){   //if command is suggest
+		let user = message.author;
+const channel = message.guild.channels.find(ch => ch.name === '❔│pomysłyꞏnaꞏaktualizacje');  //finds the channel named suggestions 
+		const gchannel = message.guild.channels.find(`name`, "💬│ogólnyꞏbreach");
+		
+		
+let proembed = new Discord.RichEmbed()
+.setDescription('**Propozycja od użytkownika:**\n\n' +              args.join(' '))
+    .setColor("#00ffd4")
+.setTimestamp(new Date())
+.setFooter(`${user.username}#${user.discriminator}`)
+                  .setThumbnail(`${user.avatarURL}`)
+		     
+		     channel.send(proembed)
+		.then(function (msg) {
+            msg.react("✅");
+            msg.react("❎"); // You can only add two reacts
+      ({timeout: 1000});
+            })
+		gchannel.send("Na <#759314154090790953> pojawiła się nowa propozycja.");
+}     
 	
 	if(cmd === `${prefix}vip`){
 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`Musisz posiadać uprawnienia Administratora, by użyć tej komendy, ${message.author}.`);
